@@ -1,0 +1,3 @@
+Imagens opcionais das perguntas ficam nesta pasta.
+Em dados_quiz.py, acrescente à pergunta: "imagem": "imagens_perguntas/arquivo.jpg"
+Sem essa chave, o painel usa apenas texto. Nenhuma imagem é buscada automaticamente.
