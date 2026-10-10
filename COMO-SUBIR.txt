@@ -1,0 +1,9 @@
+1. Extraia este ZIP.
+2. Suba o conteúdo da pasta Quiz-10 para a raiz do seu repositório.
+3. Inclua .github/workflows/gerar-quiz.yml (a pasta .github pode ficar oculta no celular).
+4. Configure o Secret RCLONE_DRIVE_TOKEN em Settings > Secrets and variables > Actions.
+5. Actions > Gerar Juh Quiz e salvar no Drive > Run workflow.
+6. Primeiro teste: início 1, quantidade 1. Depois: início 1, quantidade 30.
+
+As prévias em previas/ mostram os layouts implementados no código.
+Leia README.md para a pasta de destino e instruções completas.
