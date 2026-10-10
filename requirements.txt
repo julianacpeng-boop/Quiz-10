@@ -1,0 +1,4 @@
+Pillow>=10.4,<13
+edge-tts>=7,<8
+pilmoji>=2.0.5,<3
+emoji>=2,<3
