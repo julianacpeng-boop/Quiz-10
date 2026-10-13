@@ -207,57 +207,18 @@ def validar():
 _EDGE_CONFIGURADO = False
 
 def configurar_edge():
-    """Atualiza o cliente para o endpoint Edge que respondeu ao teste real."""
+    """Preserva o protocolo e o endpoint fornecidos pela biblioteca."""
     global _EDGE_CONFIGURADO
-    import edge_tts.constants as constantes
+    import edge_tts
     import edge_tts.communicate as comunicacao
     import edge_tts.voices as vozes
-    from urllib.error import URLError
-
-    versao = os.getenv('QUIZ_EDGE_VERSION', '').strip()
-    if versao and not re.fullmatch(r'\d+\.\d+\.\d+\.\d+', versao):
-        raise ValueError('QUIZ_EDGE_VERSION precisa ser uma versão completa do Edge.')
-    if not versao:
-        try:
-            with urlopen('https://edgeupdates.microsoft.com/api/products?view=enterprise', timeout=15) as r:
-                produtos = json.load(r)
-            versoes = [release['ProductVersion']
-                       for produto in produtos if produto.get('Product') == 'Stable'
-                       for release in produto.get('Releases', [])
-                       if release.get('Platform') == 'Windows'
-                       and release.get('Architecture') == 'x64'
-                       and re.fullmatch(r'\d+\.\d+\.\d+\.\d+', release.get('ProductVersion', ''))]
-            versao = max(versoes, key=lambda v: tuple(map(int, v.split('.'))))
-        except (URLError, TimeoutError, OSError, ValueError, KeyError, TypeError):
-            # Esta versão gerou áudio Antonio válido no teste de 12/10/2026.
-            versao = '155.0.4283.45'
-            print('Catálogo Edge indisponível; usando a versão validada 155.0.4283.45.', flush=True)
-    major = versao.split('.')[0]
-    constantes.CHROMIUM_FULL_VERSION = versao
-    constantes.CHROMIUM_MAJOR_VERSION = major
-    constantes.SEC_MS_GEC_VERSION = comunicacao.SEC_MS_GEC_VERSION = vozes.SEC_MS_GEC_VERSION = '1-' + versao
-    # Endpoint já utilizado pelo projeto edge-tts na versão 7.2.3.
-    # O valor abaixo vem do próprio cliente público Edge; não é uma chave Azure.
-    base = 'api.msedgeservices.com/tts/cognitiveservices'
-    token = constantes.TRUSTED_CLIENT_TOKEN
-    constantes.WSS_URL = comunicacao.WSS_URL = f'wss://{base}/websocket/v1?Ocp-Apim-Subscription-Key={token}'
-    constantes.VOICE_LIST = vozes.VOICE_LIST = f'https://{base}/voices/list?Ocp-Apim-Subscription-Key={token}'
-    user_agent = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
-                  f'(KHTML, like Gecko) Chrome/{major}.0.0.0 Safari/537.36 Edg/{major}.0.0.0')
-    for headers in (constantes.BASE_HEADERS, constantes.WSS_HEADERS, constantes.VOICE_HEADERS,
-                    comunicacao.WSS_HEADERS, vozes.VOICE_HEADERS):
-        headers['User-Agent'] = user_agent
-    comunicacao.WSS_HEADERS['Sec-WebSocket-Protocol'] = 'synthesize'
-    vozes.VOICE_HEADERS['Authority'] = 'api.msedgeservices.com'
-    vozes.VOICE_HEADERS['Sec-CH-UA'] = (f'" Not;A Brand";v="99", "Microsoft Edge";v="{major}", '
-                                       f'"Chromium";v="{major}"')
-    # Acrescenta autoridades confiáveis do sistema, preservando a validação TLS.
+    # URL, GEC e headers precisam corresponder ao protocolo da biblioteca.
     for modulo in (comunicacao, vozes):
         contexto = getattr(modulo, '_SSL_CTX', None)
         if contexto is not None:
             contexto.load_default_certs()
     _EDGE_CONFIGURADO = True
-    print(f'Voz AntonioNeural: conexão Edge Services, versão {versao}, sem chave Azure.', flush=True)
+    print(f'Voz AntonioNeural: protocolo original edge-tts {edge_tts.__version__}.', flush=True)
 
 async def narrar(texto, caminho):
     import edge_tts
