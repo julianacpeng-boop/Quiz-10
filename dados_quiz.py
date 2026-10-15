@@ -1,708 +1,651 @@
-# -*- coding: utf-8 -*-
-# Lote 6: 1–10 caricaturas ABC; 11–20 contexto; 21–30 sem imagens.
-QUIZZES = {'Dinossauros: fatos além dos filmes': [{'pergunta': 'Qual destes dinossauros viveu no período Cretáceo?',
-                                         'alternativas': ['Tiranossauro', 'Estegossauro', 'Diplodoco'],
-                                         'correta': 0,
-                                         'imagem': 'imagens_perguntas/lote6_v01_p01.png'},
-                                        {'pergunta': 'Qual destes dinossauros era herbívoro?',
-                                         'alternativas': ['Velociraptor', 'Tricerátopo', 'Tiranossauro'],
-                                         'correta': 1,
-                                         'imagem': 'imagens_perguntas/lote6_v01_p02.png'},
-                                        {'pergunta': 'Qual destes dinossauros pertence ao grupo dos '
-                                                     'saurópodes?',
-                                         'alternativas': ['Tricerátopo', 'Velociraptor', 'Braquiossauro'],
-                                         'correta': 2,
-                                         'imagem': 'imagens_perguntas/lote6_v01_p03.png'}],
- 'Animais que vivem nos polos': [{'pergunta': 'Qual destes animais é um mamífero marinho?',
-                                  'alternativas': ['Pinguim-imperador', 'Urso-polar', 'Morsa'],
-                                  'correta': 2,
-                                  'imagem': 'imagens_perguntas/lote6_v02_p01.png'},
-                                 {'pergunta': 'Qual destes animais é nativo do Ártico?',
-                                  'alternativas': ['Urso-polar', 'Pinguim-imperador', 'Leopardo'],
-                                  'correta': 0,
-                                  'imagem': 'imagens_perguntas/lote6_v02_p02.png'},
-                                 {'pergunta': 'Qual destes animais é uma ave?',
-                                  'alternativas': ['Morsa', 'Pinguim-imperador', 'Raposa-do-ártico'],
-                                  'correta': 1,
-                                  'imagem': 'imagens_perguntas/lote6_v02_p03.png'}],
- 'Primatas e suas habilidades': [{'pergunta': 'Qual destes primatas é nativo de Bornéu e Sumatra?',
-                                  'alternativas': ['Gorila', 'Orangotango', 'Mico-leão-dourado'],
-                                  'correta': 1,
-                                  'imagem': 'imagens_perguntas/lote6_v03_p01.png'},
-                                 {'pergunta': 'Qual destes primatas é conhecido pelo uso de ferramentas na '
-                                              'natureza?',
-                                  'alternativas': ['Lêmure-de-cauda-anelada',
-                                                   'Mico-leão-dourado',
-                                                   'Chimpanzé'],
-                                  'correta': 2,
-                                  'imagem': 'imagens_perguntas/lote6_v03_p02.png'},
-                                 {'pergunta': 'Qual destes primatas tem populações nativas na América do '
-                                              'Sul?',
-                                  'alternativas': ['Mico-leão-dourado', 'Gorila', 'Orangotango'],
-                                  'correta': 0,
-                                  'imagem': 'imagens_perguntas/lote6_v03_p03.png'}],
- 'Tubarões e seus parentes': [{'pergunta': 'Qual destes animais é o maior peixe vivo?',
-                               'alternativas': ['Tubarão-branco', 'Tubarão-baleia', 'Tubarão-martelo'],
-                               'correta': 1,
-                               'imagem': 'imagens_perguntas/lote6_v04_p01.png'},
-                              {'pergunta': 'Qual destes tubarões se alimenta principalmente filtrando '
-                                           'pequenos organismos?',
-                               'alternativas': ['Tubarão-branco', 'Tubarão-tigre', 'Tubarão-baleia'],
-                               'correta': 2,
-                               'imagem': 'imagens_perguntas/lote6_v04_p02.png'},
-                              {'pergunta': 'Qual destes animais é um peixe cartilaginoso?',
-                               'alternativas': ['Arraia', 'Golfinho', 'Atum'],
-                               'correta': 0,
-                               'imagem': 'imagens_perguntas/lote6_v04_p03.png'}],
- 'Moluscos e crustáceos': [{'pergunta': 'Qual destes animais pertence ao grupo dos moluscos?',
-                            'alternativas': ['Polvo', 'Caranguejo', 'Camarão'],
-                            'correta': 0,
-                            'imagem': 'imagens_perguntas/lote6_v05_p01.png'},
-                           {'pergunta': 'Qual destes moluscos pode produzir pérolas?',
-                            'alternativas': ['Polvo', 'Lula', 'Ostra'],
-                            'correta': 2,
-                            'imagem': 'imagens_perguntas/lote6_v05_p02.png'},
-                           {'pergunta': 'Qual destes animais é um crustáceo?',
-                            'alternativas': ['Lula', 'Lagosta', 'Caracol'],
-                            'correta': 1,
-                            'imagem': 'imagens_perguntas/lote6_v05_p03.png'}],
- 'Frutas e sementes da Amazônia': [{'pergunta': 'Qual destes frutos pertence ao mesmo gênero botânico do '
-                                                'cacau?',
-                                    'alternativas': ['Açaí', 'Bacuri', 'Cupuaçu'],
-                                    'correta': 2,
-                                    'imagem': 'imagens_perguntas/lote6_v06_p01.png'},
-                                   {'pergunta': 'Qual destes frutos é muito associado ao preparo de uma '
-                                                'bebida roxa no Brasil?',
-                                    'alternativas': ['Açaí', 'Cupuaçu', 'Bacuri'],
-                                    'correta': 0,
-                                    'imagem': 'imagens_perguntas/lote6_v06_p02.png'},
-                                   {'pergunta': 'Qual destas sementes é conhecida também como '
-                                                'castanha-do-pará?',
-                                    'alternativas': ['Amendoim', 'Castanha-do-brasil', 'Noz'],
-                                    'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote6_v06_p03.png'}],
- 'Rochas e minerais do cotidiano': [{'pergunta': 'Qual destes minerais é uma forma de carbono?',
-                                     'alternativas': ['Quartzo', 'Halita', 'Grafite'],
-                                     'correta': 2,
-                                     'imagem': 'imagens_perguntas/lote6_v07_p01.png'},
-                                    {'pergunta': 'Qual destes materiais é um mineral?',
-                                     'alternativas': ['Quartzo', 'Granito', 'Mármore'],
-                                     'correta': 0,
-                                     'imagem': 'imagens_perguntas/lote6_v07_p02.png'},
-                                    {'pergunta': 'Qual destas rochas é formada pelo resfriamento lento de '
-                                                 'magma?',
-                                     'alternativas': ['Mármore', 'Granito', 'Calcário'],
-                                     'correta': 1,
-                                     'imagem': 'imagens_perguntas/lote6_v07_p03.png'}],
- 'Invenções que transformaram a medicina': [{'pergunta': 'Qual destes objetos facilita a administração de '
-                                                         'líquidos no corpo?',
-                                             'alternativas': ['Estetoscópio', 'Termômetro', 'Seringa'],
-                                             'correta': 2,
-                                             'imagem': 'imagens_perguntas/lote6_v08_p01.png'},
-                                            {'pergunta': 'Qual destes aparelhos usa ultrassom para formar '
-                                                         'imagens?',
-                                             'alternativas': ['Tomógrafo',
-                                                              'Ultrassom',
-                                                              'Aparelho de raios X'],
-                                             'correta': 1,
-                                             'imagem': 'imagens_perguntas/lote6_v08_p02.png'},
-                                            {'pergunta': 'Qual destes instrumentos permite ouvir sons do '
-                                                         'coração?',
-                                             'alternativas': ['Estetoscópio',
-                                                              'Termômetro',
-                                                              'Esfigmomanômetro'],
-                                             'correta': 0,
-                                             'imagem': 'imagens_perguntas/lote6_v08_p03.png'}],
- 'Máquinas que trabalham no campo': [{'pergunta': 'Qual destas máquinas reúne etapas como corte e separação '
-                                                  'de grãos?',
-                                      'alternativas': ['Trator', 'Colheitadeira', 'Semeadora'],
-                                      'correta': 1,
-                                      'imagem': 'imagens_perguntas/lote6_v09_p01.png'},
-                                     {'pergunta': 'Qual destes equipamentos distribui sementes no solo?',
-                                      'alternativas': ['Colheitadeira', 'Pulverizador', 'Semeadora'],
-                                      'correta': 2,
-                                      'imagem': 'imagens_perguntas/lote6_v09_p02.png'},
-                                     {'pergunta': 'Qual destas máquinas fornece tração para diversos '
-                                                  'implementos agrícolas?',
-                                      'alternativas': ['Trator', 'Colheitadeira', 'Pulverizador'],
-                                      'correta': 0,
-                                      'imagem': 'imagens_perguntas/lote6_v09_p03.png'}],
- 'Objetos que revolucionaram a música': [{'pergunta': 'Qual destes objetos permitiu ouvir música portátil em '
-                                                      'fitas cassete?',
-                                          'alternativas': ['Tocador de fita portátil',
-                                                           'Tocador de CD portátil',
-                                                           'Tocador de MP3'],
-                                          'correta': 0,
-                                          'imagem': 'imagens_perguntas/lote6_v10_p01.png'},
-                                         {'pergunta': 'Qual destes instrumentos pode produzir sons por '
-                                                      'circuitos eletrônicos?',
-                                          'alternativas': ['Violino', 'Sintetizador', 'Flauta doce'],
-                                          'correta': 1,
-                                          'imagem': 'imagens_perguntas/lote6_v10_p02.png'},
-                                         {'pergunta': 'Qual destes objetos converte som em um sinal '
-                                                      'elétrico?',
-                                          'alternativas': ['Fone de ouvido', 'Caixa de som', 'Microfone'],
-                                          'correta': 2,
-                                          'imagem': 'imagens_perguntas/lote6_v10_p03.png'}],
- 'Inteligência artificial: o que ela consegue fazer?': [{'pergunta': 'Um modelo generativo pode produzir '
-                                                                     'qual tipo de conteúdo?',
-                                                         'alternativas': ['Somente energia elétrica',
-                                                                          'Textos e imagens',
-                                                                          'Apenas peças de metal'],
-                                                         'correta': 1,
-                                                         'imagem': 'imagens_perguntas/lote6_v11_p01.png'},
-                                                        {'pergunta': 'Como muitos sistemas de IA aprendem '
-                                                                     'padrões?',
-                                                         'alternativas': ['Por adivinhação sem dados',
-                                                                          'Somente por idade',
-                                                                          'A partir de dados de treinamento'],
-                                                         'correta': 2,
-                                                         'imagem': 'imagens_perguntas/lote6_v11_p02.png'},
-                                                        {'pergunta': 'Uma resposta de IA deve ser tratada '
-                                                                     'como sempre correta?',
-                                                         'alternativas': ['Sim, sem exceção',
-                                                                          'Não, precisa ser verificada',
-                                                                          'Sim, se for longa'],
-                                                         'correta': 1,
-                                                         'imagem': 'imagens_perguntas/lote6_v11_p03.png'}],
- 'Deepfakes: quando vídeos e vozes enganam': [{'pergunta': 'Qual atitude ajuda a verificar um vídeo '
-                                                           'suspeito?',
-                                               'alternativas': ['Compartilhar imediatamente',
-                                                                'Confiar só na aparência',
-                                                                'Conferir a origem e outras fontes'],
-                                               'correta': 2,
-                                               'imagem': 'imagens_perguntas/lote6_v12_p01.png'},
-                                              {'pergunta': 'O que caracteriza um deepfake?',
-                                               'alternativas': ['Conteúdo sintético que imita alguém',
-                                                                'Um arquivo sem som',
-                                                                'Uma foto sempre sem edição'],
-                                               'correta': 0,
-                                               'imagem': 'imagens_perguntas/lote6_v12_p02.png'},
-                                              {'pergunta': 'Uma voz parecida com a de alguém prova sua '
-                                                           'identidade?',
-                                               'alternativas': ['Sim, sempre',
-                                                                'Não, a voz pode ser imitada',
-                                                                'Sim, se falar seu nome'],
-                                               'correta': 1,
-                                               'imagem': 'imagens_perguntas/lote6_v12_p03.png'}],
- 'Artemis e a nova exploração da Lua': [{'pergunta': 'Como se chama a nave tripulada usada na Artemis II?',
-                                         'alternativas': ['Orion', 'Voyager', 'Hubble'],
-                                         'correta': 0,
-                                         'imagem': 'imagens_perguntas/lote6_v13_p01.png'},
-                                        {'pergunta': 'Qual missão Artemis realizou um voo tripulado ao redor '
-                                                     'da Lua em 2026?',
-                                         'alternativas': ['Artemis I', 'Artemis II', 'Artemis III'],
-                                         'correta': 1,
-                                         'imagem': 'imagens_perguntas/lote6_v13_p02.png'},
-                                        {'pergunta': 'Qual agência lidera o programa Artemis?',
-                                         'alternativas': ['JAXA sozinha', 'NASA', 'ESA sozinha'],
-                                         'correta': 1,
-                                         'imagem': 'imagens_perguntas/lote6_v13_p03.png'}],
- 'Lixo espacial: o problema acima da Terra': [{'pergunta': 'Qual prática ajuda a reduzir lixo espacial?',
-                                               'alternativas': ['Abandonar todos os satélites',
-                                                                'Lançar embalagens em órbita',
-                                                                'Planejar o destino do satélite ao fim da '
-                                                                'missão'],
-                                               'correta': 2,
-                                               'imagem': 'imagens_perguntas/lote6_v14_p01.png'},
-                                              {'pergunta': 'Por que pequenos fragmentos em órbita podem '
-                                                           'causar danos?',
-                                               'alternativas': ['Porque viajam em alta velocidade',
-                                                                'Porque sempre estão quentes',
-                                                                'Porque são sempre radioativos'],
-                                               'correta': 0,
-                                               'imagem': 'imagens_perguntas/lote6_v14_p02.png'},
-                                              {'pergunta': 'Qual destes exemplos pode ser lixo espacial?',
-                                               'alternativas': ['Fragmento de satélite em órbita',
-                                                                'Nuvem de chuva',
-                                                                'Rocha no fundo do mar'],
-                                               'correta': 0,
-                                               'imagem': 'imagens_perguntas/lote6_v14_p03.png'}],
- 'Microplásticos: como chegam ao ambiente?': [{'pergunta': 'Qual processo pode gerar microplásticos?',
-                                               'alternativas': ['Fragmentação de objetos plásticos',
-                                                                'Formação de nuvens',
-                                                                'Fotossíntese'],
-                                               'correta': 0,
-                                               'imagem': 'imagens_perguntas/lote6_v15_p01.png'},
-                                              {'pergunta': 'Em geral, microplásticos têm tamanho inferior a '
-                                                           'quanto?',
-                                               'alternativas': ['Cinco quilômetros',
-                                                                'Cinco milímetros',
-                                                                'Cinco metros'],
-                                               'correta': 1,
-                                               'imagem': 'imagens_perguntas/lote6_v15_p02.png'},
-                                              {'pergunta': 'Microplásticos são partículas de qual material?',
-                                               'alternativas': ['Madeira apenas', 'Vidro apenas', 'Plástico'],
-                                               'correta': 2,
-                                               'imagem': 'imagens_perguntas/lote6_v15_p03.png'}],
- 'Cidades mais quentes: as ilhas de calor': [{'pergunta': 'Qual característica de superfícies urbanas '
-                                                          'contribui para o aquecimento?',
-                                              'alternativas': ['Não receber luz',
-                                                               'Produzir frio continuamente',
-                                                               'Absorver e armazenar calor'],
-                                              'correta': 2,
-                                              'imagem': 'imagens_perguntas/lote6_v16_p01.png'},
-                                             {'pergunta': 'Qual processo ajuda as plantas a resfriar o '
-                                                          'ambiente ao liberar água?',
-                                              'alternativas': ['Sedimentação',
-                                                               'Evapotranspiração',
-                                                               'Magnetização'],
-                                              'correta': 1,
-                                              'imagem': 'imagens_perguntas/lote6_v16_p02.png'},
-                                             {'pergunta': 'O que é uma ilha de calor urbana?',
-                                              'alternativas': ['Área urbana mais quente que seus arredores',
-                                                               'Uma ilha formada por lava',
-                                                               'Um bairro sem gravidade'],
-                                              'correta': 0,
-                                              'imagem': 'imagens_perguntas/lote6_v16_p03.png'}],
- 'Energia solar: da luz à eletricidade': [{'pergunta': 'Qual equipamento converte luz solar diretamente em '
-                                                       'eletricidade?',
-                                           'alternativas': ['Reservatório de água',
-                                                            'Turbina a vapor apenas',
-                                                            'Painel fotovoltaico'],
-                                           'correta': 2,
-                                           'imagem': 'imagens_perguntas/lote6_v17_p01.png'},
-                                          {'pergunta': 'Qual tipo de corrente os módulos fotovoltaicos '
-                                                       'normalmente produzem?',
-                                           'alternativas': ['Corrente alternada',
-                                                            'Corrente contínua',
-                                                            'Somente eletricidade estática'],
-                                           'correta': 1,
-                                           'imagem': 'imagens_perguntas/lote6_v17_p02.png'},
-                                          {'pergunta': 'Qual componente pode armazenar energia para uso '
-                                                       'posterior?',
-                                           'alternativas': ['Bateria', 'Vidro comum', 'Antena de rádio'],
-                                           'correta': 0,
-                                           'imagem': 'imagens_perguntas/lote6_v17_p03.png'}],
- 'Carros elétricos e o futuro dos transportes': [{'pergunta': 'Qual alternativa descreve corretamente um '
-                                                              'carro totalmente elétrico?',
-                                                  'alternativas': ['Nunca causa impacto ambiental',
-                                                                   'Não emite gases pelo escapamento durante '
-                                                                   'o uso',
-                                                                   'Não precisa de energia'],
-                                                  'correta': 1,
-                                                  'imagem': 'imagens_perguntas/lote6_v18_p01.png'},
-                                                 {'pergunta': 'Onde fica armazenada grande parte da energia '
-                                                              'usada por esse carro?',
-                                                  'alternativas': ['No para-brisa',
-                                                                   'No escapamento',
-                                                                   'Na bateria'],
-                                                  'correta': 2,
-                                                  'imagem': 'imagens_perguntas/lote6_v18_p02.png'},
-                                                 {'pergunta': 'Qual componente movimenta um carro totalmente '
-                                                              'elétrico?',
-                                                  'alternativas': ['Motor a gasolina obrigatório',
-                                                                   'Motor elétrico',
-                                                                   'Caldeira a carvão'],
-                                                  'correta': 1,
-                                                  'imagem': 'imagens_perguntas/lote6_v18_p03.png'}],
- 'Corais: por que os oceanos precisam deles?': [{'pergunta': 'Qual é uma função dos recifes de coral?',
-                                                 'alternativas': ['Produzir plástico',
-                                                                  'Eliminar toda a vida marinha',
-                                                                  'Servir de habitat para muitas espécies'],
-                                                 'correta': 2,
-                                                 'imagem': 'imagens_perguntas/lote6_v19_p01.png'},
-                                                {'pergunta': 'O branqueamento de corais pode ocorrer após '
-                                                             'qual situação?',
-                                                 'alternativas': ['Resfriamento do núcleo da Terra',
-                                                                  'Estresse causado por água muito quente',
-                                                                  'Ausência de pedras na praia'],
-                                                 'correta': 1,
-                                                 'imagem': 'imagens_perguntas/lote6_v19_p02.png'},
-                                                {'pergunta': 'Os corais pertencem a qual grupo de seres '
-                                                             'vivos?',
-                                                 'alternativas': ['Plantas', 'Animais', 'Fungos'],
-                                                 'correta': 1,
-                                                 'imagem': 'imagens_perguntas/lote6_v19_p03.png'}],
- 'Robôs na medicina: como ajudam profissionais?': [{'pergunta': 'Na cirurgia robótica, quem geralmente '
-                                                                'controla os instrumentos?',
-                                                    'alternativas': ['Paciente dormindo',
-                                                                     'Cirurgião',
-                                                                     'Robô sem supervisão sempre'],
-                                                    'correta': 1,
-                                                    'imagem': 'imagens_perguntas/lote6_v20_p01.png'},
-                                                   {'pergunta': 'Qual pode ser uma vantagem de sistemas '
-                                                                'robóticos cirúrgicos?',
-                                                    'alternativas': ['Dispensar toda a equipe',
-                                                                     'Auxiliar movimentos precisos',
-                                                                     'Garantir sucesso em todos os casos'],
-                                                    'correta': 1,
-                                                    'imagem': 'imagens_perguntas/lote6_v20_p02.png'},
-                                                   {'pergunta': 'O uso de robôs elimina a necessidade de '
-                                                                'profissionais treinados?',
-                                                    'alternativas': ['Sim, em qualquer procedimento',
-                                                                     'Não',
-                                                                     'Sim, após ligar o aparelho'],
-                                                    'correta': 1,
-                                                    'imagem': 'imagens_perguntas/lote6_v20_p03.png'}],
- 'Por que uma notícia falsa parece convincente?': [{'pergunta': 'Qual recurso pode fazer uma notícia falsa '
-                                                                'parecer confiável?',
-                                                    'alternativas': ['Imitar a aparência de um veículo '
-                                                                     'conhecido',
-                                                                     'Ser sempre verdadeira',
-                                                                     'Não ter nenhuma informação'],
-                                                    'correta': 0},
-                                                   {'pergunta': 'Qual atitude é mais útil antes de '
-                                                                'compartilhar uma notícia?',
-                                                    'alternativas': ['Verificar fonte e contexto',
-                                                                     'Ler só o título',
-                                                                     'Contar apenas os comentários'],
-                                                    'correta': 0},
-                                                   {'pergunta': 'Ter muitos compartilhamentos garante que '
-                                                                'algo seja verdade?',
-                                                    'alternativas': ['Sim, sempre',
-                                                                     'Não',
-                                                                     'Sim, acima de mil'],
-                                                    'correta': 1}],
- 'Como os algoritmos escolhem o que aparece no seu feed?': [{'pergunta': 'Como ampliar a diversidade do que '
-                                                                         'você vê?',
-                                                             'alternativas': ['Seguir apenas uma fonte',
-                                                                              'Buscar fontes e perspectivas '
-                                                                              'diferentes',
-                                                                              'Ignorar todas as notícias'],
-                                                             'correta': 1},
-                                                            {'pergunta': 'Qual sinal pode ser usado para '
-                                                                         'recomendar conteúdos?',
-                                                             'alternativas': ['Seu histórico de interação',
-                                                                              'A fase da Lua apenas',
-                                                                              'A cor dos seus sapatos '
-                                                                              'apenas'],
-                                                             'correta': 0},
-                                                            {'pergunta': 'O que é uma bolha de informação?',
-                                                             'alternativas': ['Contato repetido com '
-                                                                              'conteúdos semelhantes',
-                                                                              'Um arquivo comprimido',
-                                                                              'Um defeito da tela'],
-                                                             'correta': 0}],
- 'Por que esquecer também faz parte da memória?': [{'pergunta': 'O que pode dificultar lembrar uma '
-                                                                'informação?',
-                                                    'alternativas': ['Interferência de outras informações',
-                                                                     'Revisão em intervalos',
-                                                                     'Sono adequado sempre'],
-                                                    'correta': 0},
-                                                   {'pergunta': 'Qual prática costuma fortalecer a lembrança '
-                                                                'de um conteúdo?',
-                                                    'alternativas': ['Tentar recordá-lo e revisar',
-                                                                     'Nunca recuperá-lo',
-                                                                     'Evitar revisões'],
-                                                    'correta': 0},
-                                                   {'pergunta': 'A memória humana funciona como uma gravação '
-                                                                'perfeita?',
-                                                    'alternativas': ['Sim, sempre',
-                                                                     'Não',
-                                                                     'Só durante a infância'],
-                                                    'correta': 1}],
- 'Como distinguir coincidência de causa?': [{'pergunta': 'Qual recurso pode ajudar a investigar relações de '
-                                                         'causa?',
-                                             'alternativas': ['Uma foto sem contexto',
-                                                              'Um único boato',
-                                                              'Experimentos controlados'],
-                                             'correta': 2},
-                                            {'pergunta': 'Dois fatos acontecerem juntos prova que um causou '
-                                                         'o outro?',
-                                             'alternativas': ['Sim, se for no mesmo dia',
-                                                              'Não',
-                                                              'Sim, sempre'],
-                                             'correta': 1},
-                                            {'pergunta': 'Qual fator pode explicar uma associação entre duas '
-                                                         'coisas?',
-                                             'alternativas': ['A cor de um gráfico sempre',
-                                                              'Somente magia',
-                                                              'Uma terceira variável'],
-                                             'correta': 2}],
- 'Probabilidade: por que o acaso nos confunde?': [{'pergunta': 'Após cinco caras seguidas, qual é a chance '
-                                                               'de cara no próximo lançamento independente?',
-                                                   'alternativas': ['Zero', '50%', '100%'],
-                                                   'correta': 1},
-                                                  {'pergunta': 'Qual resultado tem chance de um em seis em '
-                                                               'um dado comum justo?',
-                                                   'alternativas': ['Sair um número menor que sete',
-                                                                    'Sair exatamente o número quatro',
-                                                                    'Sair um número entre um e seis'],
-                                                   'correta': 1},
-                                                  {'pergunta': 'Em uma moeda justa, qual é a chance de sair '
-                                                               'cara em um lançamento?',
-                                                   'alternativas': ['50%', '100%', '25%'],
-                                                   'correta': 0}],
- 'O que significa dizer que algo foi comprovado cientificamente?': [{'pergunta': 'Uma conclusão científica '
-                                                                                 'pode ser revista?',
-                                                                     'alternativas': ['Sim, diante de novas '
-                                                                                      'evidências',
-                                                                                      'Nunca',
-                                                                                      'Só se não tiver '
-                                                                                      'números'],
-                                                                     'correta': 0},
-                                                                    {'pergunta': 'Para que serve a revisão '
-                                                                                 'por pares?',
-                                                                     'alternativas': ['Garantir que nunca '
-                                                                                      'haja erros',
-                                                                                      'Permitir avaliação '
-                                                                                      'por outros '
-                                                                                      'especialistas',
-                                                                                      'Escolher a cor das '
-                                                                                      'páginas'],
-                                                                     'correta': 1},
-                                                                    {'pergunta': 'O que dá força a uma '
-                                                                                 'conclusão científica?',
-                                                                     'alternativas': ['A quantidade de '
-                                                                                      'curtidas',
-                                                                                      'Evidências obtidas '
-                                                                                      'por métodos adequados',
-                                                                                      'Somente a fama do '
-                                                                                      'autor'],
-                                                                     'correta': 1}],
- 'Por que antibióticos não combatem vírus?': [{'pergunta': 'O uso inadequado de antibióticos pode favorecer '
-                                                           'qual problema?',
-                                               'alternativas': ['Melhora obrigatória de qualquer doença',
-                                                                'Resistência bacteriana',
-                                                                'Crescimento dos ossos'],
-                                               'correta': 1},
-                                              {'pergunta': 'Qual destes exemplos é causado por um vírus?',
-                                               'alternativas': ['Tétano', 'Gripe', 'Tuberculose'],
-                                               'correta': 1},
-                                              {'pergunta': 'Antibióticos são usados principalmente contra '
-                                                           'quais agentes?',
-                                               'alternativas': ['Bactérias',
-                                                                'Todos os agentes igualmente',
-                                                                'Vírus'],
-                                               'correta': 0}],
- 'Como as vacinas treinam as defesas do corpo?': [{'pergunta': 'Qual é uma finalidade importante da '
-                                                               'vacinação?',
-                                                   'alternativas': ['Garantir ausência de qualquer sintoma',
-                                                                    'Substituir todas as medidas de higiene',
-                                                                    'Reduzir o risco de doença grave'],
-                                                   'correta': 2},
-                                                  {'pergunta': 'Qual sistema é estimulado pelas vacinas?',
-                                                   'alternativas': ['Sistema imunológico',
-                                                                    'Sistema digestório apenas',
-                                                                    'Sistema ósseo apenas'],
-                                                   'correta': 0},
-                                                  {'pergunta': 'Qual capacidade ajuda o corpo a reagir a um '
-                                                               'contato futuro com um agente?',
-                                                   'alternativas': ['Visão noturna',
-                                                                    'Memória imunológica',
-                                                                    'Memória musical'],
-                                                   'correta': 1}],
- 'Por que existem anos bissextos?': [{'pergunta': 'Qual mês recebe um dia extra em um ano bissexto?',
-                                      'alternativas': ['Dezembro', 'Fevereiro', 'Janeiro'],
-                                      'correta': 1},
-                                     {'pergunta': 'Por que o calendário precisa de ajustes com anos '
-                                                  'bissextos?',
-                                      'alternativas': ['A Terra para de girar',
-                                                       'Todos os meses têm 30 dias',
-                                                       'O ano solar não tem exatamente 365 dias'],
-                                      'correta': 2},
-                                     {'pergunta': 'No calendário gregoriano, um ano de século é bissexto '
-                                                  'quando é divisível por quanto?',
-                                      'alternativas': ['Quatrocentos', 'Dez', 'Cem apenas'],
-                                      'correta': 0}],
- 'Como sabemos a idade de um fóssil?': [{'pergunta': 'Qual informação pode ajudar a estimar a idade de um '
-                                                     'fóssil?',
-                                         'alternativas': ['Somente a cor',
-                                                          'Somente o tamanho',
-                                                          'A camada geológica onde foi encontrado'],
-                                         'correta': 2},
-                                        {'pergunta': 'Carbono-14 é adequado para datar diretamente fósseis '
-                                                     'de dinossauros com milhões de anos?',
-                                         'alternativas': ['Sim, todos', 'Sim, se forem grandes', 'Não'],
-                                         'correta': 2},
-                                        {'pergunta': 'Qual método usa o decaimento de isótopos para estimar '
-                                                     'idades?',
-                                         'alternativas': ['Medição de brilho',
-                                                          'Datação radiométrica',
-                                                          'Contagem de folhas'],
-                                         'correta': 1}]}
+# Juh Quiz — lote 8: 30 temas e 90 perguntas.
 
-LEGENDAS = {'Dinossauros: fatos além dos filmes': 'CAPA_SEGUNDOS=2\n'
+QUIZZES = {'Aves brasileiras': [{'pergunta': 'Qual ave é conhecida por construir um ninho de barro?',
+                       'alternativas': ['João-de-barro', 'Tucano', 'Arara-azul'],
+                       'correta': 0,
+                       'imagem': 'imagens_perguntas/lote8_v01_p01.png'},
+                      {'pergunta': 'Qual destas aves pertence à família dos papagaios?',
+                       'alternativas': ['Bem-te-vi', 'Arara-vermelha', 'Seriema'],
+                       'correta': 1,
+                       'imagem': 'imagens_perguntas/lote8_v01_p02.png'},
+                      {'pergunta': 'Qual destas aves é conhecida pelo canto frequentemente associado ao '
+                                   'amanhecer?',
+                       'alternativas': ['Tucano', 'Ema', 'Sabiá-laranjeira'],
+                       'correta': 2,
+                       'imagem': 'imagens_perguntas/lote8_v01_p03.png'}],
+ 'Frutas exóticas pelo mundo': [{'pergunta': 'Qual destas frutas pertence à mesma família botânica da '
+                                             'lichia?',
+                                 'alternativas': ['Carambola', 'Rambutã', 'Pitaya'],
+                                 'correta': 1,
+                                 'imagem': 'imagens_perguntas/lote8_v02_p01.png'},
+                                {'pergunta': 'Qual destas frutas forma uma estrela quando cortada '
+                                             'transversalmente?',
+                                 'alternativas': ['Lichia', 'Mangostão', 'Carambola'],
+                                 'correta': 2,
+                                 'imagem': 'imagens_perguntas/lote8_v02_p02.png'},
+                                {'pergunta': 'Qual destas frutas também é conhecida como fruta-do-dragão?',
+                                 'alternativas': ['Pitaya', 'Rambutã', 'Mangostão'],
+                                 'correta': 0,
+                                 'imagem': 'imagens_perguntas/lote8_v02_p03.png'}],
+ 'Animais que vivem debaixo da terra': [{'pergunta': 'Qual destes animais é um mamífero adaptado a escavar '
+                                                     'túneis?',
+                                         'alternativas': ['Toupeira', 'Minhoca', 'Centopeia'],
+                                         'correta': 0,
+                                         'imagem': 'imagens_perguntas/lote8_v03_p01.png'},
+                                        {'pergunta': 'Qual destes animais é um anelídeo?',
+                                         'alternativas': ['Tatu', 'Minhoca', 'Toupeira'],
+                                         'correta': 1,
+                                         'imagem': 'imagens_perguntas/lote8_v03_p02.png'},
+                                        {'pergunta': 'Qual destes animais possui uma carapaça de placas '
+                                                     'ósseas?',
+                                         'alternativas': ['Minhoca', 'Toupeira', 'Tatu'],
+                                         'correta': 2,
+                                         'imagem': 'imagens_perguntas/lote8_v03_p03.png'}],
+ 'Habilidades dos insetos': [{'pergunta': 'Qual destes insetos pode produzir luz por bioluminescência?',
+                              'alternativas': ['Abelha', 'Gafanhoto', 'Vaga-lume'],
+                              'correta': 2,
+                              'imagem': 'imagens_perguntas/lote8_v04_p01.png'},
+                             {'pergunta': 'Qual destes insetos produz seda para formar o casulo?',
+                              'alternativas': ['Formiga', 'Bicho-da-seda', 'Joaninha'],
+                              'correta': 1,
+                              'imagem': 'imagens_perguntas/lote8_v04_p02.png'},
+                             {'pergunta': 'Qual destes insetos passa por uma fase de pupa antes de se tornar '
+                                          'adulto?',
+                              'alternativas': ['Borboleta', 'Gafanhoto', 'Libélula'],
+                              'correta': 0,
+                              'imagem': 'imagens_perguntas/lote8_v04_p03.png'}],
+ 'Árvores brasileiras e seus frutos': [{'pergunta': 'Qual árvore produz a castanha-do-pará?',
+                                        'alternativas': ['Jabuticabeira', 'Castanheira-do-pará', 'Cajueiro'],
+                                        'correta': 1,
+                                        'imagem': 'imagens_perguntas/lote8_v05_p01.png'},
+                                       {'pergunta': 'Qual árvore é conhecida por produzir frutos diretamente '
+                                                    'no tronco?',
+                                        'alternativas': ['Araucária', 'Ipê-amarelo', 'Jabuticabeira'],
+                                        'correta': 2,
+                                        'imagem': 'imagens_perguntas/lote8_v05_p02.png'},
+                                       {'pergunta': 'De qual árvore vem o pinhão?',
+                                        'alternativas': ['Araucária', 'Cajueiro', 'Mangueira'],
+                                        'correta': 0,
+                                        'imagem': 'imagens_perguntas/lote8_v05_p03.png'}],
+ 'Esportes e seus equipamentos': [{'pergunta': 'Qual destes objetos é usado no hóquei sobre o gelo?',
+                                   'alternativas': ['Disco', 'Peteca', 'Bola de tênis'],
+                                   'correta': 0,
+                                   'imagem': 'imagens_perguntas/lote8_v06_p01.png'},
+                                  {'pergunta': 'Qual destes objetos é usado para rebater a bola no golfe?',
+                                   'alternativas': ['Remo', 'Bastão de revezamento', 'Taco de golfe'],
+                                   'correta': 2,
+                                   'imagem': 'imagens_perguntas/lote8_v06_p02.png'},
+                                  {'pergunta': 'Qual destes objetos é usado na esgrima?',
+                                   'alternativas': ['Taco de beisebol', 'Florete', 'Raquete'],
+                                   'correta': 1,
+                                   'imagem': 'imagens_perguntas/lote8_v06_p03.png'}],
+ 'Transportes de diferentes épocas': [{'pergunta': 'Qual destes transportes se desloca sobre trilhos?',
+                                       'alternativas': ['Locomotiva', 'Diligência', 'Dirigível'],
+                                       'correta': 0,
+                                       'imagem': 'imagens_perguntas/lote8_v07_p01.png'},
+                                      {'pergunta': 'Qual destes transportes utiliza um envelope cheio de gás '
+                                                   'para sustentação?',
+                                       'alternativas': ['Caravela', 'Dirigível', 'Locomotiva'],
+                                       'correta': 1,
+                                       'imagem': 'imagens_perguntas/lote8_v07_p02.png'},
+                                      {'pergunta': 'Qual destes transportes era movido principalmente pela '
+                                                   'força dos ventos?',
+                                       'alternativas': ['Diligência', 'Locomotiva', 'Caravela'],
+                                       'correta': 2,
+                                       'imagem': 'imagens_perguntas/lote8_v07_p03.png'}],
+ 'Instrumentos musicais brasileiros': [{'pergunta': 'Qual instrumento é tradicional nas rodas de capoeira?',
+                                        'alternativas': ['Berimbau', 'Sanfona', 'Cavaquinho'],
+                                        'correta': 0,
+                                        'imagem': 'imagens_perguntas/lote8_v08_p01.png'},
+                                       {'pergunta': 'Qual instrumento tem fole e aparece com frequência no '
+                                                    'forró?',
+                                        'alternativas': ['Pandeiro', 'Sanfona', 'Agogô'],
+                                        'correta': 1,
+                                        'imagem': 'imagens_perguntas/lote8_v08_p02.png'},
+                                       {'pergunta': 'Qual destes instrumentos é tocado por meio de cordas?',
+                                        'alternativas': ['Zabumba', 'Agogô', 'Cavaquinho'],
+                                        'correta': 2,
+                                        'imagem': 'imagens_perguntas/lote8_v08_p03.png'}],
+ 'Objetos antigos do cotidiano': [{'pergunta': 'Qual objeto era usado para iluminar ambientes com '
+                                               'combustível e pavio?',
+                                   'alternativas': ['Lampião', 'Máquina de escrever', 'Moedor de café'],
+                                   'correta': 0,
+                                   'imagem': 'imagens_perguntas/lote8_v09_p01.png'},
+                                  {'pergunta': 'Qual destes objetos registra imagens em filme fotográfico?',
+                                   'alternativas': ['Rádio de válvulas', 'Câmera analógica', 'Gramofone'],
+                                   'correta': 1,
+                                   'imagem': 'imagens_perguntas/lote8_v09_p02.png'},
+                                  {'pergunta': 'Qual destes objetos reproduz discos usando uma agulha e uma '
+                                               'corneta?',
+                                   'alternativas': ['Telefone de disco', 'Máquina de escrever', 'Gramofone'],
+                                   'correta': 2,
+                                   'imagem': 'imagens_perguntas/lote8_v09_p03.png'}],
+ 'Criaturas do folclore brasileiro': [{'pergunta': 'Segundo o folclore, quem costuma esconder objetos e '
+                                                   'trançar crinas de cavalos?',
+                                       'alternativas': ['Boitatá', 'Saci', 'Iara'],
+                                       'correta': 1,
+                                       'imagem': 'imagens_perguntas/lote8_v10_p01.png'},
+                                      {'pergunta': 'Segundo a lenda, quem atrai pessoas para os rios com seu '
+                                                   'canto?',
+                                       'alternativas': ['Cuca', 'Curupira', 'Iara'],
+                                       'correta': 2,
+                                       'imagem': 'imagens_perguntas/lote8_v10_p02.png'},
+                                      {'pergunta': 'Qual personagem é conhecido por confundir caçadores para '
+                                                   'proteger a floresta?',
+                                       'alternativas': ['Curupira', 'Saci', 'Cuca'],
+                                       'correta': 0,
+                                       'imagem': 'imagens_perguntas/lote8_v10_p03.png'}],
+ 'O mistério do déjà-vu': [{'pergunta': 'O déjà-vu é estudado principalmente em relação a quais processos?',
+                            'alternativas': ['Digestão e circulação',
+                                             'Crescimento de ossos',
+                                             'Memória e familiaridade'],
+                            'correta': 2,
+                            'imagem': 'imagens_perguntas/lote8_v11_p01.png'},
+                           {'pergunta': 'A expressão déjà-vu descreve qual sensação?',
+                            'alternativas': ['Já ter vivido uma situação nova',
+                                             'Ouvir um som muito alto',
+                                             'Esquecer o próprio nome'],
+                            'correta': 0,
+                            'imagem': 'imagens_perguntas/lote8_v11_p02.png'},
+                           {'pergunta': 'O déjà-vu prova que uma pessoa previu o futuro?',
+                            'alternativas': ['Sim, em todos os casos',
+                                             'Não, a sensação não prova previsão',
+                                             'Sim, se ocorrer à noite'],
+                            'correta': 1,
+                            'imagem': 'imagens_perguntas/lote8_v11_p03.png'}],
+ 'As fugas dos polvos': [{'pergunta': 'Por que um polvo consegue passar por muitas aberturas estreitas?',
+                          'alternativas': ['Seu corpo é mole e não tem esqueleto rígido',
+                                           'Ele dissolve as paredes',
+                                           'Ele perde todos os braços'],
+                          'correta': 0,
+                          'imagem': 'imagens_perguntas/lote8_v12_p01.png'},
+                         {'pergunta': 'Qual parte rígida do polvo pode limitar o tamanho da abertura por '
+                                      'onde ele passa?',
+                          'alternativas': ['A cauda', 'O bico', 'A concha externa'],
+                          'correta': 1,
+                          'imagem': 'imagens_perguntas/lote8_v12_p02.png'},
+                         {'pergunta': 'Quantos braços um polvo normalmente possui?',
+                          'alternativas': ['Seis', 'Dez', 'Oito'],
+                          'correta': 2,
+                          'imagem': 'imagens_perguntas/lote8_v12_p03.png'}],
+ 'As cores do pôr do sol': [{'pergunta': 'Qual fenômeno ajuda a explicar a mudança de cores do céu?',
+                             'alternativas': ['Magnetização da areia',
+                                              'Espalhamento da luz',
+                                              'Congelamento do ar'],
+                             'correta': 1,
+                             'imagem': 'imagens_perguntas/lote8_v13_p01.png'},
+                            {'pergunta': 'Por que tons vermelhos ficam mais evidentes em muitos pores do '
+                                         'sol?',
+                             'alternativas': ['A luz percorre mais atmosfera',
+                                              'O Sol esfria de repente',
+                                              'O oceano pinta as nuvens'],
+                             'correta': 0,
+                             'imagem': 'imagens_perguntas/lote8_v13_p02.png'},
+                            {'pergunta': 'A presença de partículas e nuvens pode alterar as cores do pôr do '
+                                         'sol?',
+                             'alternativas': ['Nunca', 'Só no inverno', 'Sim, pode mudar a aparência'],
+                             'correta': 2,
+                             'imagem': 'imagens_perguntas/lote8_v13_p03.png'}],
+ 'Como as formigas se orientam': [{'pergunta': 'Uma trilha química de formigas funciona como qual tipo de '
+                                               'sinal?',
+                                   'alternativas': ['Uma gravação sonora',
+                                                    'Uma placa escrita',
+                                                    'Um sinal químico no ambiente'],
+                                   'correta': 2,
+                                   'imagem': 'imagens_perguntas/lote8_v14_p01.png'},
+                                  {'pergunta': 'Além de sinais químicos, algumas formigas também usam o quê '
+                                               'para se orientar?',
+                                   'alternativas': ['Ondas de rádio artificiais',
+                                                    'Referências visuais',
+                                                    'Luzes elétricas obrigatórias'],
+                                   'correta': 1,
+                                   'imagem': 'imagens_perguntas/lote8_v14_p02.png'},
+                                  {'pergunta': 'Muitas formigas deixam trilhas químicas formadas por quê?',
+                                   'alternativas': ['Feromônios', 'Clorofila', 'Sal de cozinha'],
+                                   'correta': 0,
+                                   'imagem': 'imagens_perguntas/lote8_v14_p03.png'}],
+ 'Nossa voz nas gravações': [{'pergunta': 'Uma gravação comum capta principalmente o som transmitido por '
+                                          'onde?',
+                              'alternativas': ['Pelos ossos do ouvinte', 'Pelo ar', 'Pelos dentes'],
+                              'correta': 1,
+                              'imagem': 'imagens_perguntas/lote8_v15_p01.png'},
+                             {'pergunta': 'Por que uma gravação pode soar estranha para quem falou?',
+                              'alternativas': ['Ela muda o idioma',
+                                               'Toda gravação altera o nome',
+                                               'O som ouvido difere daquele percebido ao falar'],
+                              'correta': 2,
+                              'imagem': 'imagens_perguntas/lote8_v15_p02.png'},
+                             {'pergunta': 'Ao falar, ouvimos nossa voz também por qual caminho?',
+                              'alternativas': ['Vibrações pelos ossos',
+                                               'Luz refletida',
+                                               'Corrente elétrica externa'],
+                              'correta': 0,
+                              'imagem': 'imagens_perguntas/lote8_v15_p03.png'}],
+ 'Como funciona a impressão 3D': [{'pergunta': 'Na impressão 3D por filamento, qual material é '
+                                               'frequentemente utilizado?',
+                                   'alternativas': ['Areia molhada', 'Papel alumínio', 'Termoplástico'],
+                                   'correta': 2,
+                                   'imagem': 'imagens_perguntas/lote8_v16_p01.png'},
+                                  {'pergunta': 'Qual arquivo orienta a forma de uma peça antes da preparação '
+                                               'da impressão?',
+                                   'alternativas': ['Som gravado',
+                                                    'Modelo digital tridimensional',
+                                                    'Lista de contatos'],
+                                   'correta': 1,
+                                   'imagem': 'imagens_perguntas/lote8_v16_p02.png'},
+                                  {'pergunta': 'Como muitas impressoras 3D constroem um objeto?',
+                                   'alternativas': ['Adicionando material em camadas',
+                                                    'Pintando uma fotografia',
+                                                    'Apenas cortando papel'],
+                                   'correta': 0,
+                                   'imagem': 'imagens_perguntas/lote8_v16_p03.png'}],
+ 'O enjoo em viagens': [{'pergunta': 'O enjoo de movimento pode ocorrer quando há conflito entre quais '
+                                     'informações?',
+                         'alternativas': ['Visão e sistema de equilíbrio',
+                                          'Olfato e paladar',
+                                          'Temperatura e cor da roupa'],
+                         'correta': 0,
+                         'imagem': 'imagens_perguntas/lote8_v17_p01.png'},
+                        {'pergunta': 'Qual estrutura do corpo participa da percepção de movimentos e '
+                                     'equilíbrio?',
+                         'alternativas': ['Unhas', 'Sistema vestibular', 'Cabelos'],
+                         'correta': 1,
+                         'imagem': 'imagens_perguntas/lote8_v17_p02.png'},
+                        {'pergunta': 'Qual situação pode favorecer enjoo em pessoas sensíveis?',
+                         'alternativas': ['Ouvir música baixa',
+                                          'Usar roupa azul',
+                                          'Ler dentro de um carro em movimento'],
+                         'correta': 2,
+                         'imagem': 'imagens_perguntas/lote8_v17_p03.png'}],
+ 'Investigando o interior da Terra': [{'pergunta': 'Qual camada fica entre a crosta e o núcleo terrestre?',
+                                       'alternativas': ['Atmosfera', 'Ionosfera', 'Manto'],
+                                       'correta': 2,
+                                       'imagem': 'imagens_perguntas/lote8_v18_p01.png'},
+                                      {'pergunta': 'Qual evidência ajuda a estudar camadas profundas da '
+                                                   'Terra?',
+                                       'alternativas': ['Ondas sísmicas', 'Cor das flores', 'Marés de tinta'],
+                                       'correta': 0,
+                                       'imagem': 'imagens_perguntas/lote8_v18_p02.png'},
+                                      {'pergunta': 'A mudança de velocidade de ondas sísmicas pode indicar o '
+                                                   'quê?',
+                                       'alternativas': ['O nome dos continentes',
+                                                        'Mudanças nos materiais atravessados',
+                                                        'O horário de Brasília'],
+                                       'correta': 1,
+                                       'imagem': 'imagens_perguntas/lote8_v18_p03.png'}],
+ 'Por que o pão cresce': [{'pergunta': 'O fermento biológico contém principalmente quais seres vivos?',
+                           'alternativas': ['Leveduras', 'Vírus', 'Musgos'],
+                           'correta': 0,
+                           'imagem': 'imagens_perguntas/lote8_v19_p01.png'},
+                          {'pergunta': 'Na fermentação do pão, as leveduras utilizam principalmente o quê?',
+                           'alternativas': ['Areia', 'Metal', 'Açúcares'],
+                           'correta': 2,
+                           'imagem': 'imagens_perguntas/lote8_v19_p02.png'},
+                          {'pergunta': 'Qual gás ajuda a expandir a massa durante a fermentação?',
+                           'alternativas': ['Hélio', 'Dióxido de carbono', 'Neônio'],
+                           'correta': 1,
+                           'imagem': 'imagens_perguntas/lote8_v19_p03.png'}],
+ 'A orientação das aves migratórias': [{'pergunta': 'Além do campo magnético, algumas aves usam quais '
+                                                    'referências?',
+                                        'alternativas': ['Placas de trânsito',
+                                                         'Sol e estrelas',
+                                                         'Faróis de carros obrigatoriamente'],
+                                        'correta': 1,
+                                        'imagem': 'imagens_perguntas/lote8_v20_p01.png'},
+                                       {'pergunta': 'Todas as espécies de aves migram da mesma maneira?',
+                                        'alternativas': ['Sim, no mesmo dia',
+                                                         'Sim, pela mesma rota',
+                                                         'Não, estratégias e rotas variam'],
+                                        'correta': 2,
+                                        'imagem': 'imagens_perguntas/lote8_v20_p02.png'},
+                                       {'pergunta': 'Algumas aves conseguem perceber qual característica do '
+                                                    'planeta?',
+                                        'alternativas': ['Campo magnético terrestre',
+                                                         'Rede de telefonia',
+                                                         'Código postal'],
+                                        'correta': 0,
+                                        'imagem': 'imagens_perguntas/lote8_v20_p03.png'}],
+ 'Como reconhecer golpes digitais': [{'pergunta': 'Um perfil usa a foto de alguém conhecido para pedir '
+                                                  'dinheiro. A foto confirma a identidade?',
+                                      'alternativas': ['Não, confirme por outro canal',
+                                                       'Sempre',
+                                                       'Se estiver nítida'],
+                                      'correta': 0},
+                                     {'pergunta': 'Qual sinal merece desconfiança em uma mensagem?',
+                                      'alternativas': ['Saudação educada',
+                                                       'Pressão para agir e revelar dados',
+                                                       'Uso de parágrafos'],
+                                      'correta': 1},
+                                     {'pergunta': 'Uma mensagem pede pagamento urgente por um link '
+                                                  'desconhecido. O que fazer primeiro?',
+                                      'alternativas': ['Repassar para todos',
+                                                       'Pagar para evitar problemas',
+                                                       'Verificar por um canal oficial independente'],
+                                      'correta': 2}],
+ 'Senhas, passkeys e autenticação': [{'pergunta': 'Uma passkey geralmente utiliza qual tecnologia?',
+                                      'alternativas': ['Um par de chaves criptográficas',
+                                                       'Uma pergunta pública',
+                                                       'Uma senha igual para todos'],
+                                      'correta': 0},
+                                     {'pergunta': 'Qual prática ajuda a proteger contas diferentes?',
+                                      'alternativas': ['Usar senhas únicas',
+                                                       'Compartilhar a senha',
+                                                       'Repetir a mesma senha'],
+                                      'correta': 0},
+                                     {'pergunta': 'Para que serve a autenticação em dois fatores?',
+                                      'alternativas': ['Adicionar uma etapa de verificação',
+                                                       'Eliminar a necessidade de segurança',
+                                                       'Tornar toda conta pública'],
+                                      'correta': 0}],
+ 'Os dados que deixamos na internet': [{'pergunta': 'O que é uma pegada digital?',
+                                        'alternativas': ['Um tipo de carregador',
+                                                         'O conjunto de rastros deixados no uso digital',
+                                                         'Uma marca física na tela'],
+                                        'correta': 1},
+                                       {'pergunta': 'Uma publicação apagada pode continuar acessível em '
+                                                    'capturas feitas por outras pessoas?',
+                                        'alternativas': ['Sim, cópias podem permanecer',
+                                                         'Só se houver impressão',
+                                                         'Nunca'],
+                                        'correta': 0},
+                                       {'pergunta': 'Antes de autorizar um aplicativo, o que vale conferir?',
+                                        'alternativas': ['Só a cor do ícone',
+                                                         'As permissões e sua necessidade',
+                                                         'A posição na tela'],
+                                        'correta': 1}],
+ 'Quando a inteligência artificial erra': [{'pergunta': 'Como se costuma chamar uma resposta inventada '
+                                                        'apresentada como verdadeira por uma IA?',
+                                            'alternativas': ['Criptografia', 'Alucinação', 'Compactação'],
+                                            'correta': 1},
+                                           {'pergunta': 'Uma IA apresenta uma informação com muita '
+                                                        'confiança. Isso garante que esteja correta?',
+                                            'alternativas': ['Só se o texto for longo',
+                                                             'Não, é preciso verificar',
+                                                             'Sim, sempre'],
+                                            'correta': 1},
+                                           {'pergunta': 'Qual atitude ajuda a conferir uma referência '
+                                                        'fornecida por uma IA?',
+                                            'alternativas': ['Abrir a fonte e verificar o conteúdo',
+                                                             'Contar as palavras',
+                                                             'Confiar só no título'],
+                                            'correta': 0}],
+ 'Por que vídeos curtos prendem a atenção': [{'pergunta': 'O que pode estimular a continuidade da rolagem de '
+                                                          'vídeos?',
+                                              'alternativas': ['Novidade e recompensas variáveis',
+                                                               'Tela desligada',
+                                                               'Ausência total de conteúdo'],
+                                              'correta': 0},
+                                             {'pergunta': 'Um vídeo aparecer muitas vezes no seu feed prova '
+                                                          'que ele é verdadeiro?',
+                                              'alternativas': ['Sim, se tiver música',
+                                                               'Sim, pela repetição',
+                                                               'Não, frequência não comprova veracidade'],
+                                              'correta': 2},
+                                             {'pergunta': 'Qual recurso pode ajudar a controlar o tempo de '
+                                                          'uso?',
+                                              'alternativas': ['Desativar todos os relógios',
+                                                               'Definir limites e pausas',
+                                                               'Abrir mais aplicativos'],
+                                              'correta': 1}],
+ 'Gráficos que podem enganar': [{'pergunta': 'Por que conferir o período de um gráfico?',
+                                 'alternativas': ['Porque o intervalo altera a interpretação',
+                                                  'Para escolher a cor',
+                                                  'Para dispensar os números'],
+                                 'correta': 0},
+                                {'pergunta': 'Um gráfico sem fonte deve ser avaliado como?',
+                                 'alternativas': ['Informação que exige verificação',
+                                                  'Uma prova definitiva',
+                                                  'Verdadeiro se for bonito'],
+                                 'correta': 0},
+                                {'pergunta': 'Em um gráfico de barras, o que pode exagerar diferenças '
+                                             'pequenas?',
+                                 'alternativas': ['Um eixo vertical cortado',
+                                                  'Uma legenda clara',
+                                                  'Uma fonte identificada'],
+                                 'correta': 0}],
+ 'O destino do lixo eletrônico': [{'pergunta': 'Por que eletrônicos não devem ser descartados de qualquer '
+                                               'maneira?',
+                                   'alternativas': ['Podem conter substâncias prejudiciais e materiais '
+                                                    'recuperáveis',
+                                                    'Porque desaparecem sozinhos',
+                                                    'Porque viram adubo rapidamente'],
+                                   'correta': 0},
+                                  {'pergunta': 'Qual destino é adequado para um celular sem uso que não pode '
+                                               'ser reaproveitado?',
+                                   'alternativas': ['Uma fogueira',
+                                                    'Um ponto de coleta de eletrônicos',
+                                                    'O rio mais próximo'],
+                                   'correta': 1},
+                                  {'pergunta': 'Antes de entregar um aparelho para descarte, qual cuidado '
+                                               'ajuda a proteger a privacidade?',
+                                   'alternativas': ['Deixar contas abertas',
+                                                    'Remover dados e desvincular contas',
+                                                    'Colar uma etiqueta bonita'],
+                                   'correta': 1}],
+ 'Economia circular na prática': [{'pergunta': 'Qual exemplo representa reutilização?',
+                                   'alternativas': ['Queimar uma garrafa',
+                                                    'Misturar resíduos no rio',
+                                                    'Usar um pote novamente'],
+                                   'correta': 2},
+                                  {'pergunta': 'A economia circular busca reduzir qual prática?',
+                                   'alternativas': ['Descarte contínuo após pouco uso',
+                                                    'Recuperação de materiais',
+                                                    'Manutenção de objetos'],
+                                   'correta': 0},
+                                  {'pergunta': 'Qual atitude pode prolongar a vida útil de um produto?',
+                                   'alternativas': ['Comprar outro sem avaliar',
+                                                    'Consertar quando viável',
+                                                    'Descartar ao primeiro risco'],
+                                   'correta': 1}],
+ 'Por que existem fusos horários': [{'pergunta': 'Os limites reais dos fusos seguem apenas linhas retas de '
+                                                 'longitude?',
+                                     'alternativas': ['Sim, sem exceção',
+                                                      'Só nos oceanos',
+                                                      'Não, também consideram decisões políticas'],
+                                     'correta': 2},
+                                    {'pergunta': 'A divisão teórica de 24 fusos corresponde a '
+                                                 'aproximadamente quantos graus por fuso?',
+                                     'alternativas': ['5 graus', '90 graus', '15 graus'],
+                                     'correta': 2},
+                                    {'pergunta': 'Qual movimento da Terra está ligado à alternância entre '
+                                                 'dia e noite?',
+                                     'alternativas': ['Translação da Lua', 'Rotação', 'Deriva continental'],
+                                     'correta': 1}],
+ 'Conservação de alimentos antes da geladeira': [{'pergunta': 'Como a secagem ajuda a conservar alimentos?',
+                                                  'alternativas': ['Acrescenta microrganismos',
+                                                                   'Transforma tudo em sal',
+                                                                   'Reduz a água disponível'],
+                                                  'correta': 2},
+                                                 {'pergunta': 'Qual prática tradicional envolve ação '
+                                                              'controlada de microrganismos?',
+                                                  'alternativas': ['Congelamento instantâneo',
+                                                                   'Embalagem a vácuo',
+                                                                   'Fermentação'],
+                                                  'correta': 2},
+                                                 {'pergunta': 'Por que a salga pode ajudar na conservação?',
+                                                  'alternativas': ['Porque elimina toda reação química',
+                                                                   'Porque reduz a disponibilidade de água',
+                                                                   'Porque cria refrigeração elétrica'],
+                                                  'correta': 1}]}
+
+LEGENDAS = {'Aves brasileiras': 'CAPA_SEGUNDOS=2\n'
+                     '\n'
+                     'Você reconhece nossas aves? Descubra curiosidades sobre ninhos, cantos e parentescos '
+                     'entre espécies brasileiras.\n'
+                     '\n'
+                     '#AvesBrasileiras #JoaoDeBarro #Araras #Sabia',
+ 'Frutas exóticas pelo mundo': 'CAPA_SEGUNDOS=2\n'
+                               '\n'
+                               'Pitaya, rambutã e carambola: três perguntas para conhecer frutas com '
+                               'aparências surpreendentes.\n'
+                               '\n'
+                               '#FrutasExoticas #Pitaya #Rambuta #Carambola',
+ 'Animais que vivem debaixo da terra': 'CAPA_SEGUNDOS=2\n'
                                        '\n'
-                                       'Dinossauros: fatos além dos filmes! Teste seus conhecimentos em três '
-                                       'perguntas e conte quantas acertou!\n'
+                                       'Existe muita vida escondida sob nossos pés. Teste o que você sabe '
+                                       'sobre animais que escavam e vivem no solo.\n'
                                        '\n'
-                                       '#Dinossauros #Paleontologia #Cretaceo #Sauropodes',
- 'Animais que vivem nos polos': 'CAPA_SEGUNDOS=2\n'
-                                '\n'
-                                'Animais que vivem nos polos! Teste seus conhecimentos em três perguntas e '
-                                'conte quantas acertou!\n'
-                                '\n'
-                                '#AnimaisPolares #Artico #Antartida #FaunaPolar',
- 'Primatas e suas habilidades': 'CAPA_SEGUNDOS=2\n'
-                                '\n'
-                                'Primatas e suas habilidades! Teste seus conhecimentos em três perguntas e '
-                                'conte quantas acertou!\n'
-                                '\n'
-                                '#Primatas #Orangotangos #Chimpanzes #MicoLeaoDourado',
- 'Tubarões e seus parentes': 'CAPA_SEGUNDOS=2\n'
-                             '\n'
-                             'Tubarões e seus parentes! Teste seus conhecimentos em três perguntas e conte '
-                             'quantas acertou!\n'
-                             '\n'
-                             '#Tubaroes #Arraias #PeixesCartilaginosos #VidaMarinha',
- 'Moluscos e crustáceos': 'CAPA_SEGUNDOS=2\n'
+                                       '#FaunaSubterranea #Toupeiras #Minhocas #Tatus',
+ 'Habilidades dos insetos': 'CAPA_SEGUNDOS=2\n'
+                            '\n'
+                            'Metamorfose, seda e luz própria: os insetos têm habilidades que parecem '
+                            'invenção. Quantas você conhece?\n'
+                            '\n'
+                            '#Insetos #Metamorfose #Vagalumes #Entomologia',
+ 'Árvores brasileiras e seus frutos': 'CAPA_SEGUNDOS=2\n'
+                                      '\n'
+                                      'Do pinhão à jabuticaba, as árvores brasileiras guardam histórias em '
+                                      'seus frutos. Acerte as três perguntas!\n'
+                                      '\n'
+                                      '#ArvoresBrasileiras #Araucaria #Castanheira #Jabuticabeira',
+ 'Esportes e seus equipamentos': 'CAPA_SEGUNDOS=2\n'
+                                 '\n'
+                                 'Você sabe em qual esporte cada equipamento é usado? Entre no desafio e '
+                                 'confira suas respostas.\n'
+                                 '\n'
+                                 '#Esportes #Hoquei #Esgrima #Golfe',
+ 'Transportes de diferentes épocas': 'CAPA_SEGUNDOS=2\n'
+                                     '\n'
+                                     'Dos ventos aos trilhos: reconheça transportes que marcaram diferentes '
+                                     'momentos da história.\n'
+                                     '\n'
+                                     '#Transportes #Locomotivas #Dirigiveis #Caravelas',
+ 'Instrumentos musicais brasileiros': 'CAPA_SEGUNDOS=2\n'
+                                      '\n'
+                                      'Cordas, fole e percussão: descubra curiosidades sobre instrumentos '
+                                      'presentes na música brasileira.\n'
+                                      '\n'
+                                      '#MusicaBrasileira #Berimbau #Sanfona #Cavaquinho',
+ 'Objetos antigos do cotidiano': 'CAPA_SEGUNDOS=2\n'
+                                 '\n'
+                                 'Antes das telas digitais, estes objetos faziam parte do cotidiano. Você '
+                                 'sabe para que serviam?\n'
+                                 '\n'
+                                 '#ObjetosAntigos #Gramofone #FotografiaAnalogica #HistoriaDoCotidiano',
+ 'Criaturas do folclore brasileiro': 'CAPA_SEGUNDOS=2\n'
+                                     '\n'
+                                     'Curupira, Saci e Iara: reconheça personagens de tradições que '
+                                     'atravessam gerações no Brasil.\n'
+                                     '\n'
+                                     '#FolcloreBrasileiro #Curupira #Saci #Iara',
+ 'O mistério do déjà-vu': 'CAPA_SEGUNDOS=2\n'
                           '\n'
-                          'Moluscos e crustáceos! Teste seus conhecimentos em três perguntas e conte quantas '
-                          'acertou!\n'
+                          'Já teve a impressão de viver uma cena pela segunda vez? Explore o déjà-vu e o que '
+                          'essa sensação significa.\n'
                           '\n'
-                          '#Moluscos #Crustaceos #Polvos #Ostras',
- 'Frutas e sementes da Amazônia': 'CAPA_SEGUNDOS=2\n'
-                                  '\n'
-                                  'Frutas e sementes da Amazônia! Teste seus conhecimentos em três perguntas '
-                                  'e conte quantas acertou!\n'
-                                  '\n'
-                                  '#Amazonia #Acai #Cupuacu #CastanhaDoBrasil',
- 'Rochas e minerais do cotidiano': 'CAPA_SEGUNDOS=2\n'
-                                   '\n'
-                                   'Rochas e minerais do cotidiano! Teste seus conhecimentos em três '
-                                   'perguntas e conte quantas acertou!\n'
-                                   '\n'
-                                   '#Minerais #Rochas #Geologia #Quartzo',
- 'Invenções que transformaram a medicina': 'CAPA_SEGUNDOS=2\n'
-                                           '\n'
-                                           'Invenções que transformaram a medicina! Teste seus conhecimentos '
-                                           'em três perguntas e conte quantas acertou!\n'
-                                           '\n'
-                                           '#HistoriaDaMedicina #InstrumentosMedicos #TecnologiaMedica '
-                                           '#Diagnostico',
- 'Máquinas que trabalham no campo': 'CAPA_SEGUNDOS=2\n'
+                          '#DejaVu #Memoria #Familiaridade #Neurociencia',
+ 'As fugas dos polvos': 'CAPA_SEGUNDOS=2\n'
+                        '\n'
+                        'Um corpo flexível e muitas surpresas: conheça adaptações que tornam os polvos tão '
+                        'fascinantes.\n'
+                        '\n'
+                        '#Polvos #VidaMarinha #Cefalopodes #Zoologia',
+ 'As cores do pôr do sol': 'CAPA_SEGUNDOS=2\n'
+                           '\n'
+                           'O pôr do sol muda a paisagem e desperta perguntas. Descubra a ciência por trás '
+                           'das cores do céu.\n'
+                           '\n'
+                           '#PorDoSol #Luz #Atmosfera #Optica',
+ 'Como as formigas se orientam': 'CAPA_SEGUNDOS=2\n'
+                                 '\n'
+                                 'Como um animal tão pequeno encontra o caminho? Conheça sinais usados pelas '
+                                 'formigas para se orientar.\n'
+                                 '\n'
+                                 '#Formigas #Feromonios #OrientacaoAnimal #Entomologia',
+ 'Nossa voz nas gravações': 'CAPA_SEGUNDOS=2\n'
+                            '\n'
+                            'Sua voz parece diferente quando você ouve uma gravação? Teste o que sabe sobre '
+                            'som e audição.\n'
+                            '\n'
+                            '#Voz #Acustica #Gravacao #Audicao',
+ 'Como funciona a impressão 3D': 'CAPA_SEGUNDOS=2\n'
+                                 '\n'
+                                 'Como uma ideia digital vira um objeto? Três perguntas para entender melhor '
+                                 'a impressão 3D.\n'
+                                 '\n'
+                                 '#Impressao3D #FabricacaoAditiva #Tecnologia #Modelagem3D',
+ 'O enjoo em viagens': 'CAPA_SEGUNDOS=2\n'
+                       '\n'
+                       'O corpo combina diferentes sinais para perceber movimento. Descubra como isso se '
+                       'relaciona ao enjoo em viagens.\n'
+                       '\n'
+                       '#EnjooDeMovimento #Equilibrio #Viagens #CorpoHumano',
+ 'Investigando o interior da Terra': 'CAPA_SEGUNDOS=2\n'
+                                     '\n'
+                                     'Como estudar lugares aos quais nunca chegamos? Explore pistas que '
+                                     'revelam o interior da Terra.\n'
+                                     '\n'
+                                     '#Geofisica #Terra #OndasSismicas #Geologia',
+ 'Por que o pão cresce': 'CAPA_SEGUNDOS=2\n'
+                         '\n'
+                         'Uma massa simples esconde muita ciência. Descubra o papel da fermentação no '
+                         'crescimento do pão.\n'
+                         '\n'
+                         '#Fermentacao #Pao #Leveduras #CienciaNaCozinha',
+ 'A orientação das aves migratórias': 'CAPA_SEGUNDOS=2\n'
+                                      '\n'
+                                      'Viagens de milhares de quilômetros exigem orientação. Conheça pistas '
+                                      'usadas por aves migratórias.\n'
+                                      '\n'
+                                      '#AvesMigratorias #Migracao #OrientacaoAnimal #Natureza',
+ 'Como reconhecer golpes digitais': 'CAPA_SEGUNDOS=2\n'
                                     '\n'
-                                    'Máquinas que trabalham no campo! Teste seus conhecimentos em três '
-                                    'perguntas e conte quantas acertou!\n'
+                                    'Uma mensagem convincente pode esconder um golpe. Treine sua atenção '
+                                    'antes de clicar, pagar ou informar dados.\n'
                                     '\n'
-                                    '#MaquinasAgricolas #Tratores #Colheita #Semeadura',
- 'Objetos que revolucionaram a música': 'CAPA_SEGUNDOS=2\n'
-                                        '\n'
-                                        'Objetos que revolucionaram a música! Teste seus conhecimentos em '
-                                        'três perguntas e conte quantas acertou!\n'
-                                        '\n'
-                                        '#TecnologiaMusical #Sintetizadores #Gravacao #Musica',
- 'Inteligência artificial: o que ela consegue fazer?': 'CAPA_SEGUNDOS=2\n'
-                                                       '\n'
-                                                       'Inteligência artificial: o que ela consegue fazer?! '
-                                                       'Teste seus conhecimentos em três perguntas e conte '
-                                                       'quantas acertou!\n'
-                                                       '\n'
-                                                       '#InteligenciaArtificial #IAGenerativa #Dados '
-                                                       '#Tecnologia',
- 'Deepfakes: quando vídeos e vozes enganam': 'CAPA_SEGUNDOS=2\n'
-                                             '\n'
-                                             'Deepfakes: quando vídeos e vozes enganam! Teste seus '
-                                             'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                             '\n'
-                                             '#Deepfakes #MidiasSinteticas #VerificacaoDeInformacoes '
-                                             '#SegurancaDigital',
- 'Artemis e a nova exploração da Lua': 'CAPA_SEGUNDOS=2\n'
-                                       '\n'
-                                       'Artemis e a nova exploração da Lua! Teste seus conhecimentos em três '
-                                       'perguntas e conte quantas acertou!\n'
-                                       '\n'
-                                       '#Artemis #Lua #NASA #ExploracaoEspacial',
- 'Lixo espacial: o problema acima da Terra': 'CAPA_SEGUNDOS=2\n'
-                                             '\n'
-                                             'Lixo espacial: o problema acima da Terra! Teste seus '
-                                             'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                             '\n'
-                                             '#LixoEspacial #Satelites #Orbitas #Espaco',
- 'Microplásticos: como chegam ao ambiente?': 'CAPA_SEGUNDOS=2\n'
-                                             '\n'
-                                             'Microplásticos: como chegam ao ambiente?! Teste seus '
-                                             'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                             '\n'
-                                             '#Microplasticos #PoluicaoPlastica #MeioAmbiente #Oceanos',
- 'Cidades mais quentes: as ilhas de calor': 'CAPA_SEGUNDOS=2\n'
+                                    '#GolpesDigitais #SegurancaOnline #Fraudes #ProtecaoDeDados',
+ 'Senhas, passkeys e autenticação': 'CAPA_SEGUNDOS=2\n'
+                                    '\n'
+                                    'Senhas únicas, passkeys e verificação adicional: teste seus '
+                                    'conhecimentos sobre proteção de contas.\n'
+                                    '\n'
+                                    '#Senhas #Passkeys #Autenticacao #Ciberseguranca',
+ 'Os dados que deixamos na internet': 'CAPA_SEGUNDOS=2\n'
+                                      '\n'
+                                      'Cada acesso pode deixar rastros. Reflita sobre publicações, '
+                                      'permissões e privacidade na internet.\n'
+                                      '\n'
+                                      '#PegadaDigital #Privacidade #DadosPessoais #Internet',
+ 'Quando a inteligência artificial erra': 'CAPA_SEGUNDOS=2\n'
+                                          '\n'
+                                          'Uma resposta bem escrita também pode estar errada. Saiba por que '
+                                          'conferir fontes continua essencial ao usar IA.\n'
+                                          '\n'
+                                          '#InteligenciaArtificial #AlucinacaoDeIA #ChecagemDeFatos '
+                                          '#FontesConfiaveis',
+ 'Por que vídeos curtos prendem a atenção': 'CAPA_SEGUNDOS=2\n'
                                             '\n'
-                                            'Cidades mais quentes: as ilhas de calor! Teste seus '
-                                            'conhecimentos em três perguntas e conte quantas acertou!\n'
+                                            'Só mais um vídeo? Entenda hábitos de atenção e pratique '
+                                            'escolhas mais conscientes nas redes sociais.\n'
                                             '\n'
-                                            '#IlhasDeCalor #Cidades #ClimaUrbano #Arborizacao',
- 'Energia solar: da luz à eletricidade': 'CAPA_SEGUNDOS=2\n'
-                                         '\n'
-                                         'Energia solar: da luz à eletricidade! Teste seus conhecimentos em '
-                                         'três perguntas e conte quantas acertou!\n'
-                                         '\n'
-                                         '#EnergiaSolar #Fotovoltaica #Eletricidade #EnergiaRenovavel',
- 'Carros elétricos e o futuro dos transportes': 'CAPA_SEGUNDOS=2\n'
+                                            '#VideosCurtos #Atencao #BemEstarDigital #RedesSociais',
+ 'Gráficos que podem enganar': 'CAPA_SEGUNDOS=2\n'
+                               '\n'
+                               'Um gráfico pode informar e também induzir a conclusões erradas. Confira '
+                               'detalhes que merecem atenção.\n'
+                               '\n'
+                               '#Graficos #Estatistica #EducacaoMidiatica #InterpretacaoDeDados',
+ 'O destino do lixo eletrônico': 'CAPA_SEGUNDOS=2\n'
+                                 '\n'
+                                 'Eletrônicos merecem um destino adequado. Teste seus conhecimentos sobre '
+                                 'descarte, materiais e privacidade.\n'
+                                 '\n'
+                                 '#LixoEletronico #Reciclagem #DescarteCorreto #Eletronicos',
+ 'Economia circular na prática': 'CAPA_SEGUNDOS=2\n'
+                                 '\n'
+                                 'Consertar e reutilizar podem ampliar a vida dos objetos. Veja como a '
+                                 'economia circular aparece no cotidiano.\n'
+                                 '\n'
+                                 '#EconomiaCircular #Reutilizacao #Reparo #ConsumoConsciente',
+ 'Por que existem fusos horários': 'CAPA_SEGUNDOS=2\n'
+                                   '\n'
+                                   'Por que o relógio muda de um lugar para outro? Explore a relação entre a '
+                                   'Terra e os fusos horários.\n'
+                                   '\n'
+                                   '#FusosHorarios #RotacaoDaTerra #Geografia #Longitude',
+ 'Conservação de alimentos antes da geladeira': 'CAPA_SEGUNDOS=2\n'
                                                 '\n'
-                                                'Carros elétricos e o futuro dos transportes! Teste seus '
-                                                'conhecimentos em três perguntas e conte quantas acertou!\n'
+                                                'Muito antes da geladeira, pessoas já conservavam alimentos. '
+                                                'Descubra a ciência por trás de práticas tradicionais.\n'
                                                 '\n'
-                                                '#CarrosEletricos #MobilidadeEletrica #Baterias #Transportes',
- 'Corais: por que os oceanos precisam deles?': 'CAPA_SEGUNDOS=2\n'
-                                               '\n'
-                                               'Corais: por que os oceanos precisam deles?! Teste seus '
-                                               'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                               '\n'
-                                               '#Corais #Recifes #BiodiversidadeMarinha #Oceanos',
- 'Robôs na medicina: como ajudam profissionais?': 'CAPA_SEGUNDOS=2\n'
-                                                  '\n'
-                                                  'Robôs na medicina: como ajudam profissionais?! Teste seus '
-                                                  'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                                  '\n'
-                                                  '#RoboticaMedica #CirurgiaRobotica #TecnologiaEmSaude '
-                                                  '#Medicina',
- 'Por que uma notícia falsa parece convincente?': 'CAPA_SEGUNDOS=2\n'
-                                                  '\n'
-                                                  'Por que uma notícia falsa parece convincente?! Teste seus '
-                                                  'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                                  '\n'
-                                                  '#NoticiasFalsas #ChecagemDeFatos #Desinformacao '
-                                                  '#EducacaoMidiatica',
- 'Como os algoritmos escolhem o que aparece no seu feed?': 'CAPA_SEGUNDOS=2\n'
-                                                           '\n'
-                                                           'Como os algoritmos escolhem o que aparece no seu '
-                                                           'feed?! Teste seus conhecimentos em três '
-                                                           'perguntas e conte quantas acertou!\n'
-                                                           '\n'
-                                                           '#Algoritmos #RedesSociais #BolhasDeInformacao '
-                                                           '#Recomendacoes',
- 'Por que esquecer também faz parte da memória?': 'CAPA_SEGUNDOS=2\n'
-                                                  '\n'
-                                                  'Por que esquecer também faz parte da memória?! Teste seus '
-                                                  'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                                  '\n'
-                                                  '#Memoria #Esquecimento #Aprendizagem #Cerebro',
- 'Como distinguir coincidência de causa?': 'CAPA_SEGUNDOS=2\n'
-                                           '\n'
-                                           'Como distinguir coincidência de causa?! Teste seus conhecimentos '
-                                           'em três perguntas e conte quantas acertou!\n'
-                                           '\n'
-                                           '#CausaECoincidencia #Correlacao #PensamentoCritico '
-                                           '#MetodoCientifico',
- 'Probabilidade: por que o acaso nos confunde?': 'CAPA_SEGUNDOS=2\n'
-                                                 '\n'
-                                                 'Probabilidade: por que o acaso nos confunde?! Teste seus '
-                                                 'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                                 '\n'
-                                                 '#Probabilidade #Acaso #Estatistica #Matematica',
- 'O que significa dizer que algo foi comprovado cientificamente?': 'CAPA_SEGUNDOS=2\n'
-                                                                   '\n'
-                                                                   'O que significa dizer que algo foi '
-                                                                   'comprovado cientificamente?! Teste seus '
-                                                                   'conhecimentos em três perguntas e conte '
-                                                                   'quantas acertou!\n'
-                                                                   '\n'
-                                                                   '#EvidenciaCientifica #Ciencia '
-                                                                   '#RevisaoPorPares #Pesquisa',
- 'Por que antibióticos não combatem vírus?': 'CAPA_SEGUNDOS=2\n'
-                                             '\n'
-                                             'Por que antibióticos não combatem vírus?! Teste seus '
-                                             'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                             '\n'
-                                             '#Antibioticos #Bacterias #Virus #ResistenciaBacteriana',
- 'Como as vacinas treinam as defesas do corpo?': 'CAPA_SEGUNDOS=2\n'
-                                                 '\n'
-                                                 'Como as vacinas treinam as defesas do corpo?! Teste seus '
-                                                 'conhecimentos em três perguntas e conte quantas acertou!\n'
-                                                 '\n'
-                                                 '#Vacinas #SistemaImunologico #MemoriaImunologica '
-                                                 '#Imunizacao',
- 'Por que existem anos bissextos?': 'CAPA_SEGUNDOS=2\n'
-                                    '\n'
-                                    'Por que existem anos bissextos?! Teste seus conhecimentos em três '
-                                    'perguntas e conte quantas acertou!\n'
-                                    '\n'
-                                    '#AnoBissexto #CalendarioGregoriano #Astronomia #Tempo',
- 'Como sabemos a idade de um fóssil?': 'CAPA_SEGUNDOS=2\n'
-                                       '\n'
-                                       'Como sabemos a idade de um fóssil?! Teste seus conhecimentos em três '
-                                       'perguntas e conte quantas acertou!\n'
-                                       '\n'
-                                       '#Fosseis #DatacaoRadiometrica #Paleontologia #Geologia'}
+                                                '#ConservacaoDeAlimentos #Secagem #Salga #Fermentacao'}
