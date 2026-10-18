@@ -165,9 +165,9 @@ def desenhar(tema, pergunta, numero, m, contagem=None, resposta=False):
         if not path.is_relative_to(RAIZ / 'imagens_perguntas'):
             raise ValueError('Imagens devem ficar em imagens_perguntas/.')
         with Image.open(path) as original:
-            figura = ImageOps.contain(original.convert('RGB'), (900, 500))
+            figura = ImageOps.contain(original.convert('RGBA'), (900, 500))
         texto_caixa(d, pergunta['pergunta'], (100, 475, 980, 635), 64)
-        img.paste(figura, ((W-figura.width)//2, 650+(500-figura.height)//2))
+        img.paste(figura, ((W-figura.width)//2, 650+(500-figura.height)//2), figura)
     else:
         texto_caixa(d, pergunta['pergunta'], (110, 510, 970, 1050), 74)
     texto_caixa(d, '@juhquiz', (330, 1145, 750, 1173), 30)
@@ -376,4 +376,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
