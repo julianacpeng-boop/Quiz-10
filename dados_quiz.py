@@ -1,340 +1,366 @@
-# Juh Quiz — lote 13: 15 disciplinas, 45 perguntas e imagens realistas transparentes.
+# Juh Quiz — lote 14: 15 temas, 45 perguntas e imagens realistas sem fundo.
 
-QUIZZES = {'Português: interpretação de textos': [{'pergunta': 'Em “A rua virou um rio depois da chuva”, a '
-                                                     'expressão sugere o quê?',
-                                         'alternativas': ['Que houve grande acúmulo de água',
-                                                          'Que a rua mudou oficialmente de nome',
-                                                          'Que um rio nasceu ali de forma permanente'],
-                                         'correta': 0,
-                                         'imagem': 'imagens_perguntas/lote13_v01_p01.png'},
-                                        {'pergunta': 'Se um texto defende uma ideia com argumentos, '
-                                                     'qual é sua finalidade principal?',
-                                         'alternativas': ['Registrar apenas sons sem significado',
-                                                          'Apresentar somente uma lista de compras',
-                                                          'Convencer o leitor de um ponto de vista'],
-                                         'correta': 2,
-                                         'imagem': 'imagens_perguntas/lote13_v01_p02.png'},
-                                        {'pergunta': 'Em uma notícia, o que distingue um fato de uma '
-                                                     'opinião?',
-                                         'alternativas': ['O fato expressa sempre um gosto pessoal',
-                                                          'O fato pode ser verificado',
-                                                          'O fato precisa começar com “eu acho”'],
-                                         'correta': 1,
-                                         'imagem': 'imagens_perguntas/lote13_v01_p03.png'}],
- 'Matemática: porcentagem no cotidiano': [{'pergunta': 'Uma mochila custa R$ 80. Quanto corresponde a '
-                                                       '20% desse valor?',
-                                           'alternativas': ['R$ 20', 'R$ 64', 'R$ 16'],
-                                           'correta': 2,
-                                           'imagem': 'imagens_perguntas/lote13_v02_p01.png'},
-                                          {'pergunta': 'Uma camiseta de R$ 100 recebeu desconto de 25%. '
-                                                       'Qual é o preço final?',
-                                           'alternativas': ['R$ 75', 'R$ 125', 'R$ 25'],
-                                           'correta': 0,
-                                           'imagem': 'imagens_perguntas/lote13_v02_p02.png'},
-                                          {'pergunta': 'Em uma turma de 40 alunos, 10 usam bicicleta '
-                                                       'para ir à escola. Qual é essa porcentagem?',
-                                           'alternativas': ['10%', '40%', '25%'],
-                                           'correta': 2,
-                                           'imagem': 'imagens_perguntas/lote13_v02_p03.png'}],
- 'História: Egito Antigo': [{'pergunta': 'Qual continente abriga o território do Egito Antigo?',
-                             'alternativas': ['África', 'Oceania', 'Europa'],
-                             'correta': 0,
-                             'imagem': 'imagens_perguntas/lote13_v03_p01.png'},
-                            {'pergunta': 'Qual era uma importante função das pirâmides do Egito Antigo?',
-                             'alternativas': ['Servir como monumentos funerários',
-                                              'Transmitir sinais de rádio',
-                                              'Funcionar como estações de trem'],
-                             'correta': 0,
-                             'imagem': 'imagens_perguntas/lote13_v03_p02.png'},
-                            {'pergunta': 'Os hieróglifos egípcios faziam parte de quê?',
-                             'alternativas': ['Uma moeda digital',
-                                              'Um sistema de escrita',
-                                              'Um tipo de motor'],
-                             'correta': 1,
-                             'imagem': 'imagens_perguntas/lote13_v03_p03.png'}],
- 'Geografia: clima e tempo': [{'pergunta': 'Qual situação descreve o tempo atmosférico?',
-                               'alternativas': ['A média de chuvas de várias décadas',
-                                                'O padrão climático de uma região ao longo de muitos '
-                                                'anos',
-                                                'A chuva que ocorre hoje em uma cidade'],
-                               'correta': 2,
-                               'imagem': 'imagens_perguntas/lote13_v04_p01.png'},
-                              {'pergunta': 'Para estudar o clima de uma região, é necessário observar o '
-                                           'quê?',
-                               'alternativas': ['Apenas a cor das casas',
-                                                'Padrões atmosféricos ao longo de muitos anos',
-                                                'Somente uma tarde'],
-                               'correta': 1,
-                               'imagem': 'imagens_perguntas/lote13_v04_p02.png'},
-                              {'pergunta': 'Em geral, como a temperatura do ar varia com o aumento da '
-                                           'altitude na troposfera?',
-                               'alternativas': ['Tende a diminuir',
-                                                'Permanece obrigatoriamente igual',
-                                                'Aumenta sempre sem limite'],
-                               'correta': 0,
-                               'imagem': 'imagens_perguntas/lote13_v04_p03.png'}],
- 'Ciências: cadeia alimentar': [{'pergunta': 'De onde vem grande parte da energia que entra nas cadeias '
-                                             'alimentares terrestres?',
-                                 'alternativas': ['Do Sol', 'Do som dos animais', 'Do plástico'],
-                                 'correta': 0,
-                                 'imagem': 'imagens_perguntas/lote13_v05_p01.png'},
-                                {'pergunta': 'Em uma cadeia alimentar, o que acontece com a energia '
-                                             'disponível entre níveis sucessivos?',
-                                 'alternativas': ['Parte é dissipada e menos energia fica disponível ao '
-                                                  'nível seguinte',
-                                                  'Ela aumenta infinitamente',
-                                                  'Ela é criada do nada pelos predadores'],
-                                 'correta': 0,
-                                 'imagem': 'imagens_perguntas/lote13_v05_p02.png'},
-                                {'pergunta': 'Qual é o papel dos decompositores nos ecossistemas?',
-                                 'alternativas': ['Eliminar a necessidade de produtores',
-                                                  'Decompor matéria orgânica e contribuir para a '
-                                                  'reciclagem de nutrientes',
-                                                  'Produzir objetos de plástico'],
-                                 'correta': 1,
-                                 'imagem': 'imagens_perguntas/lote13_v05_p03.png'}],
- 'Biologia: células e suas funções': [{'pergunta': 'Qual estrutura celular contém a maior parte do DNA '
-                                                   'em uma célula humana típica?',
-                                       'alternativas': ['Ribossomo', 'Membrana plasmática', 'Núcleo'],
-                                       'correta': 2,
-                                       'imagem': 'imagens_perguntas/lote13_v06_p01.png'},
-                                      {'pergunta': 'Que estrutura regula a entrada e a saída de '
-                                                   'substâncias da célula?',
-                                       'alternativas': ['Nucléolo', 'Centríolo', 'Membrana plasmática'],
-                                       'correta': 2,
-                                       'imagem': 'imagens_perguntas/lote13_v06_p02.png'},
-                                      {'pergunta': 'Qual organela realiza a fotossíntese nas células '
-                                                   'vegetais?',
-                                       'alternativas': ['Cloroplasto', 'Lisossomo', 'Centríolo'],
+QUIZZES = {'Mistérios do fundo do mar': [{'pergunta': 'O que acontece com a pressão da água à medida que um '
+                                            'submarino desce?',
+                                'alternativas': ['Ela permanece sempre igual',
+                                                 'Ela desaparece',
+                                                 'Ela aumenta'],
+                                'correta': 2,
+                                'imagem': 'imagens_perguntas/lote14_v01_p01.png'},
+                               {'pergunta': 'Como se chama a produção de luz por uma reação química em '
+                                            'um ser vivo?',
+                                'alternativas': ['Erosão', 'Bioluminescência', 'Evaporação'],
+                                'correta': 1,
+                                'imagem': 'imagens_perguntas/lote14_v01_p02.png'},
+                               {'pergunta': 'Por que a fotossíntese não ocorre nas regiões do oceano '
+                                            'sem luz solar?',
+                                'alternativas': ['Porque não existe água nessas regiões',
+                                                 'Porque a pressão transforma toda água em gelo',
+                                                 'Porque falta a luz necessária ao processo'],
+                                'correta': 2,
+                                'imagem': 'imagens_perguntas/lote14_v01_p03.png'}],
+ 'Invenções que surgiram por acaso': [{'pergunta': 'Qual objeto inspirou o sistema de ganchos e laços '
+                                                   'do velcro?',
+                                       'alternativas': ['Carrapichos presos a tecidos e pelos',
+                                                        'Conchas encontradas na praia',
+                                                        'Gotas de chuva sobre o vidro'],
                                        'correta': 0,
-                                       'imagem': 'imagens_perguntas/lote13_v06_p03.png'}],
- 'Química: misturas e separação': [{'pergunta': 'Qual processo pode separar areia da água usando um '
-                                                'material poroso?',
-                                    'alternativas': ['Magnetização', 'Filtração', 'Fusão'],
+                                       'imagem': 'imagens_perguntas/lote14_v02_p01.png'},
+                                      {'pergunta': 'Que alimento derretido ajudou Percy Spencer a '
+                                                   'perceber o efeito das micro-ondas?',
+                                       'alternativas': ['Sal de cozinha', 'Chocolate', 'Arroz cru'],
+                                       'correta': 1,
+                                       'imagem': 'imagens_perguntas/lote14_v02_p02.png'},
+                                      {'pergunta': 'O adesivo inicialmente considerado fraco acabou '
+                                                   'sendo útil em qual produto?',
+                                       'alternativas': ['Notas adesivas reposicionáveis',
+                                                        'Pregos de aço',
+                                                        'Tijolos de concreto'],
+                                       'correta': 0,
+                                       'imagem': 'imagens_perguntas/lote14_v02_p03.png'}],
+ 'Animais com habilidades surpreendentes': [{'pergunta': 'A ecolocalização ajuda os morcegos a se '
+                                                         'orientar usando o quê?',
+                                             'alternativas': ['O cheiro das estrelas',
+                                                              'Ecos de sons emitidos por eles',
+                                                              'A luz produzida pelas asas'],
+                                             'correta': 1,
+                                             'imagem': 'imagens_perguntas/lote14_v03_p01.png'},
+                                            {'pergunta': 'O que ajuda muitos polvos a se camuflar?',
+                                             'alternativas': ['A produção de uma carapaça de metal',
+                                                              'A transformação em plantas',
+                                                              'A capacidade de mudar a aparência da '
+                                                              'pele'],
+                                             'correta': 2,
+                                             'imagem': 'imagens_perguntas/lote14_v03_p02.png'},
+                                            {'pergunta': 'Qual característica ajuda lagartixas a aderir '
+                                                         'a superfícies?',
+                                             'alternativas': ['Uma cola fabricada pela cauda',
+                                                              'Ventosas grandes nas costas',
+                                                              'Estruturas microscópicas nos dedos'],
+                                             'correta': 2,
+                                             'imagem': 'imagens_perguntas/lote14_v03_p03.png'}],
+ 'A ciência por trás da cozinha': [{'pergunta': 'Por que um grão de milho de pipoca estoura ao ser '
+                                                'aquecido?',
+                                    'alternativas': ['O vapor interno aumenta a pressão até romper a '
+                                                     'casca',
+                                                     'O grão absorve fogo pela casca',
+                                                     'O sal faz o grão se multiplicar'],
+                                    'correta': 0,
+                                    'imagem': 'imagens_perguntas/lote14_v04_p01.png'},
+                                   {'pergunta': 'Qual gás produzido pelo fermento biológico ajuda a '
+                                                'massa do pão a crescer?',
+                                    'alternativas': ['Gás carbônico', 'Hélio', 'Oxigênio puro'],
+                                    'correta': 0,
+                                    'imagem': 'imagens_perguntas/lote14_v04_p02.png'},
+                                   {'pergunta': 'Quando o gelo derrete em um copo, qual mudança ocorre?',
+                                    'alternativas': ['Sublimação', 'Condensação', 'Fusão'],
+                                    'correta': 2,
+                                    'imagem': 'imagens_perguntas/lote14_v04_p03.png'}],
+ 'Civilizações pouco conhecidas': [{'pergunta': 'Os quipus, usados pelos incas, eram feitos '
+                                                'principalmente de quê?',
+                                    'alternativas': ['Cordões com nós',
+                                                     'Folhas de plástico',
+                                                     'Placas de vidro'],
+                                    'correta': 0,
+                                    'imagem': 'imagens_perguntas/lote14_v05_p01.png'},
+                                   {'pergunta': 'Qual povo antigo ficou conhecido por suas redes de '
+                                                'comércio marítimo no Mediterrâneo?',
+                                    'alternativas': ['Incas', 'Fenícios', 'Astecas'],
                                     'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote13_v07_p01.png'},
-                                   {'pergunta': 'Depois de dissolver sal em água, qual processo permite '
-                                                'recuperar o sal pela retirada da água?',
-                                    'alternativas': ['Imantação', 'Evaporação', 'Peneiração'],
-                                    'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote13_v07_p02.png'},
-                                   {'pergunta': 'Uma mistura com apenas uma fase visível é classificada '
-                                                'como quê?',
-                                    'alternativas': ['Heterogênea', 'Homogênea', 'Sempre gasosa'],
-                                    'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote13_v07_p03.png'}],
- 'Física: luz e fenômenos ópticos': [{'pergunta': 'Quando a luz retorna ao encontrar a superfície de um '
-                                                  'espelho, ocorre qual fenômeno?',
-                                      'alternativas': ['Evaporação', 'Combustão', 'Reflexão'],
-                                      'correta': 2,
-                                      'imagem': 'imagens_perguntas/lote13_v08_p01.png'},
-                                     {'pergunta': 'Como se chama a mudança de direção da luz ao passar '
-                                                  'entre meios diferentes, como ar e água?',
-                                      'alternativas': ['Refração', 'Magnetização', 'Fusão'],
-                                      'correta': 0,
-                                      'imagem': 'imagens_perguntas/lote13_v08_p02.png'},
-                                     {'pergunta': 'Por que um objeto opaco pode formar uma sombra?',
-                                      'alternativas': ['Porque deixa toda a luz passar',
-                                                       'Porque bloqueia a passagem de parte da luz',
-                                                       'Porque cria luz do nada'],
-                                      'correta': 1,
-                                      'imagem': 'imagens_perguntas/lote13_v08_p03.png'}],
- 'Inglês: expressões do dia a dia': [{'pergunta': "Em inglês, “I'm hungry” significa o quê?",
-                                      'alternativas': ['Estou com fome',
-                                                       'Estou com frio',
-                                                       'Estou com sono'],
-                                      'correta': 0,
-                                      'imagem': 'imagens_perguntas/lote13_v09_p01.png'},
-                                     {'pergunta': 'Qual expressão em inglês é usada para cumprimentar '
-                                                  'alguém no período da noite, ao chegar?',
-                                      'alternativas': ['Good morning', 'Good evening', 'Good afternoon'],
-                                      'correta': 1,
-                                      'imagem': 'imagens_perguntas/lote13_v09_p02.png'},
-                                     {'pergunta': 'O que significa “Can you help me?”?',
-                                      'alternativas': ['Você mora aqui?',
-                                                       'Você pode me ajudar?',
-                                                       'Você está dormindo?'],
-                                      'correta': 1,
-                                      'imagem': 'imagens_perguntas/lote13_v09_p03.png'}],
- 'Espanhol: falsos cognatos': [{'pergunta': 'Em espanhol, “carpeta” costuma significar o quê?',
-                                'alternativas': ['Tapete', 'Cortina', 'Pasta para documentos'],
-                                'correta': 2,
-                                'imagem': 'imagens_perguntas/lote13_v10_p01.png'},
-                               {'pergunta': 'Em espanhol, “apellido” significa o quê?',
-                                'alternativas': ['Apelido', 'Endereço', 'Sobrenome'],
-                                'correta': 2,
-                                'imagem': 'imagens_perguntas/lote13_v10_p02.png'},
-                               {'pergunta': 'Em espanhol, a palavra “exquisito” pode descrever um '
-                                            'alimento como quê?',
-                                'alternativas': ['Delicioso', 'Estranho', 'Estragado'],
+                                    'imagem': 'imagens_perguntas/lote14_v05_p02.png'},
+                                   {'pergunta': 'A escrita cuneiforme surgiu na região de qual '
+                                                'civilização?',
+                                    'alternativas': ['Inca', 'Asteca', 'Suméria'],
+                                    'correta': 2,
+                                    'imagem': 'imagens_perguntas/lote14_v05_p03.png'}],
+ 'Fenômenos naturais impressionantes': [{'pergunta': 'As auroras estão ligadas à interação da atmosfera '
+                                                     'com o quê?',
+                                         'alternativas': ['Grãos de areia lançados pela Lua',
+                                                          'Partículas carregadas vindas do Sol',
+                                                          'Ondas sonoras dos oceanos'],
+                                         'correta': 1,
+                                         'imagem': 'imagens_perguntas/lote14_v06_p01.png'},
+                                        {'pergunta': 'De onde vem a energia que aquece a água de um '
+                                                     'gêiser?',
+                                         'alternativas': ['Do vento sobre as montanhas',
+                                                          'Do calor do interior da Terra',
+                                                          'Do brilho das estrelas'],
+                                         'correta': 1,
+                                         'imagem': 'imagens_perguntas/lote14_v06_p02.png'},
+                                        {'pergunta': 'O trovão está associado principalmente a qual '
+                                                     'processo?',
+                                         'alternativas': ['À queda de pedras do espaço',
+                                                          'Ao choque de duas nuvens sólidas',
+                                                          'À rápida expansão do ar aquecido pelo raio'],
+                                         'correta': 2,
+                                         'imagem': 'imagens_perguntas/lote14_v06_p03.png'}],
+ 'Objetos antigos e suas funções': [{'pergunta': 'Antes da popularização da geladeira elétrica, como '
+                                                 'uma caixa de gelo conservava alimentos?',
+                                     'alternativas': ['Produzindo chamas dentro do armário',
+                                                      'Secando os alimentos com areia',
+                                                      'Usando blocos de gelo para manter o interior '
+                                                      'frio'],
+                                     'correta': 2,
+                                     'imagem': 'imagens_perguntas/lote14_v07_p01.png'},
+                                    {'pergunta': 'Para que servia o mata-borrão na escrita com tinta?',
+                                     'alternativas': ['Para absorver o excesso de tinta no papel',
+                                                      'Para derreter lacres de metal',
+                                                      'Para apontar lápis de grafite'],
+                                     'correta': 0,
+                                     'imagem': 'imagens_perguntas/lote14_v07_p02.png'},
+                                    {'pergunta': 'Qual era uma função comum do almofariz com pilão?',
+                                     'alternativas': ['Medir a passagem das horas',
+                                                      'Triturar e misturar materiais',
+                                                      'Costurar tecidos grossos'],
+                                     'correta': 1,
+                                     'imagem': 'imagens_perguntas/lote14_v07_p03.png'}],
+ 'Plantas extraordinárias': [{'pergunta': 'Por que plantas carnívoras capturam pequenos animais?',
+                              'alternativas': ['Para substituir toda a luz solar',
+                                               'Para produzir ossos e dentes',
+                                               'Para obter nutrientes, especialmente em solos pobres'],
+                              'correta': 2,
+                              'imagem': 'imagens_perguntas/lote14_v08_p01.png'},
+                             {'pergunta': 'Qual característica ajuda os cactos a enfrentar períodos '
+                                          'secos?',
+                              'alternativas': ['A necessidade de permanecer submersos',
+                                               'A capacidade de armazenar água em seus tecidos',
+                                               'A ausência completa de tecidos vivos'],
+                              'correta': 1,
+                              'imagem': 'imagens_perguntas/lote14_v08_p02.png'},
+                             {'pergunta': 'O movimento de fechamento das folhas da dormideira pode ser '
+                                          'provocado por quê?',
+                              'alternativas': ['Somente pela água salgada',
+                                               'Somente pela presença de neve',
+                                               'Pelo toque ou outro estímulo mecânico'],
+                              'correta': 2,
+                              'imagem': 'imagens_perguntas/lote14_v08_p03.png'}],
+ 'Como o corpo percebe o mundo': [{'pergunta': 'Qual região do ouvido participa diretamente do '
+                                               'equilíbrio?',
+                                   'alternativas': ['O ouvido interno',
+                                                    'A ponta do nariz',
+                                                    'O lóbulo da orelha'],
+                                   'correta': 0,
+                                   'imagem': 'imagens_perguntas/lote14_v09_p01.png'},
+                                  {'pergunta': 'Por que o cheiro influencia a percepção do sabor dos '
+                                               'alimentos?',
+                                   'alternativas': ['Porque olfato e paladar atuam em conjunto',
+                                                    'Porque a língua detecta todas as cores',
+                                                    'Porque o nariz mastiga os alimentos'],
+                                   'correta': 0,
+                                   'imagem': 'imagens_perguntas/lote14_v09_p02.png'},
+                                  {'pergunta': 'Como se chama a percepção da posição das partes do '
+                                               'corpo sem precisar olhar para elas?',
+                                   'alternativas': ['Fotossíntese', 'Evaporação', 'Propriocepção'],
+                                   'correta': 2,
+                                   'imagem': 'imagens_perguntas/lote14_v09_p03.png'}],
+ 'Mistérios do Sistema Solar': [{'pergunta': 'Europa, que pode abrigar um oceano sob o gelo, é uma lua '
+                                             'de qual planeta?',
+                                 'alternativas': ['Júpiter', 'Vênus', 'Marte'],
+                                 'correta': 0,
+                                 'imagem': 'imagens_perguntas/lote14_v10_p01.png'},
+                                {'pergunta': 'Qual característica distingue o núcleo de um cometa de '
+                                             'muitos asteroides rochosos?',
+                                 'alternativas': ['Ser feito apenas de luz',
+                                                  'A presença significativa de gelos e poeira',
+                                                  'Ter motores próprios'],
+                                 'correta': 1,
+                                 'imagem': 'imagens_perguntas/lote14_v10_p02.png'},
+                                {'pergunta': 'Por que vemos fases diferentes da Lua ao longo do mês?',
+                                 'alternativas': ['Porque muda a porção iluminada que vemos da Terra',
+                                                  'Porque as nuvens cortam pedaços da Lua',
+                                                  'Porque a Lua muda de formato físico'],
+                                 'correta': 0,
+                                 'imagem': 'imagens_perguntas/lote14_v10_p03.png'}],
+ 'A origem das palavras': [{'pergunta': 'De qual língua veio a palavra portuguesa “abacaxi”?',
+                            'alternativas': ['Japonês', 'Tupi', 'Alemão'],
+                            'correta': 1,
+                            'imagem': 'imagens_perguntas/lote14_v11_p01.png'},
+                           {'pergunta': 'Na origem grega de “biologia”, o elemento “bio” se refere a '
+                                        'quê?',
+                            'alternativas': ['Pedra', 'Vida', 'Som'],
+                            'correta': 1,
+                            'imagem': 'imagens_perguntas/lote14_v11_p02.png'},
+                           {'pergunta': 'A palavra “fotografia” reúne elementos gregos associados a '
+                                        'quais ideias?',
+                            'alternativas': ['Luz e escrita', 'Terra e calor', 'Água e movimento'],
+                            'correta': 0,
+                            'imagem': 'imagens_perguntas/lote14_v11_p03.png'}],
+ 'Construções que desafiam a engenharia': [{'pergunta': 'Em uma ponte pênsil, os grandes cabos '
+                                                        'trabalham principalmente sob qual esforço?',
+                                            'alternativas': ['Combustão', 'Evaporação', 'Tração'],
+                                            'correta': 2,
+                                            'imagem': 'imagens_perguntas/lote14_v12_p01.png'},
+                                           {'pergunta': 'Por que muitos prédios altos precisam '
+                                                        'considerar a ação do vento no projeto?',
+                                            'alternativas': ['Porque o vento impede qualquer uso de '
+                                                             'concreto',
+                                                             'Porque o vento elimina o peso do prédio',
+                                                             'Porque o vento exerce forças sobre a '
+                                                             'estrutura'],
+                                            'correta': 2,
+                                            'imagem': 'imagens_perguntas/lote14_v12_p02.png'},
+                                           {'pergunta': 'Para que servem juntas de dilatação em uma '
+                                                        'ponte?',
+                                            'alternativas': ['Para permitir movimentos e variações de '
+                                                             'dimensão',
+                                                             'Para aumentar a temperatura do rio',
+                                                             'Para impedir toda passagem de veículos'],
+                                            'correta': 0,
+                                            'imagem': 'imagens_perguntas/lote14_v12_p03.png'}],
+ 'Mitos e verdades sobre reciclagem': [{'pergunta': 'Por que restos de comida podem atrapalhar a '
+                                                    'reciclagem de embalagens?',
+                                        'alternativas': ['Porque podem contaminar materiais e '
+                                                         'dificultar o processo',
+                                                         'Porque transformam plástico em metal',
+                                                         'Porque tornam todos os materiais '
+                                                         'biodegradáveis'],
+                                        'correta': 0,
+                                        'imagem': 'imagens_perguntas/lote14_v13_p01.png'},
+                                       {'pergunta': 'O que é a compostagem?',
+                                        'alternativas': ['A transformação de pilhas em adubo',
+                                                         'A fusão de vidro para fazer papel',
+                                                         'A decomposição controlada de resíduos '
+                                                         'orgânicos'],
+                                        'correta': 2,
+                                        'imagem': 'imagens_perguntas/lote14_v13_p02.png'},
+                                       {'pergunta': 'Em geral, o que deve ser feito com pilhas usadas?',
+                                        'alternativas': ['Abri-las antes de jogar no chão',
+                                                         'Misturá-las aos restos de comida',
+                                                         'Encaminhá-las a pontos de coleta apropriados'],
+                                        'correta': 2,
+                                        'imagem': 'imagens_perguntas/lote14_v13_p03.png'}],
+ 'Como funcionam as tecnologias do dia a dia': [{'pergunta': 'O GPS calcula a localização '
+                                                             'principalmente a partir de sinais '
+                                                             'enviados por quê?',
+                                                 'alternativas': ['Semáforos de todas as ruas',
+                                                                  'Satélites',
+                                                                  'Cabos dentro dos pneus'],
+                                                 'correta': 1,
+                                                 'imagem': 'imagens_perguntas/lote14_v14_p01.png'},
+                                                {'pergunta': 'Muitos controles remotos de televisão '
+                                                             'tradicionais transmitem comandos usando o '
+                                                             'quê?',
+                                                 'alternativas': ['Fios invisíveis de metal',
+                                                                  'Luz infravermelha',
+                                                                  'Ondas do mar'],
+                                                 'correta': 1,
+                                                 'imagem': 'imagens_perguntas/lote14_v14_p02.png'},
+                                                {'pergunta': 'Uma tela sensível ao toque capacitiva '
+                                                             'detecta principalmente alterações em quê?',
+                                                 'alternativas': ['Propriedades elétricas na superfície '
+                                                                  'da tela',
+                                                                  'No peso total do aparelho',
+                                                                  'Na quantidade de tinta do vidro'],
+                                                 'correta': 0,
+                                                 'imagem': 'imagens_perguntas/lote14_v14_p03.png'}],
+ 'Vestígios da pré-história': [{'pergunta': 'Além de ossos, qual destes também pode se preservar como '
+                                            'fóssil?',
+                                'alternativas': ['Uma mensagem de celular',
+                                                 'Uma pegada antiga',
+                                                 'Um saco plástico recém-fabricado'],
+                                'correta': 1,
+                                'imagem': 'imagens_perguntas/lote14_v15_p01.png'},
+                               {'pergunta': 'Por que ferramentas de pedra são importantes para estudar '
+                                            'grupos humanos pré-históricos?',
+                                'alternativas': ['Elas oferecem pistas sobre técnicas e atividades '
+                                                 'desses grupos',
+                                                 'Elas provam que todos viviam da mesma maneira',
+                                                 'Elas registram vídeos do passado'],
                                 'correta': 0,
-                                'imagem': 'imagens_perguntas/lote13_v10_p03.png'}],
- 'Literatura: gêneros literários': [{'pergunta': 'Qual característica é comum ao gênero lírico?',
-                                     'alternativas': ['Instruções de montagem de máquinas',
-                                                      'Expressão de sentimentos e da subjetividade',
-                                                      'Registro obrigatório de dados meteorológicos'],
-                                     'correta': 1,
-                                     'imagem': 'imagens_perguntas/lote13_v11_p01.png'},
-                                    {'pergunta': 'Uma narrativa curta com poucos personagens e conflito '
-                                                 'concentrado costuma ser chamada de quê?',
-                                     'alternativas': ['Dicionário', 'Conto', 'Enciclopédia'],
-                                     'correta': 1,
-                                     'imagem': 'imagens_perguntas/lote13_v11_p02.png'},
-                                    {'pergunta': 'No gênero dramático, o texto costuma ser organizado '
-                                                 'principalmente para quê?',
-                                     'alternativas': ['Descrição de fórmulas químicas',
-                                                      'Representação por atores',
-                                                      'Consulta de números de telefone'],
-                                     'correta': 1,
-                                     'imagem': 'imagens_perguntas/lote13_v11_p03.png'}],
- 'Artes: cores e movimentos artísticos': [{'pergunta': 'Qual conjunto é formado por cores '
-                                                       'tradicionalmente consideradas quentes?',
-                                           'alternativas': ['Preto, cinza e branco',
-                                                            'Azul, verde e violeta',
-                                                            'Vermelho, laranja e amarelo'],
-                                           'correta': 2,
-                                           'imagem': 'imagens_perguntas/lote13_v12_p01.png'},
-                                          {'pergunta': 'Qual movimento artístico é associado ao '
-                                                       'interesse por efeitos de luz e impressões '
-                                                       'visuais do momento?',
-                                           'alternativas': ['Impressionismo', 'Surrealismo', 'Cubismo'],
-                                           'correta': 0,
-                                           'imagem': 'imagens_perguntas/lote13_v12_p02.png'},
-                                          {'pergunta': 'Qual linguagem artística trabalha tipicamente '
-                                                       'com volumes em três dimensões?',
-                                           'alternativas': ['Música', 'Poesia', 'Escultura'],
-                                           'correta': 2,
-                                           'imagem': 'imagens_perguntas/lote13_v12_p03.png'}],
- 'Educação Física: regras dos esportes': [{'pergunta': 'Quantos jogadores de uma equipe ficam em quadra '
-                                                       'no voleibol de quadra durante o jogo?',
-                                           'alternativas': ['Seis', 'Onze', 'Cinco'],
-                                           'correta': 0,
-                                           'imagem': 'imagens_perguntas/lote13_v13_p01.png'},
-                                          {'pergunta': 'No basquete, uma cesta feita de dentro da linha '
-                                                       'de três pontos, durante uma jogada comum, vale '
-                                                       'quantos pontos?',
-                                           'alternativas': ['Três', 'Um', 'Dois'],
-                                           'correta': 2,
-                                           'imagem': 'imagens_perguntas/lote13_v13_p02.png'},
-                                          {'pergunta': 'Qual fundamento do futebol consiste em enviar a '
-                                                       'bola a um companheiro?',
-                                           'alternativas': ['Saque', 'Passe', 'Bandeja'],
-                                           'correta': 1,
-                                           'imagem': 'imagens_perguntas/lote13_v13_p03.png'}],
- 'Filosofia: ética e escolhas': [{'pergunta': 'A reflexão ética procura examinar principalmente o quê?',
-                                  'alternativas': ['Os valores e as razões que orientam nossas ações',
-                                                   'Somente a classificação das plantas',
-                                                   'Apenas a velocidade dos objetos'],
-                                  'correta': 0,
-                                  'imagem': 'imagens_perguntas/lote13_v14_p01.png'},
-                                 {'pergunta': 'Agir por medo de punição é necessariamente o mesmo que '
-                                              'agir por convicção moral?',
-                                  'alternativas': ['Não, as motivações podem ser diferentes',
-                                                   'Sim, não existe diferença entre motivos',
-                                                   'Sim, são sempre idênticos'],
-                                  'correta': 0,
-                                  'imagem': 'imagens_perguntas/lote13_v14_p02.png'},
-                                 {'pergunta': 'Ao avaliar uma escolha ética, por que considerar as '
-                                              'pessoas afetadas?',
-                                  'alternativas': ['Porque regras dispensam qualquer reflexão',
-                                                   'Porque nossas ações podem ter consequências para '
-                                                   'outras pessoas',
-                                                   'Porque só importa ganhar uma discussão'],
-                                  'correta': 1,
-                                  'imagem': 'imagens_perguntas/lote13_v14_p03.png'}],
- 'Sociologia: cultura e convivência': [{'pergunta': 'Na Sociologia, cultura inclui o quê?',
-                                        'alternativas': ['Somente características biológicas',
-                                                         'Apenas obras expostas em museus',
-                                                         'Valores, costumes, saberes e práticas '
-                                                         'aprendidos socialmente'],
-                                        'correta': 2,
-                                        'imagem': 'imagens_perguntas/lote13_v15_p01.png'},
-                                       {'pergunta': 'Julgar outras culturas apenas pelos padrões da '
-                                                    'própria cultura é chamado de quê?',
-                                        'alternativas': ['Fotossíntese', 'Evaporação', 'Etnocentrismo'],
-                                        'correta': 2,
-                                        'imagem': 'imagens_perguntas/lote13_v15_p02.png'},
-                                       {'pergunta': 'O respeito à diversidade cultural exige que todas '
-                                                    'as pessoas tenham os mesmos costumes?',
-                                        'alternativas': ['Sim, toda diferença deve desaparecer',
-                                                         'Sim, só existe uma cultura válida',
-                                                         'Não, é possível conviver respeitando '
-                                                         'diferenças'],
-                                        'correta': 2,
-                                        'imagem': 'imagens_perguntas/lote13_v15_p03.png'}]}
+                                'imagem': 'imagens_perguntas/lote14_v15_p02.png'},
+                               {'pergunta': 'O que são pinturas rupestres?',
+                                'alternativas': ['Textos impressos em jornais antigos',
+                                                 'Registros gráficos feitos em superfícies rochosas',
+                                                 'Imagens produzidas por satélites'],
+                                'correta': 1,
+                                'imagem': 'imagens_perguntas/lote14_v15_p03.png'}]}
 
-LEGENDAS = {'Português: interpretação de textos': 'CAPA_SEGUNDOS=2\n'
-                                       '\n'
-                                       'Português: interpretação de textos: três perguntas para testar '
-                                       'seus conhecimentos! Quantas você acertou?\n'
-                                       '#InterpretacaoDeTexto #Portugues #LinguaPortuguesa #QuizEscolar',
- 'Matemática: porcentagem no cotidiano': 'CAPA_SEGUNDOS=2\n'
-                                         '\n'
-                                         'Matemática: porcentagem no cotidiano: três perguntas para '
-                                         'testar seus conhecimentos! Quantas você acertou?\n'
-                                         '#Porcentagem #Matematica #CalculoMental #QuizEscolar',
- 'História: Egito Antigo': 'CAPA_SEGUNDOS=2\n'
-                           '\n'
-                           'História: Egito Antigo: três perguntas para testar seus conhecimentos! '
-                           'Quantas você acertou?\n'
-                           '#EgitoAntigo #Historia #CivilizacoesAntigas #QuizEscolar',
- 'Geografia: clima e tempo': 'CAPA_SEGUNDOS=2\n'
-                             '\n'
-                             'Geografia: clima e tempo: três perguntas para testar seus conhecimentos! '
-                             'Quantas você acertou?\n'
-                             '#ClimaETempo #Geografia #Atmosfera #QuizEscolar',
- 'Ciências: cadeia alimentar': 'CAPA_SEGUNDOS=2\n'
-                               '\n'
-                               'Ciências: cadeia alimentar: três perguntas para testar seus '
-                               'conhecimentos! Quantas você acertou?\n'
-                               '#CadeiaAlimentar #Ecologia #Ciencias #QuizEscolar',
- 'Biologia: células e suas funções': 'CAPA_SEGUNDOS=2\n'
-                                     '\n'
-                                     'Biologia: células e suas funções: três perguntas para testar seus '
-                                     'conhecimentos! Quantas você acertou?\n'
-                                     '#Celulas #Biologia #Citologia #QuizEscolar',
- 'Química: misturas e separação': 'CAPA_SEGUNDOS=2\n'
-                                  '\n'
-                                  'Química: misturas e separação: três perguntas para testar seus '
-                                  'conhecimentos! Quantas você acertou?\n'
-                                  '#Misturas #Quimica #SeparacaoDeMisturas #QuizEscolar',
- 'Física: luz e fenômenos ópticos': 'CAPA_SEGUNDOS=2\n'
-                                    '\n'
-                                    'Física: luz e fenômenos ópticos: três perguntas para testar seus '
-                                    'conhecimentos! Quantas você acertou?\n'
-                                    '#Luz #Optica #Fisica #QuizEscolar',
- 'Inglês: expressões do dia a dia': 'CAPA_SEGUNDOS=2\n'
-                                    '\n'
-                                    'Inglês: expressões do dia a dia: três perguntas para testar seus '
-                                    'conhecimentos! Quantas você acertou?\n'
-                                    '#Ingles #ExpressoesEmIngles #AprenderIngles #QuizEscolar',
- 'Espanhol: falsos cognatos': 'CAPA_SEGUNDOS=2\n'
+LEGENDAS = {'Mistérios do fundo do mar': 'CAPA_SEGUNDOS=2\n'
                               '\n'
-                              'Espanhol: falsos cognatos: três perguntas para testar seus '
-                              'conhecimentos! Quantas você acertou?\n'
-                              '#Espanhol #FalsosCognatos #VocabularioEspanhol #QuizEscolar',
- 'Literatura: gêneros literários': 'CAPA_SEGUNDOS=2\n'
+                              'Descubra o que torna o oceano profundo tão surpreendente!\n'
+                              '#FundoDoMar #Oceanografia #VidaMarinha #QuizEducativo',
+ 'Invenções que surgiram por acaso': 'CAPA_SEGUNDOS=2\n'
+                                     '\n'
+                                     'Até um resultado inesperado pode abrir caminho para uma '
+                                     'invenção!\n'
+                                     '#HistoriaDasInvencoes #Descobertas #Criatividade #QuizEducativo',
+ 'Animais com habilidades surpreendentes': 'CAPA_SEGUNDOS=2\n'
+                                           '\n'
+                                           'Conheça habilidades animais que parecem ficção, mas têm '
+                                           'explicação!\n'
+                                           '#MundoAnimal #Adaptacoes #Zoologia #QuizEducativo',
+ 'A ciência por trás da cozinha': 'CAPA_SEGUNDOS=2\n'
+                                  '\n'
+                                  'A cozinha também é um laboratório de descobertas!\n'
+                                  '#CienciaNaCozinha #QuimicaDosAlimentos #MudancasDeEstado '
+                                  '#QuizEducativo',
+ 'Civilizações pouco conhecidas': 'CAPA_SEGUNDOS=2\n'
+                                  '\n'
+                                  'Explore povos antigos e contribuições que atravessaram os séculos!\n'
+                                  '#CivilizacoesAntigas #HistoriaAntiga #PatrimonioCultural '
+                                  '#QuizEducativo',
+ 'Fenômenos naturais impressionantes': 'CAPA_SEGUNDOS=2\n'
+                                       '\n'
+                                       'Auroras, gêiseres e trovões: descubra a ciência desses '
+                                       'fenômenos!\n'
+                                       '#FenomenosNaturais #Auroras #Geociencias #QuizEducativo',
+ 'Objetos antigos e suas funções': 'CAPA_SEGUNDOS=2\n'
                                    '\n'
-                                   'Literatura: gêneros literários: três perguntas para testar seus '
-                                   'conhecimentos! Quantas você acertou?\n'
-                                   '#GenerosLiterarios #Literatura #Leitura #QuizEscolar',
- 'Artes: cores e movimentos artísticos': 'CAPA_SEGUNDOS=2\n'
-                                         '\n'
-                                         'Artes: cores e movimentos artísticos: três perguntas para '
-                                         'testar seus conhecimentos! Quantas você acertou?\n'
-                                         '#Artes #Cores #MovimentosArtisticos #QuizEscolar',
- 'Educação Física: regras dos esportes': 'CAPA_SEGUNDOS=2\n'
-                                         '\n'
-                                         'Educação Física: regras dos esportes: três perguntas para '
-                                         'testar seus conhecimentos! Quantas você acertou?\n'
-                                         '#EducacaoFisica #RegrasDosEsportes #Esportes #QuizEscolar',
- 'Filosofia: ética e escolhas': 'CAPA_SEGUNDOS=2\n'
-                                '\n'
-                                'Filosofia: ética e escolhas: três perguntas para testar seus '
-                                'conhecimentos! Quantas você acertou?\n'
-                                '#Etica #Filosofia #Escolhas #QuizEscolar',
- 'Sociologia: cultura e convivência': 'CAPA_SEGUNDOS=2\n'
+                                   'Você reconheceria a utilidade destes objetos de outras épocas?\n'
+                                   '#ObjetosAntigos #HistoriaDoCotidiano #Memoria #QuizEducativo',
+ 'Plantas extraordinárias': 'CAPA_SEGUNDOS=2\n'
+                            '\n'
+                            'Descubra estratégias surpreendentes de sobrevivência das plantas!\n'
+                            '#Botanica #Plantas #AdaptacoesVegetais #QuizEducativo',
+ 'Como o corpo percebe o mundo': 'CAPA_SEGUNDOS=2\n'
+                                 '\n'
+                                 'Explore como o corpo combina sinais para perceber o mundo!\n'
+                                 '#Sentidos #CorpoHumano #Percepcao #QuizEducativo',
+ 'Mistérios do Sistema Solar': 'CAPA_SEGUNDOS=2\n'
+                               '\n'
+                               'Uma viagem de curiosidades pelas luas e pequenos corpos do Sistema '
+                               'Solar!\n'
+                               '#SistemaSolar #Astronomia #Luas #QuizEducativo',
+ 'A origem das palavras': 'CAPA_SEGUNDOS=2\n'
+                          '\n'
+                          'As palavras também guardam histórias e pistas sobre suas origens!\n'
+                          '#Etimologia #LinguaPortuguesa #OrigemDasPalavras #QuizEducativo',
+ 'Construções que desafiam a engenharia': 'CAPA_SEGUNDOS=2\n'
+                                          '\n'
+                                          'Entenda desafios que fazem parte das grandes obras de '
+                                          'engenharia!\n'
+                                          '#Engenharia #Estruturas #Pontes #QuizEducativo',
+ 'Mitos e verdades sobre reciclagem': 'CAPA_SEGUNDOS=2\n'
                                       '\n'
-                                      'Sociologia: cultura e convivência: três perguntas para testar '
-                                      'seus conhecimentos! Quantas você acertou?\n'
-                                      '#Cultura #Sociologia #DiversidadeCultural #QuizEscolar'}
+                                      'Teste seus conhecimentos sobre descarte e reaproveitamento de '
+                                      'materiais!\n'
+                                      '#Reciclagem #Compostagem #Residuos #QuizEducativo',
+ 'Como funcionam as tecnologias do dia a dia': 'CAPA_SEGUNDOS=2\n'
+                                               '\n'
+                                               'Descubra o que existe por trás de tecnologias tão '
+                                               'familiares!\n'
+                                               '#Tecnologia #GPS #Eletronica #QuizEducativo',
+ 'Vestígios da pré-história': 'CAPA_SEGUNDOS=2\n'
+                              '\n'
+                              'Aprenda como vestígios ajudam a investigar o passado humano!\n'
+                              '#PreHistoria #Arqueologia #Fosseis #QuizEducativo'}
