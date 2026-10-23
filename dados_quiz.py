@@ -1,381 +1,375 @@
-# Juh Quiz — lote 16: 15 temas de atualidade, 45 perguntas e caricaturas sem fundo.
+# Juh Quiz — lote 17: 15 temas de atualidade, 45 perguntas e caricaturas sem fundo.
 
-QUIZZES = {'Inteligência artificial no cotidiano': [{'pergunta': 'No aprendizado de máquina, o treinamento '
-                                                       'permite ao modelo principalmente o quê?',
-                                           'alternativas': ['Ajustar padrões a partir de dados',
-                                                            'Substituir dados por palpites aleatórios',
-                                                            'Guardar apenas comandos sem qualquer '
-                                                            'ajuste'],
-                                           'correta': 0,
-                                           'imagem': 'imagens_perguntas/lote16_v01_p01.png'},
-                                          {'pergunta': 'Uma IA pode produzir uma resposta convincente, '
-                                                       'mas falsa. O que isso mostra?',
-                                           'alternativas': ['Que fluência não garante exatidão',
-                                                            'Que toda resposta longa é verdadeira',
-                                                            'Que erros só ocorrem sem internet'],
-                                           'correta': 0,
-                                           'imagem': 'imagens_perguntas/lote16_v01_p02.png'},
-                                          {'pergunta': 'Por que testar uma IA com dados de diferentes '
-                                                       'contextos?',
-                                           'alternativas': ['Para garantir que nunca mais erre',
-                                                            'Para dispensar qualquer análise humana',
-                                                            'Para avaliar limites e possíveis vieses'],
-                                           'correta': 2,
-                                           'imagem': 'imagens_perguntas/lote16_v01_p03.png'}],
- 'Deepfakes e vídeos falsos': [{'pergunta': 'O que caracteriza um deepfake?',
-                                'alternativas': ['Conteúdo sintético que imita pessoas com IA',
-                                                 'Vídeo antigo publicado sem cortes',
-                                                 'Fotografia salva em baixa resolução'],
-                                'correta': 0,
-                                'imagem': 'imagens_perguntas/lote16_v02_p01.png'},
-                               {'pergunta': 'Ao receber um vídeo com uma declaração surpreendente, qual '
-                                            'atitude ajuda a verificar o contexto?',
-                                'alternativas': ['Confiar apenas no número de curtidas',
-                                                 'Compartilhar antes que o vídeo desapareça',
-                                                 'Buscar a fonte original e outras fontes confiáveis'],
+QUIZZES = {'Pix e pagamentos digitais': [{'pergunta': 'O que caracteriza o Pix?',
+                                'alternativas': ['Pagamento que depende de compensação de cheque',
+                                                 'Empréstimo automático oferecido pelo comércio',
+                                                 'Transferência eletrônica entre contas em poucos '
+                                                 'segundos'],
                                 'correta': 2,
-                                'imagem': 'imagens_perguntas/lote16_v02_p02.png'},
-                               {'pergunta': 'Uma voz familiar em uma gravação basta para comprovar a '
-                                            'identidade de quem fala?',
-                                'alternativas': ['Sim, se o áudio tiver poucos segundos',
-                                                 'Não, vozes também podem ser imitadas',
-                                                 'Sim, toda voz gravada é impossível de copiar'],
-                                'correta': 1,
-                                'imagem': 'imagens_perguntas/lote16_v02_p03.png'}],
- 'Golpes digitais': [{'pergunta': 'O que é phishing?',
-                      'alternativas': ['Um método de compactar fotos',
-                                       'Uma fraude que tenta obter dados por mensagens enganosas',
-                                       'Um recurso de melhorar a conexão Wi-Fi'],
-                      'correta': 1,
-                      'imagem': 'imagens_perguntas/lote16_v03_p01.png'},
-                     {'pergunta': 'Qual é o objetivo da autenticação com dois fatores?',
-                      'alternativas': ['Exigir uma segunda forma de confirmar o acesso',
-                                       'Eliminar a necessidade de proteger a conta',
-                                       'Repetir a mesma senha duas vezes'],
-                      'correta': 0,
-                      'imagem': 'imagens_perguntas/lote16_v03_p02.png'},
-                     {'pergunta': 'Um conhecido pede uma transferência urgente por mensagem. Qual '
-                                  'atitude reduz o risco de golpe?',
-                      'alternativas': ['Transferir só porque a foto é familiar',
-                                       'Confirmar o pedido por outro contato já conhecido',
-                                       'Enviar o código de acesso para provar confiança'],
-                      'correta': 1,
-                      'imagem': 'imagens_perguntas/lote16_v03_p03.png'}],
- 'Ondas de calor e cidades': [{'pergunta': 'Por que áreas muito asfaltadas podem ficar mais quentes do '
-                                           'que áreas vegetadas?',
-                               'alternativas': ['Porque toda árvore aumenta a temperatura do ar',
-                                                'Porque o asfalto produz chuva continuamente',
-                                                'Porque materiais urbanos armazenam e liberam calor'],
-                               'correta': 2,
-                               'imagem': 'imagens_perguntas/lote16_v04_p01.png'},
-                              {'pergunta': 'Como árvores podem ajudar a amenizar o calor urbano?',
-                               'alternativas': ['Impedindo toda circulação de ar',
-                                                'Oferecendo sombra e liberando água por transpiração',
-                                                'Produzindo gelo dentro dos troncos'],
-                               'correta': 1,
-                               'imagem': 'imagens_perguntas/lote16_v04_p02.png'},
-                              {'pergunta': 'Uma tarde muito quente, sozinha, permite descrever o clima '
-                                           'de décadas de uma cidade?',
-                               'alternativas': ['Não, o clima exige observar padrões de longo prazo',
-                                                'Sim, se a cidade tiver muitos prédios',
-                                                'Sim, qualquer tarde define o clima para sempre'],
-                               'correta': 0,
-                               'imagem': 'imagens_perguntas/lote16_v04_p03.png'}],
- 'Carros elétricos e híbridos': [{'pergunta': 'Qual combinação caracteriza um carro híbrido '
-                                              'convencional?',
-                                  'alternativas': ['Motor a vapor e motor a diesel',
-                                                   'Motor a combustão e motor elétrico',
-                                                   'Dois motores movidos apenas a gasolina'],
-                                  'correta': 1,
-                                  'imagem': 'imagens_perguntas/lote16_v05_p01.png'},
-                                 {'pergunta': 'O que a frenagem regenerativa pode fazer em veículos '
-                                              'eletrificados?',
-                                  'alternativas': ['Recuperar parte da energia durante a desaceleração',
-                                                   'Eliminar toda perda de energia do veículo',
-                                                   'Criar combustível dentro dos pneus'],
-                                  'correta': 0,
-                                  'imagem': 'imagens_perguntas/lote16_v05_p02.png'},
-                                 {'pergunta': 'O que distingue um híbrido plug-in de um híbrido '
-                                              'convencional?',
-                                  'alternativas': ['O uso exclusivo de energia solar no teto',
-                                                   'A ausência obrigatória de motor a combustão',
-                                                   'A possibilidade de recarregar sua bateria em fonte '
-                                                   'externa'],
-                                  'correta': 2,
-                                  'imagem': 'imagens_perguntas/lote16_v05_p03.png'}],
- 'Energia solar nas casas': [{'pergunta': 'Uma célula fotovoltaica converte principalmente qual forma '
-                                          'de energia em eletricidade?',
-                              'alternativas': ['Energia da luz', 'Energia da chuva', 'Energia do som'],
-                              'correta': 0,
-                              'imagem': 'imagens_perguntas/lote16_v06_p01.png'},
-                             {'pergunta': 'Em muitos sistemas solares, qual é uma função do inversor?',
-                              'alternativas': ['Produzir luz solar durante a noite',
-                                               'Transformar o telhado em bateria',
-                                               'Converter corrente contínua em corrente alternada'],
-                              'correta': 2,
-                              'imagem': 'imagens_perguntas/lote16_v06_p02.png'},
-                             {'pergunta': 'Em dias nublados, o que pode acontecer com a geração de um '
-                                          'painel fotovoltaico?',
-                              'alternativas': ['Ela passa a depender apenas do vento',
-                                               'Ela é sempre igual à de um céu limpo',
-                                               'Ela pode continuar, geralmente com menor produção'],
-                              'correta': 2,
-                              'imagem': 'imagens_perguntas/lote16_v06_p03.png'}],
- 'Lixo eletrônico': [{'pergunta': 'Por que equipamentos eletrônicos exigem cuidado no descarte?',
-                      'alternativas': ['Porque qualquer aparelho é feito só de papel',
-                                       'Porque podem conter materiais que contaminam o ambiente',
-                                       'Porque todo componente se dissolve sem impacto'],
-                      'correta': 1,
-                      'imagem': 'imagens_perguntas/lote16_v07_p01.png'},
-                     {'pergunta': 'O que significa logística reversa de eletroeletrônicos?',
-                      'alternativas': ['Transportar equipamentos apenas de marcha a ré',
-                                       'Enviar toda compra de volta antes de usar',
-                                       'Organizar o retorno de produtos após o uso'],
-                      'correta': 2,
-                      'imagem': 'imagens_perguntas/lote16_v07_p02.png'},
-                     {'pergunta': 'Qual é uma vantagem ambiental de prolongar a vida útil de um '
-                                  'aparelho?',
-                      'alternativas': ['Impedir para sempre a existência de defeitos',
-                                       'Tornar desnecessário qualquer consumo de energia',
-                                       'Reduzir a necessidade de novas substituições'],
-                      'correta': 2,
-                      'imagem': 'imagens_perguntas/lote16_v07_p03.png'}],
- 'Microplásticos no ambiente': [{'pergunta': 'O termo microplástico se refere, em geral, a partículas '
-                                             'plásticas menores que qual tamanho?',
-                                 'alternativas': ['5 milímetros', '5 centímetros', '5 metros'],
-                                 'correta': 0,
-                                 'imagem': 'imagens_perguntas/lote16_v08_p01.png'},
-                                {'pergunta': 'Qual processo pode originar microplásticos no ambiente?',
-                                 'alternativas': ['A fragmentação de objetos plásticos maiores',
-                                                  'A transformação de qualquer areia em plástico',
-                                                  'A evaporação de água completamente pura'],
-                                 'correta': 0,
-                                 'imagem': 'imagens_perguntas/lote16_v08_p02.png'},
-                                {'pergunta': 'Por que retirar apenas o lixo plástico visível não '
-                                             'resolve toda a poluição por plástico?',
-                                 'alternativas': ['Porque todo plástico visível vira metal',
-                                                  'Porque os oceanos não possuem correntes',
-                                                  'Porque partículas pequenas também podem permanecer'],
-                                 'correta': 2,
-                                 'imagem': 'imagens_perguntas/lote16_v08_p03.png'}],
- 'Eventos climáticos extremos': [{'pergunta': 'Como superfícies impermeáveis podem influenciar '
-                                              'alagamentos urbanos?',
-                                  'alternativas': ['Aumentando sempre a capacidade dos rios',
-                                                   'Fazendo toda chuva desaparecer no asfalto',
-                                                   'Dificultando a infiltração da água no solo'],
-                                  'correta': 2,
-                                  'imagem': 'imagens_perguntas/lote16_v09_p01.png'},
-                                 {'pergunta': 'Qual é a finalidade de um sistema de alerta antecipado '
-                                              'para desastres?',
-                                  'alternativas': ['Avisar sobre riscos para permitir ações de proteção',
-                                                   'Garantir que nenhum fenômeno natural ocorra',
-                                                   'Substituir todas as obras de infraestrutura'],
-                                  'correta': 0,
-                                  'imagem': 'imagens_perguntas/lote16_v09_p02.png'},
-                                 {'pergunta': 'Qual diferença ajuda a distinguir uma seca prolongada de '
-                                              'um dia sem chuva?',
-                                  'alternativas': ['A cor das roupas usadas pela população',
-                                                   'A duração e o déficit de precipitação ao longo do '
-                                                   'período',
-                                                   'A presença obrigatória de neve nas ruas'],
-                                  'correta': 1,
-                                  'imagem': 'imagens_perguntas/lote16_v09_p03.png'}],
- 'Redes sociais e algoritmos': [{'pergunta': 'Qual é uma função comum dos algoritmos de recomendação?',
-                                 'alternativas': ['Mostrar obrigatoriamente todos os conteúdos '
-                                                  'existentes',
-                                                  'Garantir que toda postagem seja verdadeira',
-                                                  'Selecionar conteúdos conforme sinais e critérios'],
-                                 'correta': 2,
-                                 'imagem': 'imagens_perguntas/lote16_v10_p01.png'},
-                                {'pergunta': 'O que é uma bolha informacional nas redes?',
-                                 'alternativas': ['Contato frequente com conteúdos e opiniões '
-                                                  'semelhantes',
-                                                  'Uma falha que quebra fisicamente a tela',
-                                                  'Um arquivo que ocupa toda a memória do celular'],
-                                 'correta': 0,
-                                 'imagem': 'imagens_perguntas/lote16_v10_p02.png'},
-                                {'pergunta': 'Por que o número de curtidas não comprova a veracidade de '
-                                             'uma publicação?',
-                                 'alternativas': ['Porque popularidade e exatidão são coisas diferentes',
-                                                  'Porque apenas vídeos podem conter informação correta',
-                                                  'Porque textos curtos são sempre falsos'],
-                                 'correta': 0,
-                                 'imagem': 'imagens_perguntas/lote16_v10_p03.png'}],
- 'Compras pela internet': [{'pergunta': 'O que ajuda a avaliar se uma loja virtual desconhecida é '
-                                        'confiável?',
-                            'alternativas': ['Usar somente o desconto como critério',
-                                             'Confiar apenas na aparência bonita da página',
-                                             'Consultar sua identificação e reputação em fontes '
-                                             'independentes'],
-                            'correta': 2,
-                            'imagem': 'imagens_perguntas/lote16_v11_p01.png'},
-                           {'pergunta': 'Por que avaliações de produtos devem ser analisadas com '
-                                        'cuidado?',
-                            'alternativas': ['Porque comentários nunca contêm experiências reais',
-                                             'Porque algumas podem ser falsas ou incentivadas',
-                                             'Porque toda nota alta prova qualidade perfeita'],
-                            'correta': 1,
-                            'imagem': 'imagens_perguntas/lote16_v11_p02.png'},
-                           {'pergunta': 'Uma postagem patrocinada é, principalmente, o quê?',
-                            'alternativas': ['Uma prova automática de qualidade do produto',
-                                             'Um conteúdo associado a uma relação publicitária',
-                                             'Uma opinião que nunca envolve interesse comercial'],
-                            'correta': 1,
-                            'imagem': 'imagens_perguntas/lote16_v11_p03.png'}],
- 'Satélites a serviço do Brasil': [{'pergunta': 'Imagens de satélite podem ajudar a acompanhar qual '
-                                                'mudança no território?',
-                                    'alternativas': ['O pensamento dos moradores',
-                                                     'A perda de cobertura vegetal',
-                                                     'O sabor de cada alimento'],
-                                    'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote16_v12_p01.png'},
-                                   {'pergunta': 'O sensoriamento remoto permite obter informações sobre '
-                                                'um local de que forma?',
-                                    'alternativas': ['Apenas por entrevistas presenciais',
-                                                     'Pela detecção a distância de energia refletida ou '
-                                                     'emitida',
-                                                     'Somente tocando o solo com as mãos'],
-                                    'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote16_v12_p02.png'},
-                                   {'pergunta': 'Em uma conexão por satélite, a comunicação utiliza '
-                                                'principalmente o quê?',
-                                    'alternativas': ['Tubos de água entre a casa e o espaço',
-                                                     'Cabos presos fisicamente a todas as nuvens',
-                                                     'Sinais eletromagnéticos'],
-                                    'correta': 2,
-                                    'imagem': 'imagens_perguntas/lote16_v12_p03.png'}],
- 'Tecnologia na agricultura': [{'pergunta': 'Um sensor de umidade do solo pode ajudar o agricultor a '
-                                            'decidir o quê?',
-                                'alternativas': ['Qual será o preço mundial de todos os alimentos',
-                                                 'Quando e quanto irrigar',
-                                                 'A data exata de todas as chuvas do ano'],
-                                'correta': 1,
-                                'imagem': 'imagens_perguntas/lote16_v13_p01.png'},
-                               {'pergunta': 'Como um drone pode auxiliar no acompanhamento de uma '
-                                            'lavoura?',
-                                'alternativas': ['Garantindo que nenhuma praga apareça',
-                                                 'Substituindo toda análise agronômica',
-                                                 'Captando imagens para observar variações na área'],
+                                'imagem': 'imagens_perguntas/lote17_v01_p01.png'},
+                               {'pergunta': 'Qual é a função de uma chave Pix?',
+                                'alternativas': ['Definir o limite de crédito do destinatário',
+                                                 'Substituir a senha de acesso ao aplicativo',
+                                                 'Identificar uma conta para facilitar o recebimento'],
                                 'correta': 2,
-                                'imagem': 'imagens_perguntas/lote16_v13_p02.png'},
-                               {'pergunta': 'Qual é um princípio da agricultura de precisão?',
-                                'alternativas': ['Considerar diferenças dentro de uma mesma área',
-                                                 'Tratar todo terreno como se fosse sempre idêntico',
-                                                 'Usar a maior quantidade possível de insumos em '
-                                                 'qualquer ponto'],
-                                'correta': 0,
-                                'imagem': 'imagens_perguntas/lote16_v13_p03.png'}],
- 'Desperdício de alimentos': [{'pergunta': 'Como planejar compras pode ajudar a reduzir desperdícios?',
-                               'alternativas': ['Ajustando quantidades ao consumo previsto',
-                                                'Tornando desnecessário observar a conservação',
-                                                'Garantindo que todo alimento dure para sempre'],
-                               'correta': 0,
-                               'imagem': 'imagens_perguntas/lote16_v14_p01.png'},
-                              {'pergunta': 'O que significa aproveitar integralmente um alimento quando '
-                                           'isso é adequado e seguro?',
-                               'alternativas': ['Misturar alimentos deteriorados aos frescos',
-                                                'Usar também partes comestíveis que costumam ser '
-                                                'descartadas',
-                                                'Comer obrigatoriamente qualquer parte de qualquer '
-                                                'alimento'],
-                               'correta': 1,
-                               'imagem': 'imagens_perguntas/lote16_v14_p02.png'},
-                              {'pergunta': 'Para reduzir perdas, qual é uma vantagem de organizar '
-                                           'alimentos por ordem de chegada e validade?',
-                               'alternativas': ['Fazer a data de validade deixar de existir',
-                                                'Facilitar o uso dos itens que precisam ser consumidos '
-                                                'antes',
-                                                'Eliminar a necessidade de refrigeração'],
-                               'correta': 1,
-                               'imagem': 'imagens_perguntas/lote16_v14_p03.png'}],
- 'Ciência brasileira e inovação': [{'pergunta': 'Qual característica torna uma hipótese científica '
-                                                'testável?',
-                                    'alternativas': ['Permitir observações ou experimentos que a '
-                                                     'confrontem',
-                                                     'Depender apenas da fama de quem a propõe',
-                                                     'Ser impossível de comparar com evidências'],
+                                'imagem': 'imagens_perguntas/lote17_v01_p02.png'},
+                               {'pergunta': 'Antes de confirmar um Pix, o que deve ser conferido?',
+                                'alternativas': ['A quantidade de seguidores de quem pediu o pagamento',
+                                                 'O destinatário e o valor exibidos no aplicativo',
+                                                 'A cor escolhida para a tela do celular'],
+                                'correta': 1,
+                                'imagem': 'imagens_perguntas/lote17_v01_p03.png'}],
+ 'Carros autônomos': [{'pergunta': 'Para que servem câmeras e sensores em um carro autônomo?',
+                       'alternativas': ['Substituir o material dos pneus durante o trajeto',
+                                        'Produzir o combustível consumido pelo motor',
+                                        'Perceber características do ambiente ao redor'],
+                       'correta': 2,
+                       'imagem': 'imagens_perguntas/lote17_v02_p01.png'},
+                      {'pergunta': 'Por que um veículo automatizado precisa identificar obstáculos?',
+                       'alternativas': ['Para alterar automaticamente a cor da pintura',
+                                        'Para aumentar o tamanho interno do porta-malas',
+                                        'Para planejar movimentos e evitar colisões'],
+                       'correta': 2,
+                       'imagem': 'imagens_perguntas/lote17_v02_p02.png'},
+                      {'pergunta': 'Chuva intensa pode dificultar a condução automatizada por quê?',
+                       'alternativas': ['Pode reduzir a qualidade das informações dos sensores',
+                                        'Pode transformar o sistema elétrico em motor a vapor',
+                                        'Pode tornar todas as vias automaticamente exclusivas'],
+                       'correta': 0,
+                       'imagem': 'imagens_perguntas/lote17_v02_p03.png'}],
+ 'Robôs no trabalho': [{'pergunta': 'O que é comum na programação de um robô industrial?',
+                        'alternativas': ['Permitir que ele trabalhe sem nenhuma fonte de energia',
+                                         'Definir movimentos e condições para executar tarefas',
+                                         'Garantir que ele dispense qualquer manutenção'],
+                        'correta': 1,
+                        'imagem': 'imagens_perguntas/lote17_v03_p01.png'},
+                       {'pergunta': 'Qual tarefa costuma ser adequada para um robô industrial?',
+                        'alternativas': ['Avaliar sentimentos humanos sem margem de erro',
+                                         'Definir sozinho as leis trabalhistas de um país',
+                                         'Repetir movimentos precisos em uma linha de produção'],
+                        'correta': 2,
+                        'imagem': 'imagens_perguntas/lote17_v03_p02.png'},
+                       {'pergunta': 'Por que robôs e pessoas precisam de medidas de segurança ao '
+                                    'trabalhar juntos?',
+                        'alternativas': ['Para eliminar toda necessidade de planejamento',
+                                         'Para impedir qualquer atualização dos equipamentos',
+                                         'Para reduzir riscos de contato e movimentos perigosos'],
+                        'correta': 2,
+                        'imagem': 'imagens_perguntas/lote17_v03_p03.png'}],
+ 'Impressão 3D': [{'pergunta': 'Como funciona, em geral, a fabricação por impressão 3D?',
+                   'alternativas': ['O objeto surge apenas pela impressão de tinta no papel',
+                                    'O objeto é sempre esculpido de um bloco por lâminas',
+                                    'O objeto é construído pela adição de material em camadas'],
+                   'correta': 2,
+                   'imagem': 'imagens_perguntas/lote17_v04_p01.png'},
+                  {'pergunta': 'Qual informação costuma orientar uma impressora 3D?',
+                   'alternativas': ['Um modelo digital preparado para fabricação',
+                                    'Uma fotografia impressa usada como combustível',
+                                    'Uma lista de músicas escolhida pelo operador'],
+                   'correta': 0,
+                   'imagem': 'imagens_perguntas/lote17_v04_p02.png'},
+                  {'pergunta': 'Por que imprimir um protótipo pode ser útil no desenvolvimento de um '
+                               'produto?',
+                   'alternativas': ['Garante que todo material tenha a mesma resistência',
+                                    'Elimina todos os testes necessários para qualquer uso',
+                                    'Permite avaliar forma e encaixes antes da versão final'],
+                   'correta': 2,
+                   'imagem': 'imagens_perguntas/lote17_v04_p03.png'}],
+ 'Realidade virtual e aumentada': [{'pergunta': 'O que caracteriza a realidade virtual?',
+                                    'alternativas': ['A imersão em um ambiente digital simulado',
+                                                     'A impressão de um cenário em folhas de papel',
+                                                     'A ampliação óptica de um objeto por uma lupa'],
                                     'correta': 0,
-                                    'imagem': 'imagens_perguntas/lote16_v15_p01.png'},
-                                   {'pergunta': 'Para que serve a revisão por pares de um trabalho '
-                                                'científico?',
-                                    'alternativas': ['Para substituir os resultados por opiniões '
-                                                     'populares',
-                                                     'Para garantir ausência eterna de qualquer erro',
-                                                     'Para especialistas avaliarem métodos e '
-                                                     'argumentos'],
-                                    'correta': 2,
-                                    'imagem': 'imagens_perguntas/lote16_v15_p02.png'},
-                                   {'pergunta': 'Quando uma pesquisa gera uma solução aplicada a uma '
-                                                'necessidade real, ela pode contribuir para quê?',
-                                    'alternativas': ['Impossibilidade de testar ideias',
-                                                     'Inovação',
-                                                     'Fim de toda pesquisa futura'],
-                                    'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote16_v15_p03.png'}]}
+                                    'imagem': 'imagens_perguntas/lote17_v05_p01.png'},
+                                   {'pergunta': 'Como a realidade aumentada costuma funcionar?',
+                                    'alternativas': ['Sobrepõe elementos digitais à visão do ambiente '
+                                                     'real',
+                                                     'Transforma qualquer tela em uma impressora de '
+                                                     'objetos',
+                                                     'Substitui permanentemente todos os objetos '
+                                                     'físicos'],
+                                    'correta': 0,
+                                    'imagem': 'imagens_perguntas/lote17_v05_p02.png'},
+                                   {'pergunta': 'Qual é um possível uso educativo de ambientes '
+                                                'virtuais?',
+                                    'alternativas': ['Simular situações para praticar habilidades',
+                                                     'Garantir aprendizado sem participação do '
+                                                     'estudante',
+                                                     'Eliminar a necessidade de avaliar o conhecimento'],
+                                    'correta': 0,
+                                    'imagem': 'imagens_perguntas/lote17_v05_p03.png'}],
+ 'Internet das coisas': [{'pergunta': 'O que caracteriza um dispositivo da internet das coisas?',
+                          'alternativas': ['É qualquer objeto fabricado em tamanho pequeno',
+                                           'Pode trocar dados por uma rede',
+                                           'Precisa funcionar apenas com peças mecânicas'],
+                          'correta': 1,
+                          'imagem': 'imagens_perguntas/lote17_v06_p01.png'},
+                         {'pergunta': 'Uma lâmpada conectada pode permitir qual ação?',
+                          'alternativas': ['Armazenar alimentos sem refrigeração',
+                                           'Aumentar a pressão da água na cozinha',
+                                           'Ajustar a iluminação por um aplicativo'],
+                          'correta': 2,
+                          'imagem': 'imagens_perguntas/lote17_v06_p02.png'},
+                         {'pergunta': 'Por que atualizar o software de um aparelho conectado?',
+                          'alternativas': ['Para corrigir falhas e melhorar sua segurança',
+                                           'Para tornar desnecessária qualquer configuração de rede',
+                                           'Para dispensar definitivamente o fornecimento de energia'],
+                          'correta': 0,
+                          'imagem': 'imagens_perguntas/lote17_v06_p03.png'}],
+ 'Biometria e reconhecimento facial': [{'pergunta': 'O que um sistema biométrico utiliza para '
+                                                    'reconhecer uma pessoa?',
+                                        'alternativas': ['A marca do aparelho usado para acessar',
+                                                         'Características físicas ou comportamentais',
+                                                         'A cor da roupa escolhida no dia'],
+                                        'correta': 1,
+                                        'imagem': 'imagens_perguntas/lote17_v07_p01.png'},
+                                       {'pergunta': 'Qual é uma limitação possível do reconhecimento '
+                                                    'facial?',
+                                        'alternativas': ['Reconhece qualquer rosto com precisão '
+                                                         'infalível',
+                                                         'Pode cometer erros de identificação',
+                                                         'Dispensa testes em diferentes condições de '
+                                                         'uso'],
+                                        'correta': 1,
+                                        'imagem': 'imagens_perguntas/lote17_v07_p02.png'},
+                                       {'pergunta': 'Por que dados biométricos exigem cuidado com a '
+                                                    'privacidade?',
+                                        'alternativas': ['Servem somente para escolher a cor de uma '
+                                                         'tela',
+                                                         'Estão ligados a características pessoais de '
+                                                         'identificação',
+                                                         'São iguais para todas as pessoas de uma '
+                                                         'cidade'],
+                                        'correta': 1,
+                                        'imagem': 'imagens_perguntas/lote17_v07_p03.png'}],
+ 'Computação em nuvem': [{'pergunta': 'Ao salvar um arquivo na nuvem, onde ele fica armazenado?',
+                          'alternativas': ['Apenas dentro do monitor utilizado',
+                                           'Nas nuvens de água da atmosfera',
+                                           'Em servidores acessados por uma rede'],
+                          'correta': 2,
+                          'imagem': 'imagens_perguntas/lote17_v08_p01.png'},
+                         {'pergunta': 'O que a sincronização de arquivos pode permitir?',
+                          'alternativas': ['Manter versões atualizadas entre dispositivos',
+                                           'Impedir qualquer acesso ao arquivo original',
+                                           'Garantir funcionamento sem armazenamento algum'],
+                          'correta': 0,
+                          'imagem': 'imagens_perguntas/lote17_v08_p02.png'},
+                         {'pergunta': 'Por que é importante controlar permissões ao compartilhar um '
+                                      'arquivo?',
+                          'alternativas': ['Para mudar o tipo de bateria do computador',
+                                           'Para definir quem pode visualizar ou editar',
+                                           'Para aumentar a resolução física do monitor'],
+                          'correta': 1,
+                          'imagem': 'imagens_perguntas/lote17_v08_p03.png'}],
+ 'Baterias e armazenamento de energia': [{'pergunta': 'Em uma bateria recarregável, a energia é '
+                                                      'armazenada principalmente de que forma?',
+                                          'alternativas': ['Gravitacional', 'Química', 'Sonora'],
+                                          'correta': 1,
+                                          'imagem': 'imagens_perguntas/lote17_v09_p01.png'},
+                                         {'pergunta': 'O que a capacidade de uma bateria indica, em '
+                                                      'condições especificadas?',
+                                          'alternativas': ['A quantidade de carga elétrica que pode '
+                                                           'fornecer',
+                                                           'A velocidade máxima de uma conexão sem fio',
+                                                           'O número de aplicativos instalados na '
+                                                           'fábrica'],
+                                          'correta': 0,
+                                          'imagem': 'imagens_perguntas/lote17_v09_p02.png'},
+                                         {'pergunta': 'Por que baterias podem ser úteis junto à geração '
+                                                      'solar?',
+                                          'alternativas': ['Podem substituir a luz necessária aos '
+                                                           'painéis',
+                                                           'Podem guardar energia para uso em outro '
+                                                           'momento',
+                                                           'Podem criar energia continuamente sem '
+                                                           'recarga'],
+                                          'correta': 1,
+                                          'imagem': 'imagens_perguntas/lote17_v09_p03.png'}],
+ 'Hidrogênio verde': [{'pergunta': 'O que caracteriza o hidrogênio chamado de verde?',
+                       'alternativas': ['Produção por eletrólise com eletricidade renovável',
+                                        'Produção identificada apenas pela cor do gás',
+                                        'Extração direta de reservas naturais de carvão'],
+                       'correta': 0,
+                       'imagem': 'imagens_perguntas/lote17_v10_p01.png'},
+                      {'pergunta': 'Na eletrólise da água, qual é o papel da eletricidade?',
+                       'alternativas': ['Fornecer energia para separar componentes da água',
+                                        'Transformar diretamente a água em petróleo',
+                                        'Eliminar a necessidade de qualquer equipamento'],
+                       'correta': 0,
+                       'imagem': 'imagens_perguntas/lote17_v10_p02.png'},
+                      {'pergunta': 'Por que a produção de hidrogênio verde depende da origem da '
+                                   'eletricidade?',
+                       'alternativas': ['A fonte altera o número de prótons do hidrogênio',
+                                        'A fonte influencia as emissões associadas à produção',
+                                        'A fonte define obrigatoriamente a cor do cilindro'],
+                       'correta': 1,
+                       'imagem': 'imagens_perguntas/lote17_v10_p03.png'}],
+ 'Economia circular': [{'pergunta': 'Qual ideia está ligada à economia circular?',
+                        'alternativas': ['Manter produtos e materiais em uso por mais tempo',
+                                         'Descartar todo material após o primeiro uso',
+                                         'Trocar produtos funcionais sempre que possível'],
+                        'correta': 0,
+                        'imagem': 'imagens_perguntas/lote17_v11_p01.png'},
+                       {'pergunta': 'Consertar um produto pode contribuir para quê?',
+                        'alternativas': ['Aumentar obrigatoriamente o consumo de matéria-prima',
+                                         'Prolongar sua utilização e reduzir substituições',
+                                         'Impedir qualquer aproveitamento futuro de peças'],
+                        'correta': 1,
+                        'imagem': 'imagens_perguntas/lote17_v11_p02.png'},
+                       {'pergunta': 'O que diferencia reutilização de reciclagem?',
+                        'alternativas': ['Reciclar significa guardar um objeto sem processamento',
+                                         'Reutilizar exige derreter todo objeto antes do uso',
+                                         'Reutilizar mantém o uso do objeto sem transformá-lo em '
+                                         'matéria-prima'],
+                        'correta': 2,
+                        'imagem': 'imagens_perguntas/lote17_v11_p03.png'}],
+ 'Cidades inteligentes': [{'pergunta': 'Qual pode ser a função de sensores no transporte urbano?',
+                           'alternativas': ['Substituir automaticamente todos os veículos públicos',
+                                            'Garantir que nenhuma via precise de manutenção',
+                                            'Coletar informações para apoiar decisões sobre o trânsito'],
+                           'correta': 2,
+                           'imagem': 'imagens_perguntas/lote17_v12_p01.png'},
+                          {'pergunta': 'Como dados sobre vazamentos podem ajudar uma cidade?',
+                           'alternativas': ['Orientando a manutenção da rede de água',
+                                            'Tornando desnecessário o tratamento de esgoto',
+                                            'Alterando a composição química de toda a água'],
+                           'correta': 0,
+                           'imagem': 'imagens_perguntas/lote17_v12_p02.png'},
+                          {'pergunta': 'Além de instalar tecnologia, o que importa em uma cidade '
+                                       'inteligente?',
+                           'alternativas': ['Substituir o planejamento urbano por anúncios digitais',
+                                            'Restringir todos os serviços a quem tem o celular mais '
+                                            'novo',
+                                            'Usar soluções que atendam às necessidades da população'],
+                           'correta': 2,
+                           'imagem': 'imagens_perguntas/lote17_v12_p03.png'}],
+ 'Exploração da Lua': [{'pergunta': 'Por que astronautas precisam de trajes especiais na superfície '
+                                    'lunar?',
+                        'alternativas': ['Para aumentar a gravidade da Lua até a terrestre',
+                                         'Para transformar rochas lunares em água potável',
+                                         'Para proteção e suporte à vida no ambiente lunar'],
+                        'correta': 2,
+                        'imagem': 'imagens_perguntas/lote17_v13_p01.png'},
+                       {'pergunta': 'Por que a poeira lunar é um desafio para equipamentos?',
+                        'alternativas': ['Pode desgastar materiais e prejudicar mecanismos',
+                                         'É composta principalmente de folhas de plantas',
+                                         'Desaparece totalmente quando entra em uma máquina'],
+                        'correta': 0,
+                        'imagem': 'imagens_perguntas/lote17_v13_p02.png'},
+                       {'pergunta': 'O que o estudo de rochas lunares pode ajudar a investigar?',
+                        'alternativas': ['A história geológica da Lua',
+                                         'A previsão diária das marés de todos os rios',
+                                         'A localização exata de todas as estrelas'],
+                        'correta': 0,
+                        'imagem': 'imagens_perguntas/lote17_v13_p03.png'}],
+ 'Desinformação científica': [{'pergunta': 'O que ajuda a avaliar uma afirmação apresentada como '
+                                           'científica?',
+                               'alternativas': ['Examinar evidências, métodos e fontes',
+                                                'Contar quantas vezes o texto foi encaminhado',
+                                                'Escolher a mensagem com o título mais chamativo'],
+                               'correta': 0,
+                               'imagem': 'imagens_perguntas/lote17_v14_p01.png'},
+                              {'pergunta': 'Por que um depoimento isolado não comprova uma relação de '
+                                           'causa e efeito?',
+                               'alternativas': ['Uma relação causal só existe quando vira notícia',
+                                                'Outros fatores podem explicar o que aconteceu',
+                                                'Toda experiência individual é necessariamente '
+                                                'inventada'],
+                               'correta': 1,
+                               'imagem': 'imagens_perguntas/lote17_v14_p02.png'},
+                              {'pergunta': 'O que significa encontrar associação entre dois '
+                                           'acontecimentos?',
+                               'alternativas': ['Que não podem ter nenhum fator em comum',
+                                                'Que variam juntos, sem provar por si só causalidade',
+                                                'Que um necessariamente causou o outro'],
+                               'correta': 1,
+                               'imagem': 'imagens_perguntas/lote17_v14_p03.png'}],
+ 'Tecnologia e acessibilidade': [{'pergunta': 'Qual é a função de um leitor de tela?',
+                                  'alternativas': ['Imprimir automaticamente todas as páginas abertas',
+                                                   'Apresentar informações da interface por voz ou '
+                                                   'Braille',
+                                                   'Aumentar fisicamente o tamanho de qualquer monitor'],
+                                  'correta': 1,
+                                  'imagem': 'imagens_perguntas/lote17_v15_p01.png'},
+                                 {'pergunta': 'Por que legendas ajudam na acessibilidade de vídeos?',
+                                  'alternativas': ['Garantem que o vídeo dispense qualquer imagem',
+                                                   'Substituem a conexão necessária para baixar o '
+                                                   'arquivo',
+                                                   'Permitem acompanhar informações sonoras em texto'],
+                                  'correta': 2,
+                                  'imagem': 'imagens_perguntas/lote17_v15_p02.png'},
+                                 {'pergunta': 'Qual é um objetivo do desenho universal?',
+                                  'alternativas': ['Limitar o acesso a um único perfil de usuário',
+                                                   'Criar soluções utilizáveis pelo maior número '
+                                                   'possível de pessoas',
+                                                   'Exigir uma adaptação exclusiva para cada visitante'],
+                                  'correta': 1,
+                                  'imagem': 'imagens_perguntas/lote17_v15_p03.png'}]}
 
-LEGENDAS = {'Inteligência artificial no cotidiano': 'CAPA_SEGUNDOS=2\n'
-                                         '\n'
-                                         'IA faz parte do cotidiano: teste seus conhecimentos sobre '
-                                         'possibilidades e limites!\n'
-                                         '#InteligenciaArtificial #AprendizadoDeMaquina #Tecnologia '
-                                         '#EducacaoDigital',
- 'Deepfakes e vídeos falsos': 'CAPA_SEGUNDOS=2\n'
+LEGENDAS = {'Pix e pagamentos digitais': 'CAPA_SEGUNDOS=2\n'
                               '\n'
-                              'Vídeo e voz podem enganar: aprenda a avaliar conteúdos digitais!\n'
-                              '#Deepfake #Desinformacao #Verificacao #EducacaoMidiatica',
- 'Golpes digitais': 'CAPA_SEGUNDOS=2\n'
-                    '\n'
-                    'Mensagens e pedidos urgentes: reconheça situações que exigem verificação!\n'
-                    '#SegurancaDigital #Phishing #GolpesDigitais #ProtecaoDeDados',
- 'Ondas de calor e cidades': 'CAPA_SEGUNDOS=2\n'
-                             '\n'
-                             'Entenda como a paisagem urbana influencia o calor nas cidades!\n'
-                             '#CalorUrbano #IlhasDeCalor #Arborizacao #Clima',
- 'Carros elétricos e híbridos': 'CAPA_SEGUNDOS=2\n'
-                                '\n'
-                                'Motores, baterias e frenagem: descubra diferenças entre veículos '
-                                'eletrificados!\n'
-                                '#CarrosEletricos #CarrosHibridos #Mobilidade #Energia',
- 'Energia solar nas casas': 'CAPA_SEGUNDOS=2\n'
-                            '\n'
-                            'Teste seus conhecimentos sobre painéis e geração solar residencial!\n'
-                            '#EnergiaSolar #Fotovoltaica #EnergiaRenovavel #Eletricidade',
- 'Lixo eletrônico': 'CAPA_SEGUNDOS=2\n'
-                    '\n'
-                    'Saiba por que celulares e computadores precisam de um destino responsável!\n'
-                    '#LixoEletronico #LogisticaReversa #ConsumoConsciente #MeioAmbiente',
- 'Microplásticos no ambiente': 'CAPA_SEGUNDOS=2\n'
-                               '\n'
-                               'Pequenas partículas, grandes perguntas sobre o ambiente!\n'
-                               '#Microplasticos #PoluicaoPlastica #Oceanos #EducacaoAmbiental',
- 'Eventos climáticos extremos': 'CAPA_SEGUNDOS=2\n'
-                                '\n'
-                                'Chuvas e secas: entenda riscos, impactos e formas de monitoramento!\n'
-                                '#EventosExtremos #Alagamentos #Secas #PrevencaoDeDesastres',
- 'Redes sociais e algoritmos': 'CAPA_SEGUNDOS=2\n'
-                               '\n'
-                               'Entenda recomendações, popularidade e circulação de informações nas '
-                               'redes!\n'
-                               '#Algoritmos #RedesSociais #EducacaoMidiatica #Informacao',
- 'Compras pela internet': 'CAPA_SEGUNDOS=2\n'
-                          '\n'
-                          'Aprenda a olhar além de anúncios, descontos e avaliações!\n'
-                          '#ComprasOnline #ConsumoConsciente #Publicidade #EducacaoDigital',
- 'Satélites a serviço do Brasil': 'CAPA_SEGUNDOS=2\n'
+                              'Pix no cotidiano: você conhece o funcionamento dos pagamentos digitais? '
+                              'Responda às três perguntas!\n'
+                              '#Pix #PagamentosDigitais #Tecnologia #Educacao',
+ 'Carros autônomos': 'CAPA_SEGUNDOS=2\n'
+                     '\n'
+                     'Sensores e decisões nas ruas: teste o que você sabe sobre carros autônomos.\n'
+                     '#CarrosAutonomos #Mobilidade #Tecnologia #Educacao',
+ 'Robôs no trabalho': 'CAPA_SEGUNDOS=2\n'
+                      '\n'
+                      'Robôs já fazem parte de muitos trabalhos. Você conhece suas funções e seus '
+                      'limites?\n'
+                      '#Robotica #Industria #Tecnologia #Trabalho',
+ 'Impressão 3D': 'CAPA_SEGUNDOS=2\n'
+                 '\n'
+                 'Do projeto ao objeto: três perguntas sobre impressão 3D e protótipos.\n'
+                 '#Impressao3D #Prototipagem #Inovacao #Tecnologia',
+ 'Realidade virtual e aumentada': 'CAPA_SEGUNDOS=2\n'
                                   '\n'
-                                  'Do espaço ao cotidiano: descubra usos dos satélites!\n'
-                                  '#Satelites #SensoriamentoRemoto #MonitoramentoAmbiental '
-                                  '#TecnologiaEspacial',
- 'Tecnologia na agricultura': 'CAPA_SEGUNDOS=2\n'
-                              '\n'
-                              'Sensores, drones e dados também fazem parte do campo!\n'
-                              '#AgriculturaDePrecisao #AgroTecnologia #Sensores #UsoDaAgua',
- 'Desperdício de alimentos': 'CAPA_SEGUNDOS=2\n'
+                                  'Realidade virtual ou aumentada? Descubra se você conhece as '
+                                  'diferenças e os usos.\n'
+                                  '#RealidadeVirtual #RealidadeAumentada #Tecnologia #Educacao',
+ 'Internet das coisas': 'CAPA_SEGUNDOS=2\n'
+                        '\n'
+                        'Objetos conectados: teste seus conhecimentos sobre a internet das coisas.\n'
+                        '#InternetDasCoisas #CasaConectada #Tecnologia #Educacao',
+ 'Biometria e reconhecimento facial': 'CAPA_SEGUNDOS=2\n'
+                                      '\n'
+                                      'Rosto, identificação e privacidade: três perguntas sobre '
+                                      'biometria.\n'
+                                      '#Biometria #ReconhecimentoFacial #Privacidade #Tecnologia',
+ 'Computação em nuvem': 'CAPA_SEGUNDOS=2\n'
+                        '\n'
+                        'Seus arquivos estão na nuvem? Veja se você sabe como esse serviço funciona.\n'
+                        '#ComputacaoEmNuvem #ArquivosDigitais #Tecnologia #Educacao',
+ 'Baterias e armazenamento de energia': 'CAPA_SEGUNDOS=2\n'
+                                        '\n'
+                                        'Baterias além do celular: teste seus conhecimentos sobre '
+                                        'armazenamento de energia.\n'
+                                        '#Baterias #Energia #ArmazenamentoDeEnergia #Tecnologia',
+ 'Hidrogênio verde': 'CAPA_SEGUNDOS=2\n'
+                     '\n'
+                     'Hidrogênio verde: entenda os conceitos por trás desse tema da energia.\n'
+                     '#HidrogenioVerde #EnergiaRenovavel #TransicaoEnergetica #Ciencia',
+ 'Economia circular': 'CAPA_SEGUNDOS=2\n'
+                      '\n'
+                      'Consertar, reutilizar e reciclar: você sabe diferenciar essas ideias?\n'
+                      '#EconomiaCircular #Reutilizacao #Sustentabilidade #Educacao',
+ 'Cidades inteligentes': 'CAPA_SEGUNDOS=2\n'
+                         '\n'
+                         'Tecnologia a serviço de quem vive na cidade: responda às três perguntas.\n'
+                         '#CidadesInteligentes #MobilidadeUrbana #Tecnologia #Cidadania',
+ 'Exploração da Lua': 'CAPA_SEGUNDOS=2\n'
+                      '\n'
+                      'Trajes, poeira e rochas: três desafios e descobertas da exploração lunar.\n'
+                      '#Lua #ExploracaoEspacial #Astronomia #Ciencia',
+ 'Desinformação científica': 'CAPA_SEGUNDOS=2\n'
                              '\n'
-                             'Pequenas escolhas ajudam a aproveitar melhor os alimentos!\n'
-                             '#DesperdicioDeAlimentos #Planejamento #Aproveitamento #ConsumoResponsavel',
- 'Ciência brasileira e inovação': 'CAPA_SEGUNDOS=2\n'
-                                  '\n'
-                                  'Descubra como evidências e pesquisas podem contribuir para novas '
-                                  'soluções!\n'
-                                  '#CienciaBrasileira #Pesquisa #Inovacao #MetodoCientifico'}
+                             'Nem toda mensagem com aparência científica tem boas evidências. Teste seu '
+                             'olhar crítico!\n'
+                             '#DivulgacaoCientifica #PensamentoCritico #Ciencia #Educacao',
+ 'Tecnologia e acessibilidade': 'CAPA_SEGUNDOS=2\n'
+                                '\n'
+                                'Acessibilidade digital: recursos que ajudam mais pessoas a '
+                                'participar.\n'
+                                '#Acessibilidade #InclusaoDigital #TecnologiaAssistiva #Educacao'}
