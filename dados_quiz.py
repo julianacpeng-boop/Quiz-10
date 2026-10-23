@@ -1,352 +1,381 @@
-# Juh Quiz — lote 15: 15 temas, 45 perguntas e imagens realistas sem fundo.
+# Juh Quiz — lote 16: 15 temas de atualidade, 45 perguntas e caricaturas sem fundo.
 
-QUIZZES = {'Mistérios do cérebro': [{'pergunta': 'Qual estrutura cerebral participa da formação de novas memórias '
-                                       'de fatos e acontecimentos?',
-                           'alternativas': ['Cerebelo', 'Bulbo', 'Hipocampo'],
-                           'correta': 2,
-                           'imagem': 'imagens_perguntas/lote15_v01_p01.png'},
-                          {'pergunta': 'Como o sono pode contribuir para a aprendizagem?',
-                           'alternativas': ['Apagando tudo o que foi aprendido',
-                                            'Ajudando a consolidar memórias',
-                                            'Substituindo a necessidade de estudar'],
-                           'correta': 1,
-                           'imagem': 'imagens_perguntas/lote15_v01_p02.png'},
-                          {'pergunta': 'O que significa neuroplasticidade?',
-                           'alternativas': ['A interrupção definitiva de toda aprendizagem',
-                                            'A capacidade do sistema nervoso de se modificar',
-                                            'A transformação do cérebro em um único músculo'],
-                           'correta': 1,
-                           'imagem': 'imagens_perguntas/lote15_v01_p03.png'}],
- 'Alimentos que viajaram pelo mundo': [{'pergunta': 'De qual continente vieram os ancestrais do tomate '
-                                                    'cultivado?',
-                                        'alternativas': ['Europa', 'América', 'Oceania'],
-                                        'correta': 1,
-                                        'imagem': 'imagens_perguntas/lote15_v02_p01.png'},
-                                       {'pergunta': 'Em qual região a batata foi domesticada há '
-                                                    'milhares de anos?',
-                                        'alternativas': ['Andes', 'Alpes', 'Himalaia'],
-                                        'correta': 0,
-                                        'imagem': 'imagens_perguntas/lote15_v02_p02.png'},
-                                       {'pergunta': 'Qual parte do fruto do cacau é usada como '
-                                                    'matéria-prima principal do chocolate?',
-                                        'alternativas': ['As sementes',
-                                                         'O pedúnculo',
-                                                         'A casca externa'],
-                                        'correta': 0,
-                                        'imagem': 'imagens_perguntas/lote15_v02_p03.png'}],
- 'Profissões que desapareceram': [{'pergunta': 'O que fazia um acendedor de lampiões nas cidades de '
-                                               'antigamente?',
-                                   'alternativas': ['Fabricava lentes de óculos',
-                                                    'Acendia a iluminação das ruas',
-                                                    'Consertava relógios de bolso'],
-                                   'correta': 1,
-                                   'imagem': 'imagens_perguntas/lote15_v03_p01.png'},
-                                  {'pergunta': 'Antes das centrais automáticas, o que fazia uma '
-                                               'telefonista de comutação manual?',
-                                   'alternativas': ['Traduzia cartas entre idiomas',
-                                                    'Conectava chamadas entre usuários',
-                                                    'Imprimia fotografias de jornais'],
-                                   'correta': 1,
-                                   'imagem': 'imagens_perguntas/lote15_v03_p02.png'},
-                                  {'pergunta': 'Qual equipamento era central no trabalho de um '
-                                               'datilógrafo?',
-                                   'alternativas': ['Projetor de slides',
-                                                    'Máquina de escrever',
-                                                    'Prensa de gravura'],
-                                   'correta': 1,
-                                   'imagem': 'imagens_perguntas/lote15_v03_p03.png'}],
- 'Desafios da vida nos desertos': [{'pergunta': 'Qual característica é fundamental para classificar uma '
-                                                'região como deserto?',
-                                    'alternativas': ['O calor intenso durante todo o ano',
-                                                     'A escassez de precipitação',
-                                                     'A presença obrigatória de dunas'],
-                                    'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote15_v04_p01.png'},
-                                   {'pergunta': 'Por que muitos animais de desertos quentes têm hábitos '
-                                                'noturnos?',
-                                    'alternativas': ['Para obter luz do Sol durante a noite',
-                                                     'Para evitar parte do calor do dia',
-                                                     'Para deixar de precisar de água'],
-                                    'correta': 1,
-                                    'imagem': 'imagens_perguntas/lote15_v04_p02.png'},
-                                   {'pergunta': 'Qual destes lugares contém um vasto deserto polar?',
-                                    'alternativas': ['Bacia do Congo',
-                                                     'Floresta Amazônica',
-                                                     'Antártida'],
-                                    'correta': 2,
-                                    'imagem': 'imagens_perguntas/lote15_v04_p03.png'}],
- 'Símbolos que usamos sem perceber': [{'pergunta': 'Na etiqueta de uma roupa, o triângulo está '
-                                                   'relacionado a qual cuidado?',
-                                       'alternativas': ['Passadoria',
-                                                        'Secagem em tambor',
-                                                        'Alvejamento'],
-                                       'correta': 2,
-                                       'imagem': 'imagens_perguntas/lote15_v05_p01.png'},
-                                      {'pergunta': 'Em embalagens, o símbolo de uma taça costuma '
-                                                   'indicar o quê?',
-                                       'alternativas': ['Material inflamável',
-                                                        'Produto perecível',
-                                                        'Conteúdo frágil'],
-                                       'correta': 2,
-                                       'imagem': 'imagens_perguntas/lote15_v05_p02.png'},
-                                      {'pergunta': 'Em aparelhos, um cadeado fechado costuma indicar '
-                                                   'qual estado?',
-                                       'alternativas': ['Volume no máximo',
-                                                        'Bateria descarregada',
-                                                        'Bloqueado ou protegido'],
-                                       'correta': 2,
-                                       'imagem': 'imagens_perguntas/lote15_v05_p03.png'}],
- 'Instrumentos musicais pelo mundo': [{'pergunta': 'O som de uma flauta é produzido principalmente pela '
-                                                   'vibração de quê?',
-                                       'alternativas': ['Uma coluna de ar',
-                                                        'Uma membrana de couro',
-                                                        'Uma corda esticada'],
-                                       'correta': 0,
-                                       'imagem': 'imagens_perguntas/lote15_v06_p01.png'},
-                                      {'pergunta': 'O berimbau tem papel tradicional em qual prática '
-                                                   'cultural brasileira?',
-                                       'alternativas': ['Frevo', 'Quadrilha junina', 'Capoeira'],
-                                       'correta': 2,
-                                       'imagem': 'imagens_perguntas/lote15_v06_p02.png'},
-                                      {'pergunta': 'Qual característica sonora é chamada de timbre?',
-                                       'alternativas': ['A qualidade que distingue fontes sonoras',
-                                                        'A velocidade de uma música inteira',
-                                                        'A quantidade de segundos de silêncio'],
-                                       'correta': 0,
-                                       'imagem': 'imagens_perguntas/lote15_v06_p03.png'}],
- 'Ilusões de óptica': [{'pergunta': 'O que uma ilusão de óptica revela sobre a visão?',
-                        'alternativas': ['Que a interpretação pode ser influenciada pelo contexto',
-                                         'Que toda imagem precisa estar em movimento',
-                                         'Que os olhos medem tudo com precisão absoluta'],
-                        'correta': 0,
-                        'imagem': 'imagens_perguntas/lote15_v07_p01.png'},
-                       {'pergunta': 'Na ilusão de Müller-Lyer, as setas nas extremidades podem alterar '
-                                    'a percepção de quê?',
-                        'alternativas': ['Peso do papel',
-                                         'Temperatura dos objetos',
-                                         'Comprimento das linhas'],
-                        'correta': 2,
-                        'imagem': 'imagens_perguntas/lote15_v07_p02.png'},
-                       {'pergunta': 'Por que uma imagem pode ter duas interpretações visuais '
-                                    'diferentes?',
-                        'alternativas': ['Porque a imagem contém necessariamente duas telas',
-                                         'Porque o cérebro pode organizar os mesmos elementos de modos '
-                                         'distintos',
-                                         'Porque o papel muda de composição química ao ser observado'],
-                        'correta': 1,
-                        'imagem': 'imagens_perguntas/lote15_v07_p03.png'}],
- 'Dinheiro antes das moedas': [{'pergunta': 'Como se chama a troca direta de bens ou serviços sem '
-                                            'dinheiro?',
-                                'alternativas': ['Empréstimo', 'Escambo', 'Tributação'],
-                                'correta': 1,
-                                'imagem': 'imagens_perguntas/lote15_v08_p01.png'},
-                               {'pergunta': 'Qual dificuldade pode surgir em uma troca direta?',
-                                'alternativas': ['Cada pessoa precisa querer o que a outra oferece',
-                                                 'Nenhum serviço pode participar da troca',
-                                                 'Todo produto precisa ter o mesmo tamanho'],
+QUIZZES = {'Inteligência artificial no cotidiano': [{'pergunta': 'No aprendizado de máquina, o treinamento '
+                                                       'permite ao modelo principalmente o quê?',
+                                           'alternativas': ['Ajustar padrões a partir de dados',
+                                                            'Substituir dados por palpites aleatórios',
+                                                            'Guardar apenas comandos sem qualquer '
+                                                            'ajuste'],
+                                           'correta': 0,
+                                           'imagem': 'imagens_perguntas/lote16_v01_p01.png'},
+                                          {'pergunta': 'Uma IA pode produzir uma resposta convincente, '
+                                                       'mas falsa. O que isso mostra?',
+                                           'alternativas': ['Que fluência não garante exatidão',
+                                                            'Que toda resposta longa é verdadeira',
+                                                            'Que erros só ocorrem sem internet'],
+                                           'correta': 0,
+                                           'imagem': 'imagens_perguntas/lote16_v01_p02.png'},
+                                          {'pergunta': 'Por que testar uma IA com dados de diferentes '
+                                                       'contextos?',
+                                           'alternativas': ['Para garantir que nunca mais erre',
+                                                            'Para dispensar qualquer análise humana',
+                                                            'Para avaliar limites e possíveis vieses'],
+                                           'correta': 2,
+                                           'imagem': 'imagens_perguntas/lote16_v01_p03.png'}],
+ 'Deepfakes e vídeos falsos': [{'pergunta': 'O que caracteriza um deepfake?',
+                                'alternativas': ['Conteúdo sintético que imita pessoas com IA',
+                                                 'Vídeo antigo publicado sem cortes',
+                                                 'Fotografia salva em baixa resolução'],
                                 'correta': 0,
-                                'imagem': 'imagens_perguntas/lote15_v08_p02.png'},
-                               {'pergunta': 'Quando um bem é aceito por muitas pessoas para intermediar '
-                                            'trocas, ele exerce qual função?',
-                                'alternativas': ['Certificado de vacinação',
-                                                 'Calendário agrícola',
-                                                 'Meio de troca'],
+                                'imagem': 'imagens_perguntas/lote16_v02_p01.png'},
+                               {'pergunta': 'Ao receber um vídeo com uma declaração surpreendente, qual '
+                                            'atitude ajuda a verificar o contexto?',
+                                'alternativas': ['Confiar apenas no número de curtidas',
+                                                 'Compartilhar antes que o vídeo desapareça',
+                                                 'Buscar a fonte original e outras fontes confiáveis'],
                                 'correta': 2,
-                                'imagem': 'imagens_perguntas/lote15_v08_p03.png'}],
- 'A ciência dos esportes': [{'pergunta': 'Por que uma bola tende a continuar em movimento até sofrer '
-                                         'forças que alterem esse estado?',
-                             'alternativas': ['Por causa da evaporação',
-                                              'Por causa da inércia',
-                                              'Por causa da refração'],
-                             'correta': 1,
-                             'imagem': 'imagens_perguntas/lote15_v09_p01.png'},
-                            {'pergunta': 'Qual força entre o tênis e o chão ajuda um atleta a não '
-                                         'escorregar?',
-                             'alternativas': ['Atrito', 'Força magnética', 'Empuxo'],
-                             'correta': 0,
-                             'imagem': 'imagens_perguntas/lote15_v09_p02.png'},
-                            {'pergunta': 'Como se chama o ponto associado à distribuição da massa de um '
-                                         'corpo?',
-                             'alternativas': ['Nível de ruído', 'Ponto de fusão', 'Centro de massa'],
-                             'correta': 2,
-                             'imagem': 'imagens_perguntas/lote15_v09_p03.png'}],
- 'Ilhas com características surpreendentes': [{'pergunta': 'As ilhas do Havaí se formaram '
-                                                           'principalmente por qual processo?',
-                                               'alternativas': ['Acúmulo de icebergs',
-                                                                'Construção de recifes de água doce',
-                                                                'Atividade vulcânica'],
-                                               'correta': 2,
-                                               'imagem': 'imagens_perguntas/lote15_v10_p01.png'},
-                                              {'pergunta': 'Por que o isolamento de uma ilha pode '
-                                                           'favorecer espécies endêmicas?',
-                                               'alternativas': ['Porque o clima fica idêntico em todas '
-                                                                'as ilhas',
-                                                                'Porque todas as espécies passam a voar',
-                                                                'Porque populações podem evoluir '
-                                                                'separadas de outras'],
-                                               'correta': 2,
-                                               'imagem': 'imagens_perguntas/lote15_v10_p02.png'},
-                                              {'pergunta': 'O que é um arquipélago?',
-                                               'alternativas': ['Um conjunto de ilhas',
-                                                                'Uma única montanha submersa',
-                                                                'Uma faixa contínua de deserto'],
-                                               'correta': 0,
-                                               'imagem': 'imagens_perguntas/lote15_v10_p03.png'}],
- 'Materiais que transformaram o mundo': [{'pergunta': 'Qual é uma característica estrutural do vidro '
-                                                      'comum?',
-                                          'alternativas': ['Não possuir uma organização cristalina de '
-                                                           'longo alcance',
-                                                           'Ser sempre um metal líquido',
-                                                           'Ser formado apenas por fibras vegetais'],
-                                          'correta': 0,
-                                          'imagem': 'imagens_perguntas/lote15_v11_p01.png'},
-                                         {'pergunta': 'O aço é uma liga formada principalmente por '
-                                                      'quais elementos?',
-                                          'alternativas': ['Ferro e carbono',
-                                                           'Cobre e estanho',
-                                                           'Alumínio e magnésio'],
-                                          'correta': 0,
-                                          'imagem': 'imagens_perguntas/lote15_v11_p02.png'},
-                                         {'pergunta': 'O que a vulcanização faz com a borracha?',
-                                          'alternativas': ['Melhora propriedades como elasticidade e '
-                                                           'resistência',
-                                                           'Remove definitivamente toda flexibilidade',
-                                                           'Transforma borracha em vidro transparente'],
-                                          'correta': 0,
-                                          'imagem': 'imagens_perguntas/lote15_v11_p03.png'}],
- 'Segredos da conservação dos alimentos': [{'pergunta': 'Por que a refrigeração ajuda a conservar '
-                                                        'muitos alimentos?',
-                                            'alternativas': ['Porque dispensa toda higiene no preparo',
-                                                             'Porque elimina qualquer microrganismo '
-                                                             'instantaneamente',
-                                                             'Porque desacelera a atividade de muitos '
-                                                             'microrganismos'],
-                                            'correta': 2,
-                                            'imagem': 'imagens_perguntas/lote15_v12_p01.png'},
-                                           {'pergunta': 'A secagem ajuda a conservar alimentos '
-                                                        'principalmente ao reduzir o quê?',
-                                            'alternativas': ['O tamanho da embalagem',
-                                                             'A água disponível',
-                                                             'A quantidade de utensílios'],
-                                            'correta': 1,
-                                            'imagem': 'imagens_perguntas/lote15_v12_p02.png'},
-                                           {'pergunta': 'Na fermentação do iogurte, bactérias '
-                                                        'transformam parte da lactose principalmente em '
-                                                        'quê?',
-                                            'alternativas': ['Ácido láctico', 'Óleo vegetal', 'Amido'],
-                                            'correta': 0,
-                                            'imagem': 'imagens_perguntas/lote15_v12_p03.png'}],
- 'Como os animais se comunicam': [{'pergunta': 'As trilhas químicas de muitas formigas utilizam '
-                                               'substâncias chamadas de quê?',
-                                   'alternativas': ['Vitaminas', 'Anticorpos', 'Feromônios'],
-                                   'correta': 2,
-                                   'imagem': 'imagens_perguntas/lote15_v13_p01.png'},
-                                  {'pergunta': 'A dança de certas abelhas pode informar às companheiras '
-                                               'o quê?',
-                                   'alternativas': ['A idade de todas as árvores',
-                                                    'A temperatura do centro da Terra',
-                                                    'Direção e distância de uma fonte de alimento'],
-                                   'correta': 2,
-                                   'imagem': 'imagens_perguntas/lote15_v13_p02.png'},
-                                  {'pergunta': 'O canto de muitas aves pode ajudar em qual função?',
-                                   'alternativas': ['Atrair parceiros e defender território',
-                                                    'Transformar insetos em sementes',
-                                                    'Trocar todas as penas imediatamente'],
-                                   'correta': 0,
-                                   'imagem': 'imagens_perguntas/lote15_v13_p03.png'}],
- 'Medidas e unidades curiosas': [{'pergunta': 'Um ano-luz é uma unidade usada para medir o quê?',
-                                  'alternativas': ['Distância', 'Tempo', 'Temperatura'],
+                                'imagem': 'imagens_perguntas/lote16_v02_p02.png'},
+                               {'pergunta': 'Uma voz familiar em uma gravação basta para comprovar a '
+                                            'identidade de quem fala?',
+                                'alternativas': ['Sim, se o áudio tiver poucos segundos',
+                                                 'Não, vozes também podem ser imitadas',
+                                                 'Sim, toda voz gravada é impossível de copiar'],
+                                'correta': 1,
+                                'imagem': 'imagens_perguntas/lote16_v02_p03.png'}],
+ 'Golpes digitais': [{'pergunta': 'O que é phishing?',
+                      'alternativas': ['Um método de compactar fotos',
+                                       'Uma fraude que tenta obter dados por mensagens enganosas',
+                                       'Um recurso de melhorar a conexão Wi-Fi'],
+                      'correta': 1,
+                      'imagem': 'imagens_perguntas/lote16_v03_p01.png'},
+                     {'pergunta': 'Qual é o objetivo da autenticação com dois fatores?',
+                      'alternativas': ['Exigir uma segunda forma de confirmar o acesso',
+                                       'Eliminar a necessidade de proteger a conta',
+                                       'Repetir a mesma senha duas vezes'],
+                      'correta': 0,
+                      'imagem': 'imagens_perguntas/lote16_v03_p02.png'},
+                     {'pergunta': 'Um conhecido pede uma transferência urgente por mensagem. Qual '
+                                  'atitude reduz o risco de golpe?',
+                      'alternativas': ['Transferir só porque a foto é familiar',
+                                       'Confirmar o pedido por outro contato já conhecido',
+                                       'Enviar o código de acesso para provar confiança'],
+                      'correta': 1,
+                      'imagem': 'imagens_perguntas/lote16_v03_p03.png'}],
+ 'Ondas de calor e cidades': [{'pergunta': 'Por que áreas muito asfaltadas podem ficar mais quentes do '
+                                           'que áreas vegetadas?',
+                               'alternativas': ['Porque toda árvore aumenta a temperatura do ar',
+                                                'Porque o asfalto produz chuva continuamente',
+                                                'Porque materiais urbanos armazenam e liberam calor'],
+                               'correta': 2,
+                               'imagem': 'imagens_perguntas/lote16_v04_p01.png'},
+                              {'pergunta': 'Como árvores podem ajudar a amenizar o calor urbano?',
+                               'alternativas': ['Impedindo toda circulação de ar',
+                                                'Oferecendo sombra e liberando água por transpiração',
+                                                'Produzindo gelo dentro dos troncos'],
+                               'correta': 1,
+                               'imagem': 'imagens_perguntas/lote16_v04_p02.png'},
+                              {'pergunta': 'Uma tarde muito quente, sozinha, permite descrever o clima '
+                                           'de décadas de uma cidade?',
+                               'alternativas': ['Não, o clima exige observar padrões de longo prazo',
+                                                'Sim, se a cidade tiver muitos prédios',
+                                                'Sim, qualquer tarde define o clima para sempre'],
+                               'correta': 0,
+                               'imagem': 'imagens_perguntas/lote16_v04_p03.png'}],
+ 'Carros elétricos e híbridos': [{'pergunta': 'Qual combinação caracteriza um carro híbrido '
+                                              'convencional?',
+                                  'alternativas': ['Motor a vapor e motor a diesel',
+                                                   'Motor a combustão e motor elétrico',
+                                                   'Dois motores movidos apenas a gasolina'],
+                                  'correta': 1,
+                                  'imagem': 'imagens_perguntas/lote16_v05_p01.png'},
+                                 {'pergunta': 'O que a frenagem regenerativa pode fazer em veículos '
+                                              'eletrificados?',
+                                  'alternativas': ['Recuperar parte da energia durante a desaceleração',
+                                                   'Eliminar toda perda de energia do veículo',
+                                                   'Criar combustível dentro dos pneus'],
                                   'correta': 0,
-                                  'imagem': 'imagens_perguntas/lote15_v14_p01.png'},
-                                 {'pergunta': 'Qual é a unidade básica de temperatura termodinâmica no '
-                                              'Sistema Internacional?',
-                                  'alternativas': ['Grau Celsius', 'Grau Fahrenheit', 'Kelvin'],
+                                  'imagem': 'imagens_perguntas/lote16_v05_p02.png'},
+                                 {'pergunta': 'O que distingue um híbrido plug-in de um híbrido '
+                                              'convencional?',
+                                  'alternativas': ['O uso exclusivo de energia solar no teto',
+                                                   'A ausência obrigatória de motor a combustão',
+                                                   'A possibilidade de recarregar sua bateria em fonte '
+                                                   'externa'],
                                   'correta': 2,
-                                  'imagem': 'imagens_perguntas/lote15_v14_p02.png'},
-                                 {'pergunta': 'Quantos milímetros correspondem a um centímetro?',
-                                  'alternativas': ['10', '1.000', '100'],
+                                  'imagem': 'imagens_perguntas/lote16_v05_p03.png'}],
+ 'Energia solar nas casas': [{'pergunta': 'Uma célula fotovoltaica converte principalmente qual forma '
+                                          'de energia em eletricidade?',
+                              'alternativas': ['Energia da luz', 'Energia da chuva', 'Energia do som'],
+                              'correta': 0,
+                              'imagem': 'imagens_perguntas/lote16_v06_p01.png'},
+                             {'pergunta': 'Em muitos sistemas solares, qual é uma função do inversor?',
+                              'alternativas': ['Produzir luz solar durante a noite',
+                                               'Transformar o telhado em bateria',
+                                               'Converter corrente contínua em corrente alternada'],
+                              'correta': 2,
+                              'imagem': 'imagens_perguntas/lote16_v06_p02.png'},
+                             {'pergunta': 'Em dias nublados, o que pode acontecer com a geração de um '
+                                          'painel fotovoltaico?',
+                              'alternativas': ['Ela passa a depender apenas do vento',
+                                               'Ela é sempre igual à de um céu limpo',
+                                               'Ela pode continuar, geralmente com menor produção'],
+                              'correta': 2,
+                              'imagem': 'imagens_perguntas/lote16_v06_p03.png'}],
+ 'Lixo eletrônico': [{'pergunta': 'Por que equipamentos eletrônicos exigem cuidado no descarte?',
+                      'alternativas': ['Porque qualquer aparelho é feito só de papel',
+                                       'Porque podem conter materiais que contaminam o ambiente',
+                                       'Porque todo componente se dissolve sem impacto'],
+                      'correta': 1,
+                      'imagem': 'imagens_perguntas/lote16_v07_p01.png'},
+                     {'pergunta': 'O que significa logística reversa de eletroeletrônicos?',
+                      'alternativas': ['Transportar equipamentos apenas de marcha a ré',
+                                       'Enviar toda compra de volta antes de usar',
+                                       'Organizar o retorno de produtos após o uso'],
+                      'correta': 2,
+                      'imagem': 'imagens_perguntas/lote16_v07_p02.png'},
+                     {'pergunta': 'Qual é uma vantagem ambiental de prolongar a vida útil de um '
+                                  'aparelho?',
+                      'alternativas': ['Impedir para sempre a existência de defeitos',
+                                       'Tornar desnecessário qualquer consumo de energia',
+                                       'Reduzir a necessidade de novas substituições'],
+                      'correta': 2,
+                      'imagem': 'imagens_perguntas/lote16_v07_p03.png'}],
+ 'Microplásticos no ambiente': [{'pergunta': 'O termo microplástico se refere, em geral, a partículas '
+                                             'plásticas menores que qual tamanho?',
+                                 'alternativas': ['5 milímetros', '5 centímetros', '5 metros'],
+                                 'correta': 0,
+                                 'imagem': 'imagens_perguntas/lote16_v08_p01.png'},
+                                {'pergunta': 'Qual processo pode originar microplásticos no ambiente?',
+                                 'alternativas': ['A fragmentação de objetos plásticos maiores',
+                                                  'A transformação de qualquer areia em plástico',
+                                                  'A evaporação de água completamente pura'],
+                                 'correta': 0,
+                                 'imagem': 'imagens_perguntas/lote16_v08_p02.png'},
+                                {'pergunta': 'Por que retirar apenas o lixo plástico visível não '
+                                             'resolve toda a poluição por plástico?',
+                                 'alternativas': ['Porque todo plástico visível vira metal',
+                                                  'Porque os oceanos não possuem correntes',
+                                                  'Porque partículas pequenas também podem permanecer'],
+                                 'correta': 2,
+                                 'imagem': 'imagens_perguntas/lote16_v08_p03.png'}],
+ 'Eventos climáticos extremos': [{'pergunta': 'Como superfícies impermeáveis podem influenciar '
+                                              'alagamentos urbanos?',
+                                  'alternativas': ['Aumentando sempre a capacidade dos rios',
+                                                   'Fazendo toda chuva desaparecer no asfalto',
+                                                   'Dificultando a infiltração da água no solo'],
+                                  'correta': 2,
+                                  'imagem': 'imagens_perguntas/lote16_v09_p01.png'},
+                                 {'pergunta': 'Qual é a finalidade de um sistema de alerta antecipado '
+                                              'para desastres?',
+                                  'alternativas': ['Avisar sobre riscos para permitir ações de proteção',
+                                                   'Garantir que nenhum fenômeno natural ocorra',
+                                                   'Substituir todas as obras de infraestrutura'],
                                   'correta': 0,
-                                  'imagem': 'imagens_perguntas/lote15_v14_p03.png'}],
- 'Patrimônios culturais do Brasil': [{'pergunta': 'O frevo tem raízes especialmente ligadas ao carnaval '
-                                                  'de qual estado?',
-                                      'alternativas': ['Rio Grande do Sul', 'Pernambuco', 'Goiás'],
-                                      'correta': 1,
-                                      'imagem': 'imagens_perguntas/lote15_v15_p01.png'},
-                                     {'pergunta': 'Reconhecer um ofício como patrimônio cultural '
-                                                  'imaterial valoriza principalmente o quê?',
-                                      'alternativas': ['Apenas o tamanho dos locais de trabalho',
-                                                       'Saberes e práticas transmitidos entre gerações',
-                                                       'Somente o preço dos objetos produzidos'],
-                                      'correta': 1,
-                                      'imagem': 'imagens_perguntas/lote15_v15_p02.png'},
-                                     {'pergunta': 'O Ofício das Baianas de Acarajé está associado a '
-                                                  'qual tradição?',
-                                      'alternativas': ['Construção de barcos de gelo',
-                                                       'Preparo e venda de comidas de matriz africana',
-                                                       'Produção de azulejos de porcelana'],
-                                      'correta': 1,
-                                      'imagem': 'imagens_perguntas/lote15_v15_p03.png'}]}
+                                  'imagem': 'imagens_perguntas/lote16_v09_p02.png'},
+                                 {'pergunta': 'Qual diferença ajuda a distinguir uma seca prolongada de '
+                                              'um dia sem chuva?',
+                                  'alternativas': ['A cor das roupas usadas pela população',
+                                                   'A duração e o déficit de precipitação ao longo do '
+                                                   'período',
+                                                   'A presença obrigatória de neve nas ruas'],
+                                  'correta': 1,
+                                  'imagem': 'imagens_perguntas/lote16_v09_p03.png'}],
+ 'Redes sociais e algoritmos': [{'pergunta': 'Qual é uma função comum dos algoritmos de recomendação?',
+                                 'alternativas': ['Mostrar obrigatoriamente todos os conteúdos '
+                                                  'existentes',
+                                                  'Garantir que toda postagem seja verdadeira',
+                                                  'Selecionar conteúdos conforme sinais e critérios'],
+                                 'correta': 2,
+                                 'imagem': 'imagens_perguntas/lote16_v10_p01.png'},
+                                {'pergunta': 'O que é uma bolha informacional nas redes?',
+                                 'alternativas': ['Contato frequente com conteúdos e opiniões '
+                                                  'semelhantes',
+                                                  'Uma falha que quebra fisicamente a tela',
+                                                  'Um arquivo que ocupa toda a memória do celular'],
+                                 'correta': 0,
+                                 'imagem': 'imagens_perguntas/lote16_v10_p02.png'},
+                                {'pergunta': 'Por que o número de curtidas não comprova a veracidade de '
+                                             'uma publicação?',
+                                 'alternativas': ['Porque popularidade e exatidão são coisas diferentes',
+                                                  'Porque apenas vídeos podem conter informação correta',
+                                                  'Porque textos curtos são sempre falsos'],
+                                 'correta': 0,
+                                 'imagem': 'imagens_perguntas/lote16_v10_p03.png'}],
+ 'Compras pela internet': [{'pergunta': 'O que ajuda a avaliar se uma loja virtual desconhecida é '
+                                        'confiável?',
+                            'alternativas': ['Usar somente o desconto como critério',
+                                             'Confiar apenas na aparência bonita da página',
+                                             'Consultar sua identificação e reputação em fontes '
+                                             'independentes'],
+                            'correta': 2,
+                            'imagem': 'imagens_perguntas/lote16_v11_p01.png'},
+                           {'pergunta': 'Por que avaliações de produtos devem ser analisadas com '
+                                        'cuidado?',
+                            'alternativas': ['Porque comentários nunca contêm experiências reais',
+                                             'Porque algumas podem ser falsas ou incentivadas',
+                                             'Porque toda nota alta prova qualidade perfeita'],
+                            'correta': 1,
+                            'imagem': 'imagens_perguntas/lote16_v11_p02.png'},
+                           {'pergunta': 'Uma postagem patrocinada é, principalmente, o quê?',
+                            'alternativas': ['Uma prova automática de qualidade do produto',
+                                             'Um conteúdo associado a uma relação publicitária',
+                                             'Uma opinião que nunca envolve interesse comercial'],
+                            'correta': 1,
+                            'imagem': 'imagens_perguntas/lote16_v11_p03.png'}],
+ 'Satélites a serviço do Brasil': [{'pergunta': 'Imagens de satélite podem ajudar a acompanhar qual '
+                                                'mudança no território?',
+                                    'alternativas': ['O pensamento dos moradores',
+                                                     'A perda de cobertura vegetal',
+                                                     'O sabor de cada alimento'],
+                                    'correta': 1,
+                                    'imagem': 'imagens_perguntas/lote16_v12_p01.png'},
+                                   {'pergunta': 'O sensoriamento remoto permite obter informações sobre '
+                                                'um local de que forma?',
+                                    'alternativas': ['Apenas por entrevistas presenciais',
+                                                     'Pela detecção a distância de energia refletida ou '
+                                                     'emitida',
+                                                     'Somente tocando o solo com as mãos'],
+                                    'correta': 1,
+                                    'imagem': 'imagens_perguntas/lote16_v12_p02.png'},
+                                   {'pergunta': 'Em uma conexão por satélite, a comunicação utiliza '
+                                                'principalmente o quê?',
+                                    'alternativas': ['Tubos de água entre a casa e o espaço',
+                                                     'Cabos presos fisicamente a todas as nuvens',
+                                                     'Sinais eletromagnéticos'],
+                                    'correta': 2,
+                                    'imagem': 'imagens_perguntas/lote16_v12_p03.png'}],
+ 'Tecnologia na agricultura': [{'pergunta': 'Um sensor de umidade do solo pode ajudar o agricultor a '
+                                            'decidir o quê?',
+                                'alternativas': ['Qual será o preço mundial de todos os alimentos',
+                                                 'Quando e quanto irrigar',
+                                                 'A data exata de todas as chuvas do ano'],
+                                'correta': 1,
+                                'imagem': 'imagens_perguntas/lote16_v13_p01.png'},
+                               {'pergunta': 'Como um drone pode auxiliar no acompanhamento de uma '
+                                            'lavoura?',
+                                'alternativas': ['Garantindo que nenhuma praga apareça',
+                                                 'Substituindo toda análise agronômica',
+                                                 'Captando imagens para observar variações na área'],
+                                'correta': 2,
+                                'imagem': 'imagens_perguntas/lote16_v13_p02.png'},
+                               {'pergunta': 'Qual é um princípio da agricultura de precisão?',
+                                'alternativas': ['Considerar diferenças dentro de uma mesma área',
+                                                 'Tratar todo terreno como se fosse sempre idêntico',
+                                                 'Usar a maior quantidade possível de insumos em '
+                                                 'qualquer ponto'],
+                                'correta': 0,
+                                'imagem': 'imagens_perguntas/lote16_v13_p03.png'}],
+ 'Desperdício de alimentos': [{'pergunta': 'Como planejar compras pode ajudar a reduzir desperdícios?',
+                               'alternativas': ['Ajustando quantidades ao consumo previsto',
+                                                'Tornando desnecessário observar a conservação',
+                                                'Garantindo que todo alimento dure para sempre'],
+                               'correta': 0,
+                               'imagem': 'imagens_perguntas/lote16_v14_p01.png'},
+                              {'pergunta': 'O que significa aproveitar integralmente um alimento quando '
+                                           'isso é adequado e seguro?',
+                               'alternativas': ['Misturar alimentos deteriorados aos frescos',
+                                                'Usar também partes comestíveis que costumam ser '
+                                                'descartadas',
+                                                'Comer obrigatoriamente qualquer parte de qualquer '
+                                                'alimento'],
+                               'correta': 1,
+                               'imagem': 'imagens_perguntas/lote16_v14_p02.png'},
+                              {'pergunta': 'Para reduzir perdas, qual é uma vantagem de organizar '
+                                           'alimentos por ordem de chegada e validade?',
+                               'alternativas': ['Fazer a data de validade deixar de existir',
+                                                'Facilitar o uso dos itens que precisam ser consumidos '
+                                                'antes',
+                                                'Eliminar a necessidade de refrigeração'],
+                               'correta': 1,
+                               'imagem': 'imagens_perguntas/lote16_v14_p03.png'}],
+ 'Ciência brasileira e inovação': [{'pergunta': 'Qual característica torna uma hipótese científica '
+                                                'testável?',
+                                    'alternativas': ['Permitir observações ou experimentos que a '
+                                                     'confrontem',
+                                                     'Depender apenas da fama de quem a propõe',
+                                                     'Ser impossível de comparar com evidências'],
+                                    'correta': 0,
+                                    'imagem': 'imagens_perguntas/lote16_v15_p01.png'},
+                                   {'pergunta': 'Para que serve a revisão por pares de um trabalho '
+                                                'científico?',
+                                    'alternativas': ['Para substituir os resultados por opiniões '
+                                                     'populares',
+                                                     'Para garantir ausência eterna de qualquer erro',
+                                                     'Para especialistas avaliarem métodos e '
+                                                     'argumentos'],
+                                    'correta': 2,
+                                    'imagem': 'imagens_perguntas/lote16_v15_p02.png'},
+                                   {'pergunta': 'Quando uma pesquisa gera uma solução aplicada a uma '
+                                                'necessidade real, ela pode contribuir para quê?',
+                                    'alternativas': ['Impossibilidade de testar ideias',
+                                                     'Inovação',
+                                                     'Fim de toda pesquisa futura'],
+                                    'correta': 1,
+                                    'imagem': 'imagens_perguntas/lote16_v15_p03.png'}]}
 
-LEGENDAS = {'Mistérios do cérebro': 'CAPA_SEGUNDOS=2\n'
-                         '\n'
-                         'Memória, sono e aprendizagem: explore curiosidades do cérebro!\n'
-                         '#Cerebro #Memoria #Aprendizagem #Neurociencia',
- 'Alimentos que viajaram pelo mundo': 'CAPA_SEGUNDOS=2\n'
-                                      '\n'
-                                      'Descubra as origens de alimentos que ganharam o mundo!\n'
-                                      '#HistoriaDosAlimentos #Tomate #Batata #Cacau',
- 'Profissões que desapareceram': 'CAPA_SEGUNDOS=2\n'
-                                 '\n'
-                                 'Conheça trabalhos que fizeram parte do cotidiano de outras épocas!\n'
-                                 '#ProfissoesAntigas #HistoriaDoTrabalho #Memoria #Tecnologia',
- 'Desafios da vida nos desertos': 'CAPA_SEGUNDOS=2\n'
-                                  '\n'
-                                  'Nem todo deserto é quente: descubra os desafios desses ambientes!\n'
-                                  '#Desertos #Adaptacoes #Clima #AmbientesExtremos',
- 'Símbolos que usamos sem perceber': 'CAPA_SEGUNDOS=2\n'
-                                     '\n'
-                                     'Entenda sinais presentes em roupas, embalagens e aparelhos!\n'
-                                     '#Simbolos #Etiquetas #Embalagens #Cotidiano',
- 'Instrumentos musicais pelo mundo': 'CAPA_SEGUNDOS=2\n'
-                                     '\n'
-                                     'Explore instrumentos, sons e tradições musicais!\n'
-                                     '#InstrumentosMusicais #Musica #Timbre #Cultura',
- 'Ilusões de óptica': 'CAPA_SEGUNDOS=2\n'
-                      '\n'
-                      'Descubra como o contexto pode mudar o que pensamos enxergar!\n'
-                      '#IlusoesDeOptica #PercepcaoVisual #Visao #Ciencia',
- 'Dinheiro antes das moedas': 'CAPA_SEGUNDOS=2\n'
+LEGENDAS = {'Inteligência artificial no cotidiano': 'CAPA_SEGUNDOS=2\n'
+                                         '\n'
+                                         'IA faz parte do cotidiano: teste seus conhecimentos sobre '
+                                         'possibilidades e limites!\n'
+                                         '#InteligenciaArtificial #AprendizadoDeMaquina #Tecnologia '
+                                         '#EducacaoDigital',
+ 'Deepfakes e vídeos falsos': 'CAPA_SEGUNDOS=2\n'
                               '\n'
-                              'Entenda como as sociedades realizavam trocas antes das moedas!\n'
-                              '#HistoriaDoDinheiro #Escambo #Economia #Trocas',
- 'A ciência dos esportes': 'CAPA_SEGUNDOS=2\n'
-                           '\n'
-                           'Movimento e equilíbrio também têm explicação científica!\n'
-                           '#CienciaDoEsporte #Fisica #Movimento #Equilibrio',
- 'Ilhas com características surpreendentes': 'CAPA_SEGUNDOS=2\n'
-                                             '\n'
-                                             'Descubra como ilhas se formam e abrigam vidas '
-                                             'singulares!\n'
-                                             '#Ilhas #Geografia #Biodiversidade #Arquipelagos',
- 'Materiais que transformaram o mundo': 'CAPA_SEGUNDOS=2\n'
-                                        '\n'
-                                        'Conheça propriedades de materiais que mudaram nosso '
-                                        'cotidiano!\n'
-                                        '#Materiais #Vidro #Aco #Borracha',
- 'Segredos da conservação dos alimentos': 'CAPA_SEGUNDOS=2\n'
-                                          '\n'
-                                          'Entenda processos usados para conservar alimentos!\n'
-                                          '#ConservacaoDosAlimentos #Refrigeracao #Secagem #Fermentacao',
- 'Como os animais se comunicam': 'CAPA_SEGUNDOS=2\n'
-                                 '\n'
-                                 'Sons, movimentos e sinais químicos conectam os animais!\n'
-                                 '#ComunicacaoAnimal #Formigas #Abelhas #Aves',
- 'Medidas e unidades curiosas': 'CAPA_SEGUNDOS=2\n'
+                              'Vídeo e voz podem enganar: aprenda a avaliar conteúdos digitais!\n'
+                              '#Deepfake #Desinformacao #Verificacao #EducacaoMidiatica',
+ 'Golpes digitais': 'CAPA_SEGUNDOS=2\n'
+                    '\n'
+                    'Mensagens e pedidos urgentes: reconheça situações que exigem verificação!\n'
+                    '#SegurancaDigital #Phishing #GolpesDigitais #ProtecaoDeDados',
+ 'Ondas de calor e cidades': 'CAPA_SEGUNDOS=2\n'
+                             '\n'
+                             'Entenda como a paisagem urbana influencia o calor nas cidades!\n'
+                             '#CalorUrbano #IlhasDeCalor #Arborizacao #Clima',
+ 'Carros elétricos e híbridos': 'CAPA_SEGUNDOS=2\n'
                                 '\n'
-                                'Teste o que você sabe sobre unidades e formas de medir!\n'
-                                '#UnidadesDeMedida #Metrologia #SistemaInternacional #Astronomia',
- 'Patrimônios culturais do Brasil': 'CAPA_SEGUNDOS=2\n'
-                                    '\n'
-                                    'Celebre manifestações, ofícios e saberes que fazem parte do '
-                                    'Brasil!\n'
-                                    '#PatrimonioCultural #Frevo #SaberesTradicionais #CulturaBrasileira'}
+                                'Motores, baterias e frenagem: descubra diferenças entre veículos '
+                                'eletrificados!\n'
+                                '#CarrosEletricos #CarrosHibridos #Mobilidade #Energia',
+ 'Energia solar nas casas': 'CAPA_SEGUNDOS=2\n'
+                            '\n'
+                            'Teste seus conhecimentos sobre painéis e geração solar residencial!\n'
+                            '#EnergiaSolar #Fotovoltaica #EnergiaRenovavel #Eletricidade',
+ 'Lixo eletrônico': 'CAPA_SEGUNDOS=2\n'
+                    '\n'
+                    'Saiba por que celulares e computadores precisam de um destino responsável!\n'
+                    '#LixoEletronico #LogisticaReversa #ConsumoConsciente #MeioAmbiente',
+ 'Microplásticos no ambiente': 'CAPA_SEGUNDOS=2\n'
+                               '\n'
+                               'Pequenas partículas, grandes perguntas sobre o ambiente!\n'
+                               '#Microplasticos #PoluicaoPlastica #Oceanos #EducacaoAmbiental',
+ 'Eventos climáticos extremos': 'CAPA_SEGUNDOS=2\n'
+                                '\n'
+                                'Chuvas e secas: entenda riscos, impactos e formas de monitoramento!\n'
+                                '#EventosExtremos #Alagamentos #Secas #PrevencaoDeDesastres',
+ 'Redes sociais e algoritmos': 'CAPA_SEGUNDOS=2\n'
+                               '\n'
+                               'Entenda recomendações, popularidade e circulação de informações nas '
+                               'redes!\n'
+                               '#Algoritmos #RedesSociais #EducacaoMidiatica #Informacao',
+ 'Compras pela internet': 'CAPA_SEGUNDOS=2\n'
+                          '\n'
+                          'Aprenda a olhar além de anúncios, descontos e avaliações!\n'
+                          '#ComprasOnline #ConsumoConsciente #Publicidade #EducacaoDigital',
+ 'Satélites a serviço do Brasil': 'CAPA_SEGUNDOS=2\n'
+                                  '\n'
+                                  'Do espaço ao cotidiano: descubra usos dos satélites!\n'
+                                  '#Satelites #SensoriamentoRemoto #MonitoramentoAmbiental '
+                                  '#TecnologiaEspacial',
+ 'Tecnologia na agricultura': 'CAPA_SEGUNDOS=2\n'
+                              '\n'
+                              'Sensores, drones e dados também fazem parte do campo!\n'
+                              '#AgriculturaDePrecisao #AgroTecnologia #Sensores #UsoDaAgua',
+ 'Desperdício de alimentos': 'CAPA_SEGUNDOS=2\n'
+                             '\n'
+                             'Pequenas escolhas ajudam a aproveitar melhor os alimentos!\n'
+                             '#DesperdicioDeAlimentos #Planejamento #Aproveitamento #ConsumoResponsavel',
+ 'Ciência brasileira e inovação': 'CAPA_SEGUNDOS=2\n'
+                                  '\n'
+                                  'Descubra como evidências e pesquisas podem contribuir para novas '
+                                  'soluções!\n'
+                                  '#CienciaBrasileira #Pesquisa #Inovacao #MetodoCientifico'}
